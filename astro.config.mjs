@@ -4,7 +4,8 @@ import sitemap from '@astrojs/sitemap';
 import mdx from '@astrojs/mdx';
 
 export default defineConfig({
-  site: 'https://www.agphysicaltherapypc.com',
+  site: 'https://mckee80.github.io',
+  base: '/agphysicaltherapypc-astro',
   integrations: [
     tailwind(),
     sitemap(),
