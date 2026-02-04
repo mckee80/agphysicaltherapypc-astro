@@ -94,13 +94,14 @@ export const siteConfig = {
     main: [
       { name: 'My Practice', href: '#about' },
       { name: 'Services', href: '#services' },
-      { name: 'Patient Resources', href: '#patient-resources' },
+      { name: 'Blog', href: '/agphysicaltherapypc-astro/blog/' },
       { name: 'Contact', href: '#locations' },
     ],
     footer: {
       quickLinks: [
         { name: 'My Practice', href: '#about' },
         { name: 'Services', href: '#services' },
+        { name: 'Blog', href: '/agphysicaltherapypc-astro/blog/' },
         { name: 'Patient Resources', href: '#patient-resources' },
         { name: 'Contact', href: '#locations' },
         { name: 'Book Online', href: 'https://agphysicaltherapypc.janeapp.com/' },

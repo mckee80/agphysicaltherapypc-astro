@@ -1,0 +1,82 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import { siteConfig } from '@/config/site';
+
+const posts = (await getCollection('blog')).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+
+const formatDate = (date: Date) => {
+  return new Date(date).toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  });
+};
+---
+
+<BaseLayout
+  title={`Pelvic Health Blog | ${siteConfig.shortName}`}
+  description="Expert insights on pelvic floor health, postpartum recovery, perimenopause, and women's wellness from Dr. Ashlee Gendron, pelvic floor physical therapist in Vista CA."
+>
+  <section class="section-padding pt-36">
+    <div class="container-max">
+      <div class="text-center mb-12 max-w-2xl mx-auto">
+        <span class="section-label">Resources</span>
+        <h1 class="section-title">Pelvic Health Blog</h1>
+        <p class="section-description">
+          Expert insights and education on pelvic floor health, postpartum recovery, and women's wellness.
+        </p>
+      </div>
+
+      {posts.length === 0 ? (
+        <p class="text-center text-brand-navy-light">No blog posts yet. Check back soon!</p>
+      ) : (
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {posts.map((post) => (
+            <article class="bg-white rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 overflow-hidden">
+              <a href={`/agphysicaltherapypc-astro/blog/${post.slug}/`} class="block p-6">
+                <div class="flex flex-wrap gap-2 mb-3">
+                  {post.data.tags?.slice(0, 2).map((tag) => (
+                    <span class="text-xs font-medium uppercase tracking-wider text-brand-sage">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+                <h2 class="text-xl font-heading font-semibold text-brand-navy mb-3 line-clamp-2">
+                  {post.data.title}
+                </h2>
+                <p class="text-brand-navy-light text-base mb-4 line-clamp-3">
+                  {post.data.description}
+                </p>
+                <div class="flex items-center justify-between text-sm text-brand-navy-light">
+                  <time datetime={post.data.pubDate.toISOString()}>
+                    {formatDate(post.data.pubDate)}
+                  </time>
+                  <span class="text-brand-sage font-medium">Read more &rarr;</span>
+                </div>
+              </a>
+            </article>
+          ))}
+        </div>
+      )}
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+</style>

@@ -1,0 +1,122 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import { siteConfig } from '@/config/site';
+
+interface Props {
+  frontmatter: {
+    title: string;
+    description: string;
+    pubDate: Date;
+    author?: string;
+    image?: string;
+    tags?: string[];
+  };
+}
+
+const { frontmatter } = Astro.props;
+const formattedDate = new Date(frontmatter.pubDate).toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: frontmatter.title,
+  description: frontmatter.description,
+  datePublished: frontmatter.pubDate,
+  author: {
+    '@type': 'Person',
+    name: frontmatter.author || siteConfig.provider.name,
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: siteConfig.name,
+    logo: {
+      '@type': 'ImageObject',
+      url: `${siteConfig.url}/images/logo.png`,
+    },
+  },
+};
+---
+
+<BaseLayout
+  title={`${frontmatter.title} | ${siteConfig.shortName} Blog`}
+  description={frontmatter.description}
+  image={frontmatter.image}
+  type="article"
+  publishedTime={frontmatter.pubDate}
+  jsonLd={articleSchema}
+>
+  <article class="section-padding pt-36">
+    <div class="container-max">
+      <div class="max-w-3xl mx-auto">
+        <!-- Back to blog -->
+        <a href="/agphysicaltherapypc-astro/blog/" class="inline-flex items-center gap-2 text-brand-sage hover:text-brand-sage-dark transition-colors mb-8">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+          </svg>
+          Back to Blog
+        </a>
+
+        <!-- Article header -->
+        <header class="mb-8">
+          <div class="flex flex-wrap gap-2 mb-4">
+            {frontmatter.tags?.map((tag) => (
+              <span class="text-xs font-medium uppercase tracking-wider text-brand-sage bg-brand-sage/10 px-3 py-1 rounded-full">
+                {tag}
+              </span>
+            ))}
+          </div>
+          <h1 class="text-3xl md:text-4xl lg:text-5xl mb-4">{frontmatter.title}</h1>
+          <div class="flex items-center gap-4 text-brand-navy-light">
+            <span>{frontmatter.author || siteConfig.provider.name}</span>
+            <span>|</span>
+            <time datetime={frontmatter.pubDate.toISOString()}>{formattedDate}</time>
+          </div>
+        </header>
+
+        <!-- Article content -->
+        <div class="prose prose-lg max-w-none">
+          <slot />
+        </div>
+
+        <!-- CTA -->
+        <div class="mt-12 p-8 bg-gradient-to-br from-brand-sage to-brand-sage-dark rounded-2xl text-center">
+          <h3 class="text-white text-2xl mb-2">Ready to Take Control of Your Pelvic Health?</h3>
+          <p class="text-white/85 mb-6">Schedule a free 15-minute consultation to discuss your concerns.</p>
+          <a href={siteConfig.bookingUrl} target="_blank" rel="noopener" class="btn btn-primary bg-white text-brand-sage hover:bg-gray-100 border-white">
+            Book Online
+          </a>
+        </div>
+      </div>
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .prose h2 {
+    @apply text-2xl font-heading font-semibold text-brand-navy mt-8 mb-4;
+  }
+
+  .prose h3 {
+    @apply text-xl font-heading font-semibold text-brand-navy mt-6 mb-3;
+  }
+
+  .prose p {
+    @apply text-brand-navy-light mb-4 leading-relaxed;
+  }
+
+  .prose ul {
+    @apply list-disc list-inside mb-4 space-y-2 text-brand-navy-light;
+  }
+
+  .prose li {
+    @apply leading-relaxed;
+  }
+
+  .prose strong {
+    @apply text-brand-navy font-semibold;
+  }
+</style>
