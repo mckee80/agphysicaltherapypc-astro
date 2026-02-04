@@ -1,0 +1,334 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { siteConfig } from '@/config/site';
+---
+
+<BaseLayout>
+  <!-- Hero Section -->
+  <section class="relative min-h-screen flex items-center pt-32 pb-20 overflow-hidden" id="hero">
+    <div class="absolute inset-0 hero-gradient opacity-50 -z-10"></div>
+    <div class="absolute inset-0 -z-10">
+      <img
+        src="/images/hero-bg.jpg"
+        alt=""
+        class="w-full h-full object-cover opacity-15"
+        onerror="this.style.display='none'"
+      />
+    </div>
+    <div class="container-max">
+      <div class="max-w-2xl">
+        <p class="text-sm uppercase tracking-widest text-brand-sage font-semibold mb-4">
+          Women's Pelvic Health & Orthopedic Physical Therapy
+        </p>
+        <h1 class="text-5xl md:text-6xl lg:text-7xl leading-tight mb-8">
+          Reclaim Your Passions Without Leakage or Pain
+        </h1>
+        <p class="text-lg md:text-xl text-brand-navy-light mb-10 max-w-xl">
+          Holistic pelvic wellness and orthopedic concierge service in North County San Diego. I evaluate your body as a whole to help you reach your personalized goals.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href={siteConfig.bookingUrl} target="_blank" rel="noopener" class="btn btn-primary btn-lg">
+            Book Online
+          </a>
+          <a href="#about" class="btn btn-outline btn-lg">
+            Learn More
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Bar -->
+  <section class="trust-bar">
+    <div class="container-max">
+      <div class="flex justify-center flex-wrap gap-8 lg:gap-16">
+        <div class="trust-item">
+          <span class="trust-icon">&#10003;</span>
+          <span>No Referral Needed</span>
+        </div>
+        <div class="trust-item">
+          <span class="trust-icon">&#10003;</span>
+          <span>Free 15-Min Phone Consult</span>
+        </div>
+        <div class="trust-item">
+          <span class="trust-icon">&#10003;</span>
+          <span>In-Clinic, Home & Virtual Visits</span>
+        </div>
+        <div class="trust-item">
+          <span class="trust-icon">&#10003;</span>
+          <span>90-Minute Initial Evaluation</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="section-padding" id="about">
+    <div class="container-max">
+      <div class="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <div class="max-w-md mx-auto md:max-w-none">
+          <img
+            src="/images/ashlee-gendron.jpg"
+            alt="Dr. Ashlee Gendron, PT, DPT, PCES"
+            class="w-full rounded-2xl shadow-xl"
+            onerror="this.parentElement.innerHTML='<div class=\"aspect-[4/5] bg-gradient-to-br from-brand-sage-light to-brand-rose-light rounded-2xl flex items-end justify-center p-8 text-white font-heading text-xl\" style=\"text-shadow: 0 2px 4px rgba(0,0,0,0.2)\">Dr. Ashlee Gendron, DPT</div>'"
+          />
+        </div>
+        <div>
+          <span class="section-label">My Practice</span>
+          <h2 class="section-title">Dr. Ashlee Gendron, PT, DPT, PCES</h2>
+          <p class="text-lg text-brand-sage-dark font-medium mb-6">
+            Doctor of Physical Therapy with a focus on Pelvic Health and Orthopedics
+          </p>
+          <p class="mb-4">
+            <strong>My mission is to help women reclaim their passions without leakage or pain, empowering them to feel strong in the process.</strong>
+          </p>
+          <p class="text-brand-navy-light mb-6">
+            Ashlee Gendron Physical Therapy is a holistic pelvic wellness and orthopedic concierge service. I evaluate the body as a whole to help you reach your personalized goals. Each session and plan of care is tailored to each individual, and I advocate for a multidisciplinary approach with a large radius of resources to meet each client's needs.
+          </p>
+          <div class="philosophy-box">
+            <h3>My Philosophy</h3>
+            <p>Every person has their own story and one size program does not fit all. I focus on the body as a whole and develop a unique program to fit each individual and their needs.</p>
+            <p><strong>Strengthening the pelvic floor is not "just do kegels."</strong></p>
+          </div>
+          <div class="flex gap-8 mt-8 pt-6 border-t border-surface-alt">
+            <div class="credential">
+              <strong>PT, DPT</strong>
+              <span>Doctor of Physical Therapy</span>
+            </div>
+            <div class="credential">
+              <strong>PCES</strong>
+              <span>Postpartum Corrective Exercise Specialist</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Specializations Section -->
+  <section class="py-16 bg-gradient-to-br from-brand-sage to-brand-sage-dark">
+    <div class="container-max">
+      <div class="text-center mb-12">
+        <span class="section-label text-white/80">Areas of Expertise</span>
+        <h2 class="section-title text-white">I Specialize In</h2>
+      </div>
+      <div class="flex flex-wrap justify-center gap-4">
+        {siteConfig.specializations.map((spec) => (
+          <div class="spec-item">{spec}</div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="section-padding bg-surface-alt" id="services">
+    <div class="container-max">
+      <div class="text-center mb-12 max-w-2xl mx-auto">
+        <span class="section-label">What I Offer</span>
+        <h2 class="section-title">Services</h2>
+        <p class="section-description">
+          I combine Women's Health and Orthopedics, looking at the body as a whole
+        </p>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {siteConfig.services.map((service) => (
+          <div class="service-card">
+            <div class="service-icon">
+              {service.icon === 'pelvic' && (
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <circle cx="12" cy="12" r="10"/>
+                  <path d="M12 6v6l4 2"/>
+                </svg>
+              )}
+              {service.icon === 'heart' && (
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                </svg>
+              )}
+              {service.icon === 'women' && (
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                  <circle cx="9" cy="7" r="4"/>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                </svg>
+              )}
+              {service.icon === 'orthopedic' && (
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M18 8h1a4 4 0 0 1 0 8h-1"/>
+                  <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/>
+                  <line x1="6" y1="1" x2="6" y2="4"/>
+                  <line x1="10" y1="1" x2="10" y2="4"/>
+                  <line x1="14" y1="1" x2="14" y2="4"/>
+                </svg>
+              )}
+              {service.icon === 'virtual' && (
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                  <line x1="8" y1="21" x2="16" y2="21"/>
+                  <line x1="12" y1="17" x2="12" y2="21"/>
+                </svg>
+              )}
+              {service.icon === 'home' && (
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                  <polyline points="9 22 9 12 15 12 15 22"/>
+                </svg>
+              )}
+            </div>
+            <h3>{service.name}</h3>
+            <p>{service.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Patient Resources Section -->
+  <section class="section-padding" id="patient-resources">
+    <div class="container-max">
+      <div class="text-center mb-12 max-w-2xl mx-auto">
+        <span class="section-label">Patient Resources</span>
+        <h2 class="section-title">What to Expect</h2>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="resource-card">
+          <div class="resource-number">1</div>
+          <h3 class="mt-2 mb-2 text-lg">Free 15-Minute Phone Consult</h3>
+          <p class="text-brand-navy-light text-base">
+            Start with a complimentary phone consultation so you can determine if my services are right for you. No commitment required.
+          </p>
+        </div>
+        <div class="resource-card">
+          <div class="resource-number">2</div>
+          <h3 class="mt-2 mb-2 text-lg">Initial Evaluation (90 Minutes)</h3>
+          <p class="text-brand-navy-light text-base">
+            Examinations available by video (if not local), in clinic, or at home. Your initial session includes a plan of care, home exercise program, and comprehensive assessment.
+          </p>
+        </div>
+        <div class="resource-card">
+          <div class="resource-number">3</div>
+          <h3 class="mt-2 mb-2 text-lg">Follow-Up Sessions (60 Minutes)</h3>
+          <p class="text-brand-navy-light text-base">
+            Each follow-up treatment session is 60 minutes in length. Treatment is based on a plan of care we develop together, tailored to your individual needs and goals.
+          </p>
+        </div>
+        <div class="resource-card highlight">
+          <h3 class="mb-2 text-lg">No Referral Needed</h3>
+          <p class="text-base">
+            In California, you do not need a referral from a doctor. I can treat for 12 sessions or 45 days, whichever occurs first, without a physician referral.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="py-16 md:py-20 bg-gradient-to-br from-brand-sage to-brand-sage-dark">
+    <div class="container-max">
+      <div class="text-center mb-12">
+        <span class="section-label text-white/80">Patient Stories</span>
+        <h2 class="section-title text-white">What Patients Say</h2>
+      </div>
+      <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        {siteConfig.testimonials.map((testimonial) => (
+          <div class="testimonial-card">
+            <blockquote>
+              <p>"{testimonial.quote}"</p>
+            </blockquote>
+            <cite>- {testimonial.author}</cite>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Locations / Contact Section -->
+  <section class="section-padding bg-surface-alt" id="locations">
+    <div class="container-max">
+      <div class="text-center mb-12 max-w-2xl mx-auto">
+        <span class="section-label">Contact</span>
+        <h2 class="section-title">Locations & Hours</h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8 mb-12">
+        <div class="location-card primary">
+          <h3>San Diego County Midwives HQ</h3>
+          <p class="location-subtitle">Wednesdays & Fridays</p>
+          <address>
+            16885 Via Del Campo Ct<br />
+            Suite 110<br />
+            San Diego, CA 92127
+          </address>
+          <a
+            href="https://maps.google.com/?q=16885+Via+Del+Campo+Ct+Suite+110+San+Diego+CA+92127"
+            target="_blank"
+            rel="noopener"
+            class="location-link"
+          >
+            Get Directions
+          </a>
+        </div>
+        <div class="location-card">
+          <h3>Mobile / Concierge Services</h3>
+          <p class="location-subtitle">San Diego & North County</p>
+          <p class="text-brand-navy-light">
+            In-home physical therapy services throughout San Diego and North County. Receive personalized care in the comfort of your own home.
+          </p>
+        </div>
+        <div class="location-card">
+          <h3>Virtual Visits</h3>
+          <p class="location-subtitle">Video Examinations</p>
+          <p class="text-brand-navy-light">
+            For clients who are not local, video examinations are available. Get expert guidance from anywhere.
+          </p>
+        </div>
+      </div>
+      <div class="contact-info-section grid lg:grid-cols-2 gap-12 items-center">
+        <div class="space-y-6">
+          <div>
+            <strong class="block text-xs uppercase tracking-wider text-brand-navy-light mb-1">Email</strong>
+            <a href={`mailto:${siteConfig.contact.email}`} class="text-brand-navy hover:text-brand-sage transition-colors">
+              {siteConfig.contact.email}
+            </a>
+          </div>
+          <div>
+            <strong class="block text-xs uppercase tracking-wider text-brand-navy-light mb-1">Hours</strong>
+            <span>{siteConfig.contact.hours.days}: {siteConfig.contact.hours.time}</span>
+          </div>
+          <div>
+            <strong class="block text-xs uppercase tracking-wider text-brand-navy-light mb-1">Book Online</strong>
+            <a href={siteConfig.bookingUrl} target="_blank" rel="noopener" class="text-brand-sage hover:text-brand-sage-dark transition-colors font-medium">
+              Schedule via Jane App
+            </a>
+          </div>
+        </div>
+        <div class="cta-section">
+          <h3>Ready to Get Started?</h3>
+          <p>Schedule a free 15-minute phone consultation to see if my services are right for you.</p>
+          <a href={siteConfig.bookingUrl} target="_blank" rel="noopener" class="btn btn-primary btn-lg">
+            Book Online
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section-padding" id="faq">
+    <div class="container-max">
+      <div class="text-center mb-12 max-w-2xl mx-auto">
+        <span class="section-label">FAQ</span>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+      </div>
+      <div class="max-w-3xl mx-auto">
+        {siteConfig.faq.map((item) => (
+          <details class="faq-item">
+            <summary>{item.question}</summary>
+            <p>{item.answer}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

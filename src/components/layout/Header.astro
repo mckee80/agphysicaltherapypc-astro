@@ -1,0 +1,146 @@
+---
+import { siteConfig } from '@/config/site';
+
+const navigation = siteConfig.navigation.main;
+---
+
+<header class="fixed top-0 left-0 right-0 z-50 bg-surface-warm/95 backdrop-blur-sm transition-all duration-300" id="header">
+  <div class="container-max">
+    <nav class="flex items-center justify-between h-20">
+      <!-- Logo -->
+      <a href="/" class="flex flex-col">
+        <img
+          src="/images/logo.png"
+          alt={siteConfig.name}
+          class="h-14 w-auto"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+        />
+        <div class="hidden flex-col">
+          <span class="font-heading text-xl font-semibold text-brand-navy leading-tight">Ashlee Gendron</span>
+          <span class="font-sans text-xs text-brand-navy-light uppercase tracking-widest">Physical Therapy PC</span>
+        </div>
+      </a>
+
+      <!-- Mobile menu button -->
+      <button
+        class="lg:hidden flex flex-col justify-center w-8 h-8 bg-transparent border-0 cursor-pointer"
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+        data-nav-toggle
+      >
+        <span class="hamburger block w-full h-0.5 bg-brand-navy transition-all relative before:content-[''] before:absolute before:left-0 before:-top-2 before:w-full before:h-0.5 before:bg-brand-navy before:transition-all after:content-[''] after:absolute after:left-0 after:top-2 after:w-full after:h-0.5 after:bg-brand-navy after:transition-all"></span>
+      </button>
+
+      <!-- Desktop navigation -->
+      <ul class="hidden lg:flex items-center gap-8" role="menubar">
+        {navigation.map((item) => (
+          <li role="none">
+            <a
+              href={item.href}
+              class="nav-link text-sm font-medium text-brand-navy uppercase tracking-wide relative hover:text-brand-sage transition-colors after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-brand-sage after:transition-all hover:after:w-full"
+              role="menuitem"
+            >
+              {item.name}
+            </a>
+          </li>
+        ))}
+        <li role="none">
+          <a
+            href={siteConfig.bookingUrl}
+            target="_blank"
+            rel="noopener"
+            class="btn btn-primary"
+            role="menuitem"
+          >
+            Book Online
+          </a>
+        </li>
+      </ul>
+
+      <!-- Mobile navigation -->
+      <ul
+        class="nav-menu fixed top-20 left-0 right-0 bg-white flex-col p-8 gap-4 shadow-lg transform -translate-y-full opacity-0 invisible transition-all duration-300 lg:hidden"
+        data-nav-menu
+        role="menu"
+      >
+        {navigation.map((item) => (
+          <li role="none">
+            <a
+              href={item.href}
+              class="block py-2 text-brand-navy font-medium text-sm uppercase tracking-wide hover:text-brand-sage transition-colors"
+              role="menuitem"
+            >
+              {item.name}
+            </a>
+          </li>
+        ))}
+        <li role="none">
+          <a
+            href={siteConfig.bookingUrl}
+            target="_blank"
+            rel="noopener"
+            class="btn btn-primary inline-block mt-2"
+            role="menuitem"
+          >
+            Book Online
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<style>
+  .nav-menu.active {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  [data-nav-toggle][aria-expanded="true"] .hamburger {
+    background-color: transparent;
+  }
+
+  [data-nav-toggle][aria-expanded="true"] .hamburger::before {
+    top: 0;
+    transform: rotate(45deg);
+  }
+
+  [data-nav-toggle][aria-expanded="true"] .hamburger::after {
+    top: 0;
+    transform: rotate(-45deg);
+  }
+
+  .header.scrolled {
+    @apply shadow-sm;
+  }
+</style>
+
+<script>
+  const toggle = document.querySelector('[data-nav-toggle]');
+  const menu = document.querySelector('[data-nav-menu]');
+  const header = document.getElementById('header');
+
+  toggle?.addEventListener('click', () => {
+    const isOpen = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', String(!isOpen));
+    menu?.classList.toggle('active');
+  });
+
+  // Close menu when clicking a link
+  menu?.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      toggle?.setAttribute('aria-expanded', 'false');
+      menu?.classList.remove('active');
+    });
+  });
+
+  // Add scrolled class on scroll
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 10) {
+      header?.classList.add('scrolled');
+    } else {
+      header?.classList.remove('scrolled');
+    }
+  });
+</script>

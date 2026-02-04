@@ -1,0 +1,79 @@
+---
+import { siteConfig } from '@/config/site';
+
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="bg-brand-navy text-white" role="contentinfo">
+  <div class="container-max section-padding">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+      <!-- Brand -->
+      <div>
+        <img
+          src="/images/logo.png"
+          alt={siteConfig.name}
+          class="h-12 w-auto mb-4 brightness-0 invert"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+        />
+        <div class="hidden mb-4">
+          <span class="font-heading text-xl font-semibold text-white block">Ashlee Gendron</span>
+          <span class="font-sans text-xs text-white/70 uppercase tracking-widest block">Physical Therapy PC</span>
+        </div>
+        <p class="text-white/70 text-base mb-4 max-w-xs">
+          Helping women reclaim their passions without leakage or pain.
+        </p>
+        <p class="text-sm text-white/60">
+          {siteConfig.provider.name}, {siteConfig.provider.credentials}
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <h3 class="text-white text-sm font-semibold uppercase tracking-wider mb-4">Quick Links</h3>
+        <ul class="space-y-2">
+          {siteConfig.navigation.footer.quickLinks.map((item) => (
+            <li>
+              <a
+                href={item.href}
+                class="text-white/70 text-base hover:text-white transition-colors"
+                {...(item.href.startsWith('http') && { target: '_blank', rel: 'noopener' })}
+              >
+                {item.name}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div>
+        <h3 class="text-white text-sm font-semibold uppercase tracking-wider mb-4">Contact</h3>
+        <address class="not-italic text-white/70 text-base space-y-2">
+          <p>{siteConfig.contact.address.street}</p>
+          <p>{siteConfig.contact.address.city}, {siteConfig.contact.address.state} {siteConfig.contact.address.zip}</p>
+          <p class="pt-2">
+            <a
+              href={`mailto:${siteConfig.contact.email}`}
+              class="hover:text-white transition-colors"
+            >
+              {siteConfig.contact.email}
+            </a>
+          </p>
+          <p class="text-sm">{siteConfig.contact.hours.full}</p>
+        </address>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom bar -->
+  <div class="bg-black/30 py-4">
+    <div class="container-max text-center">
+      <p class="text-white/50 text-sm mb-2">
+        &copy; {currentYear} {siteConfig.name}. All rights reserved.
+      </p>
+      <p class="text-xs text-white/40">
+        Proudly serving {siteConfig.serviceAreas.join(', ')}
+      </p>
+    </div>
+  </div>
+</footer>
