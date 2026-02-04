@@ -12,7 +12,7 @@ const defaultSchema = {
   '@context': 'https://schema.org',
   '@graph': [
     {
-      '@type': 'PhysicalTherapy',
+      '@type': ['PhysicalTherapy', 'MedicalBusiness', 'LocalBusiness'],
       '@id': `${siteConfig.url}/#organization`,
       name: siteConfig.name,
       alternateName: siteConfig.shortName,
@@ -23,8 +23,10 @@ const defaultSchema = {
       },
       image: `${siteConfig.url}/images/ashlee-gendron.jpg`,
       description: siteConfig.description,
+      telephone: `+1-${siteConfig.contact.phone.primary}`,
       email: siteConfig.contact.email,
       priceRange: '$$',
+      medicalSpecialty: 'Physical Therapy',
       address: {
         '@type': 'PostalAddress',
         streetAddress: siteConfig.contact.address.street,
@@ -98,6 +100,25 @@ const defaultSchema = {
         },
       })),
     },
+    // Reviews/Testimonials
+    ...siteConfig.testimonials.map((testimonial, index) => ({
+      '@type': 'Review',
+      '@id': `${siteConfig.url}/#review-${index + 1}`,
+      itemReviewed: {
+        '@id': `${siteConfig.url}/#organization`,
+      },
+      reviewRating: {
+        '@type': 'Rating',
+        ratingValue: 5,
+        bestRating: 5,
+        worstRating: 1,
+      },
+      reviewBody: testimonial.quote,
+      author: {
+        '@type': 'Person',
+        name: testimonial.author,
+      },
+    })),
   ],
 };
 

@@ -10,9 +10,12 @@ const currentYear = new Date().getFullYear();
       <!-- Brand -->
       <div>
         <img
-          src="/images/logo.png"
+          src="/agphysicaltherapypc-astro/images/logo.png"
           alt={siteConfig.name}
           class="h-12 w-auto mb-4 brightness-0 invert"
+          width="120"
+          height="48"
+          loading="lazy"
           onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
         />
         <div class="hidden mb-4">
@@ -52,6 +55,14 @@ const currentYear = new Date().getFullYear();
           <p>{siteConfig.contact.address.street}</p>
           <p>{siteConfig.contact.address.city}, {siteConfig.contact.address.state} {siteConfig.contact.address.zip}</p>
           <p class="pt-2">
+            <a
+              href={`tel:${siteConfig.contact.phone.primary}`}
+              class="hover:text-white transition-colors font-medium"
+            >
+              {siteConfig.contact.phone.formatted}
+            </a>
+          </p>
+          <p>
             <a
               href={`mailto:${siteConfig.contact.email}`}
               class="hover:text-white transition-colors"

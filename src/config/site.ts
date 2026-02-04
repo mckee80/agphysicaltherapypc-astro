@@ -13,6 +13,10 @@ export const siteConfig = {
 
   // Contact
   contact: {
+    phone: {
+      primary: '760-874-3309',
+      formatted: '(760) 874-3309',
+    },
     email: 'ashlee@agphysicaltherapypc.com',
     address: {
       street: '16885 Via Del Campo Ct, Suite 110',
@@ -59,9 +63,11 @@ export const siteConfig = {
 
   // SEO defaults
   seo: {
-    titleTemplate: '%s | AG Physical Therapy San Diego',
+    titleTemplate: '%s | AG Physical Therapy Vista CA',
     defaultTitle:
-      'Ashlee Gendron Physical Therapy PC | Pelvic Floor & Women\'s Health Physical Therapy | Vista & San Diego, CA',
+      'Pelvic Floor Physical Therapy Vista CA | Dr. Ashlee Gendron PT',
+    defaultDescription:
+      'Expert pelvic floor physical therapy in Vista & North County San Diego. Dr. Ashlee Gendron specializes in postpartum rehab, incontinence, diastasis recti & pelvic pain. Book your free consultation today.',
     defaultImage: '/images/og-image.jpg',
     keywords: [
       'pelvic floor physical therapy',

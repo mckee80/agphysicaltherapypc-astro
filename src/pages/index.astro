@@ -5,13 +5,15 @@ import { siteConfig } from '@/config/site';
 
 <BaseLayout>
   <!-- Hero Section -->
-  <section class="relative min-h-screen flex items-center pt-32 pb-20 overflow-hidden" id="hero">
+  <section class="relative min-h-screen flex items-center pt-36 pb-20 overflow-hidden" id="hero">
     <div class="absolute inset-0 hero-gradient opacity-50 -z-10"></div>
     <div class="absolute inset-0 -z-10">
       <img
-        src="/images/hero-bg.jpg"
-        alt=""
+        src="/agphysicaltherapypc-astro/images/hero-pg.jpg"
+        alt="Pelvic floor physical therapy session"
         class="w-full h-full object-cover opacity-15"
+        width="1920"
+        height="1080"
         onerror="this.style.display='none'"
       />
     </div>
@@ -21,10 +23,10 @@ import { siteConfig } from '@/config/site';
           Women's Pelvic Health & Orthopedic Physical Therapy
         </p>
         <h1 class="text-5xl md:text-6xl lg:text-7xl leading-tight mb-8">
-          Reclaim Your Passions Without Leakage or Pain
+          Pelvic Floor Physical Therapy in Vista & North County San Diego
         </h1>
         <p class="text-lg md:text-xl text-brand-navy-light mb-10 max-w-xl">
-          Holistic pelvic wellness and orthopedic concierge service in North County San Diego. I evaluate your body as a whole to help you reach your personalized goals.
+          Reclaim your passions without leakage or pain. Holistic pelvic wellness and orthopedic concierge service. I evaluate your body as a whole to help you reach your personalized goals.
         </p>
         <div class="flex flex-wrap gap-4">
           <a href={siteConfig.bookingUrl} target="_blank" rel="noopener" class="btn btn-primary btn-lg">
@@ -68,9 +70,12 @@ import { siteConfig } from '@/config/site';
       <div class="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
         <div class="max-w-md mx-auto md:max-w-none">
           <img
-            src="/images/ashlee-gendron.jpg"
-            alt="Dr. Ashlee Gendron, PT, DPT, PCES"
+            src="/agphysicaltherapypc-astro/images/ashlee-gendron.jpg"
+            alt="Dr. Ashlee Gendron, PT, DPT, PCES - Pelvic Floor Physical Therapist in Vista CA"
             class="w-full rounded-2xl shadow-xl"
+            width="400"
+            height="500"
+            loading="lazy"
             onerror="this.parentElement.innerHTML='<div class=\"aspect-[4/5] bg-gradient-to-br from-brand-sage-light to-brand-rose-light rounded-2xl flex items-end justify-center p-8 text-white font-heading text-xl\" style=\"text-shadow: 0 2px 4px rgba(0,0,0,0.2)\">Dr. Ashlee Gendron, DPT</div>'"
           />
         </div>
