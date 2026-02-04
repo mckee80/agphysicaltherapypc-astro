@@ -18,23 +18,36 @@ import { siteConfig } from '@/config/site';
       />
     </div>
     <div class="container-max">
-      <div class="max-w-2xl">
-        <p class="text-sm uppercase tracking-widest text-brand-sage font-semibold mb-4">
-          Women's Pelvic Health & Orthopedic Physical Therapy
-        </p>
-        <h1 class="text-5xl md:text-6xl lg:text-7xl leading-tight mb-8">
-          Pelvic Floor Physical Therapy in Vista & North County San Diego
-        </h1>
-        <p class="text-lg md:text-xl text-brand-navy-light mb-10 max-w-xl">
-          Reclaim your passions without leakage or pain. Holistic pelvic wellness and orthopedic concierge service. I evaluate your body as a whole to help you reach your personalized goals.
-        </p>
-        <div class="flex flex-wrap gap-4">
-          <a href={siteConfig.bookingUrl} target="_blank" rel="noopener" class="btn btn-primary btn-lg">
-            Book Online
-          </a>
-          <a href="#about" class="btn btn-outline btn-lg">
-            Learn More
-          </a>
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <!-- Text Content -->
+        <div>
+          <p class="text-sm uppercase tracking-widest text-brand-sage font-semibold mb-4">
+            Women's Pelvic Health & Orthopedic Physical Therapy
+          </p>
+          <h1 class="text-4xl md:text-5xl lg:text-6xl leading-tight mb-6">
+            Pelvic Floor Physical Therapy in Vista & North County San Diego
+          </h1>
+          <p class="text-lg md:text-xl text-brand-navy-light mb-8 max-w-xl">
+            Reclaim your passions without leakage or pain. Holistic pelvic wellness and orthopedic concierge service. I evaluate your body as a whole to help you reach your personalized goals.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href={siteConfig.bookingUrl} target="_blank" rel="noopener" class="btn btn-primary btn-lg">
+              Book Online
+            </a>
+            <a href="#about" class="btn btn-outline btn-lg">
+              Learn More
+            </a>
+          </div>
+        </div>
+        <!-- Hero Image -->
+        <div class="hidden lg:block">
+          <img
+            src="/agphysicaltherapypc-astro/images/ashlee-gendron.jpg"
+            alt="Dr. Ashlee Gendron, PT, DPT, PCES - Pelvic Floor Physical Therapist"
+            class="w-full max-w-md mx-auto rounded-2xl shadow-2xl"
+            width="400"
+            height="500"
+          />
         </div>
       </div>
     </div>
