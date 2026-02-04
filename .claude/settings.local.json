@@ -4,7 +4,15 @@
       "Bash(dir:*)",
       "Bash(npm run build:*)",
       "Bash(git init:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nInitial commit: AG Physical Therapy Astro website\n\n- Astro 5.0 with Tailwind CSS, MDX, and Sitemap\n- SEO optimized with PhysicalTherapy schema markup\n- Responsive design with sage green/dusty rose palette\n- All content sections: Hero, About, Services, Testimonials, FAQ\n- Netlify deployment configuration\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(gh repo create:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nAdd GitHub Pages deployment workflow\n\n- Configure GitHub Actions for automatic deployment\n- Update Astro config with GitHub Pages base URL\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(gh repo edit:*)",
+      "Bash(gh api:*)",
+      "WebFetch(domain:mckee80.github.io)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nSEO improvements: title, phone, schema, images\n\n- Optimize title tag \\(55 chars\\) with location keywords\n- Add meta description with call-to-action\n- Add phone number \\(760-874-3309\\) to header top bar and footer\n- Improve H1 with \"Pelvic Floor Physical Therapy in Vista\"\n- Fix hero image path and add descriptive alt text\n- Add width/height attributes and lazy loading to images\n- Enhance schema with MedicalBusiness type and phone\n- Add Review schema for testimonials\n- Fix image paths for GitHub Pages base URL\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git commit:*)"
     ]
   }
 }
