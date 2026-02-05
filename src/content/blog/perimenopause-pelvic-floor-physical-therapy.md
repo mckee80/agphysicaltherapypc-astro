@@ -34,6 +34,8 @@ Maintaining pelvic floor health is crucial during perimenopause, as it can help 
 
 ## How Pelvic Floor Physical Therapy Can Help
 
+![Pelvic floor physical therapy session](/agphysicaltherapypc-astro/images/jan-20-c1.jpg)
+
 Pelvic floor physical therapy is a specialized form of therapy that focuses on the muscles of the pelvic region. It can be beneficial for women experiencing perimenopausal symptoms in several ways:
 
 ### 1. Strengthening Pelvic Floor Muscles
