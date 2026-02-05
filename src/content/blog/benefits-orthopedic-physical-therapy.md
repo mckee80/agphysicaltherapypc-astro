@@ -3,6 +3,7 @@ title: "Benefits of Orthopedic Physical Therapy Explained"
 description: "Discover the incredible benefits of orthopedic therapy including pain relief, improved mobility, and pelvic health support to help you reclaim your strength and confidence."
 pubDate: 2025-10-27
 author: "Ashlee Gendron"
+image: "/agphysicaltherapypc-astro/images/10-27-cover.jpg"
 tags: ["orthopedic therapy", "physical therapy", "pelvic health", "women's health"]
 ---
 
@@ -20,6 +21,8 @@ Think about it. How often do we push through discomfort, hoping it'll just go aw
 - **Better posture and balance** to prevent falls and injuries
 
 And the best part? You're not alone in this. A skilled therapist guides you every step of the way, making sure you feel empowered, not overwhelmed.
+
+![Orthopedic physical therapy session](/agphysicaltherapypc-astro/images/10-27-c1.jpg)
 
 ## What is an Orthopedic PT Specialty?
 
@@ -46,6 +49,8 @@ Pelvic health problems often involve weak or tight muscles, poor posture, and ne
 - **Teach breathing and relaxation techniques** to ease tension
 
 These benefits don't just improve symptoms—they restore your quality of life. Imagine feeling confident during activities you once avoided or simply enjoying a restful night's sleep without discomfort.
+
+![Pelvic health and wellness support](/agphysicaltherapypc-astro/images/10-27-c2.jpg)
 
 ## Practical Tips to Maximize Your Orthopedic Therapy Benefits
 
