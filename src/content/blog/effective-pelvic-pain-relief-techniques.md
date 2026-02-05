@@ -3,6 +3,7 @@ title: "Effective Pelvic Pain Relief Techniques: Your Guide to Feeling Better"
 description: "Practical, compassionate strategies for pelvic pain relief including pelvic floor exercises, heat therapy, yoga, and lifestyle changes to help you reclaim your comfort and confidence."
 pubDate: 2025-12-30
 author: "Ashlee Gendron"
+image: "/agphysicaltherapypc-astro/images/dec-30-cover.jpg"
 tags: ["pelvic pain", "pain relief", "pelvic floor", "women's health"]
 ---
 
@@ -23,6 +24,8 @@ Knowing this helps you approach relief with a clear mind. You're not just treati
 - **Lifestyle adjustments:** Posture, diet, and activity levels all play a role.
 
 Each of these techniques can be customized to fit your lifestyle and pain level. The key is consistency and listening to your body.
+
+![Heat therapy for pelvic pain relief](/agphysicaltherapypc-astro/images/dec-30-c1.jpg)
 
 ## Practical Pelvic Pain Relief Techniques You Can Try Today
 
@@ -71,6 +74,8 @@ Poor posture can strain your pelvic muscles. When sitting, keep your feet flat, 
 Sometimes, self-care isn't enough. If your pelvic pain is severe, persistent, or worsening, it's important to reach out to a healthcare provider. A physical therapist specializing in pelvic health can offer personalized treatment plans that include manual therapy, biofeedback, and tailored exercises.
 
 I can't stress enough how much professional guidance can change your journey. It's not just about managing pain; it's about reclaiming your life.
+
+![Physical therapist guiding pelvic floor exercises](/agphysicaltherapypc-astro/images/dec-30-c2.jpg)
 
 ## Lifestyle Changes That Support Pelvic Health
 
