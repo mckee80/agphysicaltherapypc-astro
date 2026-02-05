@@ -3,6 +3,7 @@ title: "Advantages of Comprehensive Orthopedic Therapy: Your Guide to Comprehens
 description: "Discover how comprehensive orthopedic therapy offers a full-circle approach to rehabilitation, addressing body mechanics, lifestyle, and goals for long-term health."
 pubDate: 2025-12-04
 author: "Ashlee Gendron"
+image: "/agphysicaltherapypc-astro/images/dec-4-cover.jpg"
 tags: ["orthopedic therapy", "rehabilitation", "physical therapy", "women's health"]
 ---
 
