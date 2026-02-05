@@ -45,6 +45,8 @@ Heat is a simple, soothing way to reduce pelvic pain. A warm heating pad or hot 
 
 Just be sure not to use heat for too long at once - 15 to 20 minutes is usually enough. And if you have any swelling or infection, avoid heat and opt for cold packs instead.
 
+![Heating pad for pelvic pain relief](/agphysicaltherapypc-astro/images/dec-10-c2.jpg)
+
 ### 4. Mind-Body Techniques
 
 Pain isn't just physical. It's emotional and mental too. Techniques like deep breathing, meditation, and guided imagery can help you manage pain by reducing stress and changing how your brain perceives discomfort.
