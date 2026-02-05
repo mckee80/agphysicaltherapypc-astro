@@ -174,6 +174,13 @@ export const siteConfig = {
     'North County San Diego',
   ],
 
+  // Google Reviews
+  googleReviews: {
+    rating: 5.0,
+    reviewCount: 14,
+    url: 'https://www.google.com/search?q=Ashlee+Gendron+Physical+Therapy+Vista+CA+reviews',
+  },
+
   // Testimonials
   testimonials: [
     {
