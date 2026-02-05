@@ -92,18 +92,18 @@ export const siteConfig = {
   // Navigation structure
   navigation: {
     main: [
-      { name: 'My Practice', href: '#about' },
-      { name: 'Services', href: '#services' },
+      { name: 'My Practice', href: '/agphysicaltherapypc-astro/#about' },
+      { name: 'Services', href: '/agphysicaltherapypc-astro/#services' },
       { name: 'Blog', href: '/agphysicaltherapypc-astro/blog/' },
-      { name: 'Contact', href: '#locations' },
+      { name: 'Contact', href: '/agphysicaltherapypc-astro/#locations' },
     ],
     footer: {
       quickLinks: [
-        { name: 'My Practice', href: '#about' },
-        { name: 'Services', href: '#services' },
+        { name: 'My Practice', href: '/agphysicaltherapypc-astro/#about' },
+        { name: 'Services', href: '/agphysicaltherapypc-astro/#services' },
         { name: 'Blog', href: '/agphysicaltherapypc-astro/blog/' },
-        { name: 'Patient Resources', href: '#patient-resources' },
-        { name: 'Contact', href: '#locations' },
+        { name: 'Patient Resources', href: '/agphysicaltherapypc-astro/#patient-resources' },
+        { name: 'Contact', href: '/agphysicaltherapypc-astro/#locations' },
         { name: 'Book Online', href: 'https://agphysicaltherapypc.janeapp.com/' },
       ],
     },
