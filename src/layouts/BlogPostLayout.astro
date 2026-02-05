@@ -70,11 +70,19 @@ const articleSchema = {
             ))}
           </div>
           <h1 class="text-3xl md:text-4xl lg:text-5xl mb-4">{frontmatter.title}</h1>
-          <div class="flex items-center gap-4 text-brand-navy-light">
+          <div class="flex items-center gap-4 text-brand-navy-light mb-6">
             <span>{frontmatter.author || siteConfig.provider.name}</span>
             <span>|</span>
             <time datetime={frontmatter.pubDate.toISOString()}>{formattedDate}</time>
           </div>
+          {frontmatter.image && (
+            <img
+              src={frontmatter.image}
+              alt={frontmatter.title}
+              class="w-full h-64 md:h-80 object-cover rounded-2xl"
+              loading="eager"
+            />
+          )}
         </header>
 
         <!-- Article content -->
