@@ -3,7 +3,7 @@ title: "Perimenopause and the Importance of Pelvic Floor Physical Therapy"
 description: "Understanding the connection between perimenopause and pelvic floor health, and how physical therapy can help manage symptoms during this transitional phase."
 pubDate: 2025-01-20
 author: "Ashlee Gendron"
-image: "/agphysicaltherapypc-astro/images/jan-20-cover.jpg"
+image: "/agphysicaltherapypc-astro/images/jan-20-coverr.jpg"
 tags: ["perimenopause", "pelvic floor", "women's health", "menopause"]
 ---
 
