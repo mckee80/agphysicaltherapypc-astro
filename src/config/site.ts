@@ -179,12 +179,12 @@ export const siteConfig = {
     {
       quote:
         "I was 8.5 months pregnant and struggling with a lower back injury when I started working with Ashlee. Her warmth, professionalism, and expertise were evident from our first meeting. She not only helped me heal my injury, but also took the time to educate me on how to strengthen my pelvic floor in preparation for child birth. As a first time mother-to-be, Ashlee shared so much information about childbirth, postpartum healing, and even parenting tips. What sets Ashlee apart is the level of care and attention she gives to her patients.",
-      author: 'Patient Review',
+      author: 'Torrie, Oceanside',
     },
     {
       quote:
         "Ashlee is a life saver! About a year after my son was born I started experiencing unexplained pain near my c-section scar. Doctors couldn't give me answers. A trusted friend recommended Ashlee and I am so glad she did! Ashlee is professional, knowledgeable, and SO kind. She listened to my concerns, did her own research, and checked in between sessions. I am so grateful and will recommend her to all my postpartum friends and family!",
-      author: 'Patient Review',
+      author: 'Emily, Fallbrook',
     },
   ],
 
