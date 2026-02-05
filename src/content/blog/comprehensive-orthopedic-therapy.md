@@ -37,6 +37,8 @@ Here's what you can expect from a comprehensive orthopedic therapy experience:
 
 One of the best parts? You learn how to listen to your body and take control of your healing process. It's empowering to know you're actively working toward a stronger, healthier you.
 
+![Woman doing stretching exercises during orthopedic therapy](/agphysicaltherapypc-astro/images/dec-4-c1.avif)
+
 ## What to Expect from a Comprehensive Orthopedic Therapy Program
 
 If you're considering therapy, it helps to know what the journey looks like. A comprehensive orthopedic therapy program usually starts with a detailed assessment. This helps your therapist understand your pain, movement patterns, and lifestyle.
@@ -62,6 +64,8 @@ Whether you're recovering from surgery, managing chronic pain, or addressing pel
 - A focus on restoring function so you can return to the activities you love
 
 I've seen firsthand how this approach changes lives. It's not just about healing an injury; it's about restoring your confidence and independence.
+
+![Orthopedic therapy tools and exercise bands used in rehabilitation](/agphysicaltherapypc-astro/images/dec-4-c2.jpg)
 
 ## Taking the First Step Toward a Stronger You
 
