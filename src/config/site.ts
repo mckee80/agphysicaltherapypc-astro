@@ -26,10 +26,21 @@ export const siteConfig = {
       full: '16885 Via Del Campo Ct, Suite 110, San Diego, CA 92127',
     },
     hours: {
+      // General availability
       days: 'Tuesday - Friday',
-      time: '9:00 AM - 1:00 PM',
-      full: 'Tue-Fri: 9am - 1pm',
-      clinicDays: 'Wednesdays & Fridays at San Diego County Midwives HQ',
+      time: 'By Appointment',
+      full: 'Tue-Fri by appointment',
+      // In-clinic specific
+      clinic: {
+        days: 'Wednesdays & Fridays',
+        time: '9:00 AM - 1:00 PM',
+        location: 'San Diego County Midwives HQ',
+      },
+      // Home visits
+      homeVisits: {
+        days: 'Tuesday - Friday',
+        time: 'Flexible scheduling',
+      },
     },
     geo: {
       lat: 33.0247,
@@ -57,6 +68,7 @@ export const siteConfig = {
 
   // Social
   social: {
+    instagram: 'https://www.instagram.com/agpelvopt',
     yelp: 'https://www.yelp.com/biz/ashlee-gendron-physical-therapy-san-diego',
     booking: 'https://agphysicaltherapypc.janeapp.com/',
   },
@@ -94,16 +106,15 @@ export const siteConfig = {
     main: [
       { name: 'My Practice', href: '/agphysicaltherapypc-astro/#about' },
       { name: 'Services', href: '/agphysicaltherapypc-astro/#services' },
+      { name: 'Areas Served', href: '/agphysicaltherapypc-astro/areas-served/' },
       { name: 'Blog', href: '/agphysicaltherapypc-astro/blog/' },
-      { name: 'Contact', href: '/agphysicaltherapypc-astro/#locations' },
     ],
     footer: {
       quickLinks: [
         { name: 'My Practice', href: '/agphysicaltherapypc-astro/#about' },
         { name: 'Services', href: '/agphysicaltherapypc-astro/#services' },
+        { name: 'Areas Served', href: '/agphysicaltherapypc-astro/areas-served/' },
         { name: 'Blog', href: '/agphysicaltherapypc-astro/blog/' },
-        { name: 'Patient Resources', href: '/agphysicaltherapypc-astro/#patient-resources' },
-        { name: 'Contact', href: '/agphysicaltherapypc-astro/#locations' },
         { name: 'Book Online', href: 'https://agphysicaltherapypc.janeapp.com/' },
       ],
     },
@@ -220,7 +231,7 @@ export const siteConfig = {
     {
       question: 'What are your hours?',
       answer:
-        'I see patients Tuesday through Friday, 9am to 1pm. Please contact me to schedule your appointment at a time that works best for you.',
+        'In-clinic appointments at San Diego County Midwives HQ are available Wednesdays and Fridays, 9am to 1pm. For concierge home visits and virtual consultations, I have flexible scheduling Tuesday through Friday. Please contact me to find a time that works best for you.',
     },
     {
       question: 'What should I expect during pelvic floor therapy?',

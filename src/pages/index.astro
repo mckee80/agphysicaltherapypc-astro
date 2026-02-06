@@ -311,7 +311,8 @@ import { siteConfig } from '@/config/site';
           </div>
           <div>
             <strong class="block text-xs uppercase tracking-wider text-brand-navy-light mb-1">Hours</strong>
-            <span>{siteConfig.contact.hours.days}: {siteConfig.contact.hours.time}</span>
+            <span class="block">Clinic: {siteConfig.contact.hours.clinic.days}, {siteConfig.contact.hours.clinic.time}</span>
+            <span class="block text-sm text-brand-navy-light">Home visits: {siteConfig.contact.hours.homeVisits.days} (flexible)</span>
           </div>
           <div>
             <strong class="block text-xs uppercase tracking-wider text-brand-navy-light mb-1">Book Online</strong>

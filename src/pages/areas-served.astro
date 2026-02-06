@@ -1,0 +1,296 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { siteConfig } from '@/config/site';
+
+const serviceAreas = siteConfig.serviceAreas;
+
+const pageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  '@id': `${siteConfig.url}/#organization`,
+  name: siteConfig.name,
+  description: siteConfig.description,
+  url: siteConfig.url,
+  telephone: `+1-${siteConfig.contact.phone.primary}`,
+  email: siteConfig.contact.email,
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: siteConfig.contact.address.street,
+    addressLocality: 'San Diego',
+    addressRegion: 'CA',
+    postalCode: siteConfig.contact.address.zip,
+    addressCountry: 'US',
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: siteConfig.contact.geo.lat,
+    longitude: siteConfig.contact.geo.lng,
+  },
+  areaServed: serviceAreas.map((city) => ({
+    '@type': city === 'North County San Diego' ? 'AdministrativeArea' : 'City',
+    name: city,
+    ...(city !== 'North County San Diego' && {
+      containedInPlace: {
+        '@type': 'State',
+        name: 'California',
+      },
+    }),
+  })),
+  openingHoursSpecification: [
+    {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Wednesday', 'Friday'],
+      opens: '09:00',
+      closes: '13:00',
+      description: 'In-clinic appointments at San Diego County Midwives HQ',
+    },
+  ],
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Service Options',
+    itemListElement: [
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'In-Clinic Appointments',
+          description: 'Physical therapy at San Diego County Midwives HQ in Rancho Bernardo',
+          areaServed: {
+            '@type': 'Place',
+            address: {
+              '@type': 'PostalAddress',
+              streetAddress: siteConfig.contact.address.street,
+              addressLocality: 'San Diego',
+              addressRegion: 'CA',
+              postalCode: '92127',
+            },
+          },
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Concierge Home Visits',
+          description: 'In-home physical therapy throughout San Diego and North County',
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Virtual Consultations',
+          description: 'Video examinations for clients who are not local',
+        },
+      },
+    ],
+  },
+};
+---
+
+<BaseLayout
+  title="Areas Served | Pelvic Floor PT in Vista, Carlsbad & North County San Diego"
+  description="Dr. Ashlee Gendron provides pelvic floor physical therapy throughout North County San Diego. In-clinic appointments in Rancho Bernardo, concierge home visits, and virtual consultations available."
+  jsonLd={pageSchema}
+>
+  <!-- Hero Section -->
+  <section class="pt-36 pb-16 bg-gradient-to-br from-brand-sage/10 to-transparent">
+    <div class="container-max">
+      <div class="max-w-3xl">
+        <span class="section-label">How I Work</span>
+        <h1 class="text-4xl md:text-5xl mb-6">Personalized Care, Your Way</h1>
+        <p class="text-lg text-brand-navy-light mb-6">
+          As a boutique pelvic health practice, I offer flexible options to fit your lifestyle. Whether you prefer in-clinic visits, the comfort of your own home, or virtual consultations, I bring the same dedicated, one-on-one care to every session.
+        </p>
+        <a href={siteConfig.bookingUrl} target="_blank" rel="noopener" class="btn btn-primary btn-lg">
+          Book Your Appointment
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Options -->
+  <section class="section-padding">
+    <div class="container-max">
+      <div class="grid lg:grid-cols-3 gap-8">
+        <!-- In-Clinic -->
+        <div class="bg-white rounded-2xl p-8 shadow-sm border border-brand-sage/20">
+          <div class="w-12 h-12 bg-brand-sage/10 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-brand-sage" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+            </svg>
+          </div>
+          <h2 class="text-xl font-heading font-semibold text-brand-navy mb-2">In-Clinic Appointments</h2>
+          <p class="text-brand-sage-dark font-medium mb-4">San Diego County Midwives HQ</p>
+          <address class="text-brand-navy-light not-italic mb-4">
+            16885 Via Del Campo Ct<br />
+            Suite 110<br />
+            San Diego, CA 92127<br />
+            <span class="text-sm">(Rancho Bernardo area)</span>
+          </address>
+          <div class="border-t border-gray-100 pt-4 mt-4">
+            <p class="text-sm font-medium text-brand-navy mb-1">Clinic Hours</p>
+            <p class="text-brand-navy-light">Wednesdays & Fridays</p>
+            <p class="text-brand-navy-light">9:00 AM - 1:00 PM</p>
+          </div>
+          <a
+            href="https://maps.google.com/?q=16885+Via+Del+Campo+Ct+Suite+110+San+Diego+CA+92127"
+            target="_blank"
+            rel="noopener"
+            class="inline-flex items-center gap-2 text-brand-sage hover:text-brand-sage-dark transition-colors mt-4 text-sm font-medium"
+          >
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+            Get Directions
+          </a>
+        </div>
+
+        <!-- Home Visits -->
+        <div class="bg-white rounded-2xl p-8 shadow-sm border border-brand-sage/20 relative overflow-hidden">
+          <div class="absolute top-4 right-4 bg-brand-sage text-white text-xs font-medium px-3 py-1 rounded-full">
+            Most Popular
+          </div>
+          <div class="w-12 h-12 bg-brand-sage/10 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-brand-sage" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+            </svg>
+          </div>
+          <h2 class="text-xl font-heading font-semibold text-brand-navy mb-2">Concierge Home Visits</h2>
+          <p class="text-brand-sage-dark font-medium mb-4">I Come to You</p>
+          <p class="text-brand-navy-light mb-4">
+            Receive personalized physical therapy in the comfort and privacy of your own home. Ideal for postpartum moms, those with mobility challenges, or anyone who prefers the convenience of home-based care.
+          </p>
+          <div class="border-t border-gray-100 pt-4 mt-4">
+            <p class="text-sm font-medium text-brand-navy mb-1">Home Visit Hours</p>
+            <p class="text-brand-navy-light">Tuesday - Friday</p>
+            <p class="text-brand-navy-light">Flexible scheduling available</p>
+          </div>
+        </div>
+
+        <!-- Virtual -->
+        <div class="bg-white rounded-2xl p-8 shadow-sm border border-brand-sage/20">
+          <div class="w-12 h-12 bg-brand-sage/10 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-brand-sage" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+            </svg>
+          </div>
+          <h2 class="text-xl font-heading font-semibold text-brand-navy mb-2">Virtual Consultations</h2>
+          <p class="text-brand-sage-dark font-medium mb-4">Video Examinations</p>
+          <p class="text-brand-navy-light mb-4">
+            For clients who are not local, video examinations provide expert guidance and personalized exercise programs from anywhere. Great for initial consultations or follow-up care.
+          </p>
+          <div class="border-t border-gray-100 pt-4 mt-4">
+            <p class="text-sm font-medium text-brand-navy mb-1">Virtual Hours</p>
+            <p class="text-brand-navy-light">Tuesday - Friday</p>
+            <p class="text-brand-navy-light">Flexible scheduling available</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Areas -->
+  <section class="section-padding bg-surface-alt">
+    <div class="container-max">
+      <div class="text-center mb-12 max-w-2xl mx-auto">
+        <span class="section-label">Service Areas</span>
+        <h2 class="section-title">Home Visits Throughout North County San Diego</h2>
+        <p class="text-brand-navy-light">
+          I provide concierge physical therapy services to patients in the following areas. If you don't see your city listed, please contact me to discuss options.
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-4xl mx-auto">
+        {serviceAreas.map((area) => (
+          <div class="bg-white rounded-lg px-4 py-3 text-center shadow-sm">
+            <span class="text-brand-navy font-medium">{area}</span>
+          </div>
+        ))}
+      </div>
+
+      <!-- Map Embed -->
+      <div class="mt-12 rounded-2xl overflow-hidden shadow-lg">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d107065.67771893407!2d-117.18!3d33.05!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dc0d5c57c5e7c5%3A0x5f5b2d7c8d9a8e6a!2s16885%20Via%20Del%20Campo%20Ct%20%23110%2C%20San%20Diego%2C%20CA%2092127!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
+          width="100%"
+          height="400"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="AG Physical Therapy service area map"
+        ></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Concierge -->
+  <section class="section-padding">
+    <div class="container-max">
+      <div class="max-w-3xl mx-auto text-center mb-12">
+        <span class="section-label">The Concierge Difference</span>
+        <h2 class="section-title">Why Home Visits Work</h2>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="text-center">
+          <div class="w-16 h-16 bg-brand-sage/10 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-brand-sage" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3 class="font-heading font-semibold text-brand-navy mb-2">No Commute</h3>
+          <p class="text-brand-navy-light text-sm">Skip the traffic and parking. I come to you, saving your valuable time.</p>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 bg-brand-sage/10 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-brand-sage" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+            </svg>
+          </div>
+          <h3 class="font-heading font-semibold text-brand-navy mb-2">Comfort & Privacy</h3>
+          <p class="text-brand-navy-light text-sm">Receive care in a familiar, private environment where you feel most at ease.</p>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 bg-brand-sage/10 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-brand-sage" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+          </div>
+          <h3 class="font-heading font-semibold text-brand-navy mb-2">Family-Friendly</h3>
+          <p class="text-brand-navy-light text-sm">Perfect for new moms who can't easily leave home with a newborn.</p>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 bg-brand-sage/10 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-brand-sage" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+            </svg>
+          </div>
+          <h3 class="font-heading font-semibold text-brand-navy mb-2">Real-World Assessment</h3>
+          <p class="text-brand-navy-light text-sm">I can see your actual environment and tailor exercises to your space.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 bg-gradient-to-br from-brand-sage to-brand-sage-dark">
+    <div class="container-max">
+      <div class="max-w-2xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl text-white mb-4">Ready to Get Started?</h2>
+        <p class="text-white/85 text-lg mb-8">
+          Schedule a free 15-minute phone consultation to discuss which option is best for you.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href={siteConfig.bookingUrl} target="_blank" rel="noopener" class="btn btn-primary bg-white text-brand-sage hover:bg-gray-100 border-white btn-lg">
+            Book Online
+          </a>
+          <a href={`tel:${siteConfig.contact.phone.primary}`} class="btn btn-outline border-white text-white hover:bg-white/10 btn-lg">
+            Call {siteConfig.contact.phone.formatted}
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
