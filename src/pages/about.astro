@@ -1,0 +1,178 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { siteConfig } from '@/config/site';
+
+const pageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfilePage',
+  mainEntity: {
+    '@type': 'Person',
+    name: 'Ashlee Gendron',
+    jobTitle: 'Doctor of Physical Therapy',
+    description: 'Pelvic health and orthopedic physical therapist with 14+ years of experience serving North County San Diego.',
+    url: `${siteConfig.url}/about/`,
+    image: `${siteConfig.url}/images/ashlee-gendron.jpg`,
+    worksFor: {
+      '@type': 'MedicalBusiness',
+      name: siteConfig.name,
+      url: siteConfig.url,
+    },
+    hasCredential: [
+      { '@type': 'EducationalOccupationalCredential', credentialCategory: 'DPT', name: 'Doctor of Physical Therapy' },
+      { '@type': 'EducationalOccupationalCredential', credentialCategory: 'PCES', name: 'Postpartum Corrective Exercise Specialist' },
+    ],
+    alumniOf: {
+      '@type': 'CollegeOrUniversity',
+      name: 'Western University of Health Sciences',
+    },
+    knowsAbout: ['Pelvic Floor Physical Therapy', 'Postpartum Recovery', 'Orthopedic Physical Therapy', 'Women\'s Health'],
+  },
+};
+---
+
+<BaseLayout
+  title="About Dr. Ashlee Gendron, DPT | Pelvic Health Physical Therapist"
+  description="Meet Dr. Ashlee Gendron, DPT, PCES — a pelvic health and orthopedic physical therapist with 14+ years of experience. Learn her story and why she's passionate about helping women reclaim their strength."
+  jsonLd={pageSchema}
+>
+  <!-- Hero Section -->
+  <section class="pt-36 pb-16 bg-gradient-to-br from-brand-sage/10 to-transparent">
+    <div class="container-max">
+      <div class="max-w-3xl">
+        <span class="section-label">About</span>
+        <h1 class="text-4xl md:text-5xl mb-6">All About Ashlee Gendron, DPT</h1>
+        <p class="text-lg text-brand-navy-light">
+          Doctor of Physical Therapy. Pelvic Health Specialist. Mom who gets it.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Story Section -->
+  <section class="section-padding">
+    <div class="container-max">
+      <div class="grid lg:grid-cols-5 gap-12 items-start">
+        <!-- Photo Column -->
+        <div class="lg:col-span-2">
+          <img
+            src="/agphysicaltherapypc-astro/images/ashlee-gendron.jpg"
+            alt="Dr. Ashlee Gendron, PT, DPT, PCES - Pelvic Floor Physical Therapist in Vista CA"
+            class="w-full rounded-2xl shadow-xl mb-6"
+            width="500"
+            height="625"
+            loading="lazy"
+          />
+          <div class="bg-surface-alt rounded-xl p-6">
+            <h3 class="font-heading text-lg font-semibold text-brand-navy mb-4">Credentials</h3>
+            <div class="space-y-3">
+              <div>
+                <strong class="text-brand-navy">PT, DPT</strong>
+                <p class="text-sm text-brand-navy-light">Doctor of Physical Therapy</p>
+              </div>
+              <div>
+                <strong class="text-brand-navy">PCES</strong>
+                <p class="text-sm text-brand-navy-light">Postpartum Corrective Exercise Specialist</p>
+              </div>
+              <div>
+                <strong class="text-brand-navy">Western University of Health Sciences</strong>
+                <p class="text-sm text-brand-navy-light">Doctorate in Physical Therapy, 2011</p>
+              </div>
+              <div>
+                <strong class="text-brand-navy">14+ Years</strong>
+                <p class="text-sm text-brand-navy-light">Clinical experience</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Story Column -->
+        <div class="lg:col-span-3">
+          <h2 class="text-2xl md:text-3xl font-heading font-semibold text-brand-navy mb-6">My Story</h2>
+
+          <p class="text-brand-navy-light mb-6">
+            I graduated from Western University of Health Sciences with a Doctorate in Physical Therapy in 2011.
+          </p>
+
+          <p class="text-brand-navy-light mb-6">
+            I began my career in outpatient Orthopedics, where I worked with a huge variety of patients. After I had my first child in 2015, I had the most difficult time accepting my new body. My biggest issue was urinary incontinence. I couldn't make any hard impact movements — running, jumping, squatting, sneezing, coughing — without leaking heavily! My OB-GYN told me to "just do kegels" and it was "normal" after childbirth. So, I continued on with life with no improvements with a side of postpartum depression. I couldn't even chase my 15-month-old when he darted out into the street.
+          </p>
+
+          <p class="text-brand-navy-light mb-6">
+            I had my second child in 2017 and was worse than where I had started. At this time, pelvic health Physical Therapy was becoming more recognized, but I still didn't know how to locate anyone locally that could examine me and help me start to rehabilitate. I had taken my first pelvic health course back in 2013. This was before children, so I didn't realize the importance and the struggles that women go through after childbirth.
+          </p>
+
+          <div class="philosophy-box mb-8">
+            <h3>My Mission</h3>
+            <p>The lack of resources for women postpartum and entering perimenopause fueled my desire to advocate and provide <strong>hope, compassion, and accessible care</strong>.</p>
+          </div>
+
+          <p class="text-brand-navy-light mb-8">
+            I continued my pelvic health specialty and dove head first into courses, podcasts, journal articles, and books to provide the best evidence-based care to my clients.
+          </p>
+
+          <!-- Why We're Different -->
+          <h2 class="text-2xl md:text-3xl font-heading font-semibold text-brand-navy mb-6">Why Are We Different?</h2>
+
+          <p class="text-brand-navy-light mb-6">
+            We combine Women's Health and Orthopedics, and look at the body as a whole. We are Postpartum Corrective Exercise Specialists, and can offer a very personalized home exercise program to facilitate your healing process. Internal and external pelvic floor work can be performed in order to address each patient's individual needs. So, you are getting the best of both worlds. Everything needs to be working in harmony.
+          </p>
+
+          <p class="text-brand-navy-light mb-8">
+            Being an out-of-network provider also allows my services not to be dictated by insurance. Which means longer treatment sessions, one-on-one care with a Doctor of Physical Therapy, and better quality of care.
+          </p>
+
+          <!-- Highlights -->
+          <div class="grid sm:grid-cols-3 gap-6">
+            <div class="text-center p-6 bg-surface-alt rounded-xl">
+              <div class="w-12 h-12 bg-brand-sage/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                <svg class="w-6 h-6 text-brand-sage" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+              </div>
+              <strong class="text-brand-navy block mb-1">Longer Sessions</strong>
+              <p class="text-sm text-brand-navy-light">90-min initial eval, 60-min follow-ups</p>
+            </div>
+            <div class="text-center p-6 bg-surface-alt rounded-xl">
+              <div class="w-12 h-12 bg-brand-sage/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                <svg class="w-6 h-6 text-brand-sage" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+                </svg>
+              </div>
+              <strong class="text-brand-navy block mb-1">One-on-One Care</strong>
+              <p class="text-sm text-brand-navy-light">Dedicated attention every visit</p>
+            </div>
+            <div class="text-center p-6 bg-surface-alt rounded-xl">
+              <div class="w-12 h-12 bg-brand-sage/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                <svg class="w-6 h-6 text-brand-sage" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                </svg>
+              </div>
+              <strong class="text-brand-navy block mb-1">Whole-Body Approach</strong>
+              <p class="text-sm text-brand-navy-light">Pelvic health + orthopedics combined</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 bg-gradient-to-br from-brand-sage to-brand-sage-dark">
+    <div class="container-max">
+      <div class="max-w-2xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl text-white mb-4">Ready to Get Started?</h2>
+        <p class="text-white/85 text-lg mb-8">
+          Schedule a free 15-minute phone consultation to discuss your goals and see if we're a good fit.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href={siteConfig.bookingUrl} target="_blank" rel="noopener" class="btn btn-primary bg-white text-brand-sage hover:bg-gray-100 border-white btn-lg">
+            Book Online
+          </a>
+          <a href={`tel:${siteConfig.contact.phone.primary}`} class="btn btn-outline border-white text-white hover:bg-white/10 btn-lg">
+            Call {siteConfig.contact.phone.formatted}
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

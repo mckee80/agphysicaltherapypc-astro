@@ -105,14 +105,14 @@ export const siteConfig = {
   // Navigation structure
   navigation: {
     main: [
-      { name: 'My Practice', href: '/agphysicaltherapypc-astro/#about' },
+      { name: 'About', href: '/agphysicaltherapypc-astro/about/' },
       { name: 'Services', href: '/agphysicaltherapypc-astro/#services' },
       { name: 'Areas Served', href: '/agphysicaltherapypc-astro/areas-served/' },
       { name: 'Blog', href: '/agphysicaltherapypc-astro/blog/' },
     ],
     footer: {
       quickLinks: [
-        { name: 'My Practice', href: '/agphysicaltherapypc-astro/#about' },
+        { name: 'About', href: '/agphysicaltherapypc-astro/about/' },
         { name: 'Services', href: '/agphysicaltherapypc-astro/#services' },
         { name: 'Areas Served', href: '/agphysicaltherapypc-astro/areas-served/' },
         { name: 'Blog', href: '/agphysicaltherapypc-astro/blog/' },
