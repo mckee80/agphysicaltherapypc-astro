@@ -68,6 +68,7 @@ export const siteConfig = {
 
   // Social
   social: {
+    facebook: 'https://www.facebook.com/agpelvopt',
     instagram: 'https://www.instagram.com/agpelvopt',
     yelp: 'https://www.yelp.com/biz/ashlee-gendron-physical-therapy-san-diego',
     booking: 'https://agphysicaltherapypc.janeapp.com/',
