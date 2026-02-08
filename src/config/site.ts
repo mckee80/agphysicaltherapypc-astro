@@ -136,28 +136,40 @@ export const siteConfig = {
   // Services
   services: [
     {
-      name: 'Pelvic Floor Physical Therapy',
+      name: 'Urinary Incontinence & Pelvic Organ Prolapse',
       description:
-        'Internal and external pelvic floor work performed to address each patient\'s individual needs. Treatment for incontinence, pelvic pain, prolapse, and dysfunction.',
+        'Leaking urine when exercising, coughing, or sneezing. Increased urinary or fecal urgency, frequency, and pelvic pressure. We treat the root cause, not just the symptoms.',
       icon: 'pelvic',
     },
     {
-      name: 'Postpartum Recovery',
+      name: 'Pelvic Pain',
       description:
-        'As a Postpartum Corrective Exercise Specialist, I offer personalized home exercise programs to help you return to the activities you love with confidence.',
+        'Treatment for PCOS, endometriosis, painful bladder syndrome (IC), painful intercourse, painful menstruation, lower back and hip pain, constipation, and post-surgical rehabilitation.',
       icon: 'heart',
     },
     {
-      name: "Women's Health",
+      name: 'Diastasis Recti & Postpartum Recovery',
       description:
-        "Comprehensive women's health physical therapy addressing unique needs throughout all stages of life, from pregnancy preparation to menopause and beyond.",
+        'Diastasis recti (abdominal separation) and postpartum rehab: progressive core, back, and hip strengthening, C-section scar mobilization, and return to running program.',
       icon: 'women',
+    },
+    {
+      name: 'Pregnancy & Birth Preparation',
+      description:
+        'Exercises for optimal birth, breathing and pushing strategies, birthing positions, pelvic and back pain relief, pubic symphysis and round ligament pain, and pelvic floor assessment.',
+      icon: 'orthopedic',
     },
     {
       name: 'Orthopedic Physical Therapy',
       description:
         'Holistic orthopedic assessment and treatment that evaluates your body as a whole, addressing musculoskeletal issues with an understanding of their connection to pelvic health.',
       icon: 'orthopedic',
+    },
+    {
+      name: "Women's Health",
+      description:
+        "Comprehensive women's health physical therapy addressing unique needs throughout all stages of life, from pregnancy preparation to menopause and beyond.",
+      icon: 'women',
     },
     {
       name: 'Virtual Consultations',
