@@ -233,13 +233,6 @@ import { siteConfig } from '@/config/site';
         </div>
       </div>
 
-      <!-- Treatment Details -->
-      <div class="mt-12 max-w-3xl mx-auto">
-        <div class="philosophy-box">
-          <h3>What Treatment Looks Like</h3>
-          <p>Treatments consist of a full body postural exam, manual therapy (cupping, skin rolling, myofascial release, joint mobilizations, tender point release of the pelvic floor and surrounding structures as needed), internal pelvic and/or rectal exam, a personalized strengthening program, diastasis evaluation, and any necessary referrals to additional practitioners.</p>
-        </div>
-      </div>
     </div>
   </section>
 
@@ -361,6 +354,13 @@ import { siteConfig } from '@/config/site';
           <details class="faq-item">
             <summary>{item.question}</summary>
             <p>{item.answer}</p>
+            {item.link && (
+              <p class="mt-2">
+                <a href={item.link.url} target="_blank" rel="noopener" class="btn btn-primary btn-sm">
+                  {item.link.text}
+                </a>
+              </p>
+            )}
           </details>
         ))}
       </div>

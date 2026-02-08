@@ -222,9 +222,20 @@ export const siteConfig = {
   // FAQ items
   faq: [
     {
-      question: 'Do I need a referral from a doctor?',
+      question: 'What types of health insurance do you accept?',
       answer:
-        'No, you do not need a referral from a doctor. In California, I can treat for 12 sessions or 45 days, whichever occurs first, without a physician referral. However, if you have insurance requirements that mandate a referral, please check with your provider.',
+        'Currently, we are an out-of-network provider. I do offer superbills for PPO insurance carriers in order to get possible reimbursement for the services provided. The patient must submit this at their own discretion. Unfortunately, I am unable to accept Medicare as an out-of-network provider.',
+    },
+    {
+      question: 'What is your new patient procedure?',
+      answer:
+        'If you are interested in our services, you can book a 15-minute discovery call through our online scheduling. This gives us a chance to discuss how I can meet your needs and goals before committing to an appointment.',
+      link: { text: 'Book a Discovery Call', url: 'https://agphysicaltherapypc.janeapp.com/' },
+    },
+    {
+      question: 'Do I need a doctor\'s referral?',
+      answer:
+        'You do not need a referral from a doctor. However, in the state of California we are able to treat you for 12 sessions. If you wish to be treated beyond this timeline, then a written referral from your MD is required.',
     },
     {
       question: 'How long is an initial evaluation?',
@@ -249,7 +260,7 @@ export const siteConfig = {
     {
       question: 'What should I expect during pelvic floor therapy?',
       answer:
-        "During pelvic floor therapy, I may perform both internal and external assessments and treatments based on your individual needs and comfort level. Everything is done with your consent, and I'll explain each step of the process. The goal is to address your specific concerns, whether that's incontinence, pelvic pain, or preparing for/recovering from childbirth.",
+        "During pelvic floor therapy, I may perform both internal and external assessments and treatments based on your individual needs and comfort level. Everything is done with your consent, and I'll explain each step of the process. Treatments typically consist of a full body postural exam, manual therapy (cupping, skin rolling, myofascial release, joint mobilizations, tender point release of the pelvic floor and surrounding structures as needed), internal pelvic and/or rectal exam, a personalized strengthening program, diastasis evaluation, and any necessary referrals to additional practitioners. The goal is to address your specific concerns, whether that's incontinence, pelvic pain, or preparing for/recovering from childbirth.",
     },
     {
       question: 'Where are you located?',
