@@ -42,7 +42,7 @@ https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700
 
 ## Logo
 
-Upload from: `/public/images/logo.png`
+Your logo is already in there
 
 ---
 
@@ -66,30 +66,6 @@ Upload from: `/public/images/logo.png`
 
 ---
 
-## CSS Custom Properties (if Jane allows custom CSS)
-
-```css
-:root {
-  --brand-sage: #7BA196;
-  --brand-sage-dark: #6a8f84;
-  --brand-navy: #2C3E50;
-  --brand-navy-light: #5a6c7d;
-  --surface-warm: #FDFBF9;
-  --surface-alt: #f5f0eb;
-}
-
-/* Example button override */
-.jane-button-primary {
-  background-color: var(--brand-sage) !important;
-  border-radius: 9999px !important; /* Pill shape */
-}
-
-.jane-button-primary:hover {
-  background-color: var(--brand-sage-dark) !important;
-}
-```
-
----
 
 ## Checklist
 

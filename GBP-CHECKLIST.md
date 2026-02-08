@@ -5,12 +5,36 @@
 | Field | Website Value | GBP Status |
 |-------|---------------|------------|
 | **Business Name** | Ashlee Gendron Physical Therapy PC | [ ] Verified |
-| **Primary Category** | Physical Therapist | [ ] Verified |
-| **Secondary Categories** | Pelvic Floor Physical Therapy, Women's Health Clinic | [ ] Added |
+| **Primary Category** | Physical Therapist (highest search volume for your services) | [ ] Verified |
+| **Additional Categories** | See category recommendations below | [ ] Added |
 | **Phone** | (760) 874-3309 | [ ] Verified |
 | **Email** | ashlee@agphysicaltherapypc.com | [ ] Verified |
 | **Website** | Link to `/areas-served/` page (per 2025 GBP policy) | [ ] Updated |
 | **Address** | 16885 Via Del Campo Ct, Suite 110, San Diego, CA 92127 | [ ] Verified |
+
+---
+
+## 1b. Category Recommendations
+
+**Primary Category (pick one — this drives the most visibility):**
+- **Physical Therapist** — best fit, highest search volume
+
+**Recommended Additional Categories (2-4 relevant ones perform better than stuffing):**
+- [ ] Physical Therapy Clinic
+- [ ] Pelvic Floor Therapist *(check availability — Google has been adding this)*
+- [ ] Women's Health Clinic
+- [ ] Health Consultant
+
+**Consider but verify availability:**
+- Orthopedic Clinic *(only if ortho is a significant part of the business)*
+- Rehabilitation Center *(broad, but can help with discovery)*
+
+**Avoid these categories:**
+- Massage Therapist — wrong signals, different clientele
+- Chiropractor, Acupuncturist — unrelated specialties
+- Hospital / Medical Center — too broad, wrong expectations
+
+> **Note:** The primary category drives the most visibility. Additional categories help but have diminishing returns. Reviews, photos, and keeping GBP services aligned with the website matter more than extra categories.
 
 ---
 
@@ -68,6 +92,23 @@ If set up as hybrid business, add these service areas:
 | **Pelvic Pain Treatment** | Comprehensive evaluation and treatment for chronic pelvic pain conditions. | [ ] |
 | **Pelvic Organ Prolapse Therapy** | Non-surgical management and strengthening for pelvic organ prolapse. | [ ] |
 | **Return to Running Program** | Specialized program to safely return to running and high-impact exercise postpartum or after pelvic floor issues. | [ ] |
+
+### Verify With Client (Potential Additional Services)
+
+> These are commonly offered by pelvic floor/women's health PT practices. Confirm with client before adding to GBP or website.
+
+| Service Name | Description | Offered? | Added |
+|-------------|-------------|----------|-------|
+| **Prenatal Physical Therapy** | Physical therapy during pregnancy for pelvic pain, back pain, and birth preparation. | [ ] Verify | [ ] |
+| **C-Section Scar Mobilization** | Scar tissue massage and mobilization to reduce pain and adhesions after cesarean delivery. *(Already referenced in Emily's testimonial)* | [ ] Verify | [ ] |
+| **Painful Intercourse / Dyspareunia** | Pelvic floor therapy for pain during intercourse — a common reason patients seek pelvic PT. | [ ] Verify | [ ] |
+| **Fecal Incontinence Treatment** | Physical therapy for bowel leakage and control issues. | [ ] Verify | [ ] |
+| **Perimenopause / Menopause Management** | Pelvic health support for hormonal transitions. *(Blog post already exists on this topic)* | [ ] Verify | [ ] |
+| **TMJ / Jaw Pain Treatment** | Assessment and treatment for temporomandibular joint dysfunction. *(Blog post on jaw relief exists)* | [ ] Verify | [ ] |
+| **SI Joint Pain Treatment** | Sacroiliac joint pain — extremely common in postpartum patients. | [ ] Verify | [ ] |
+| **Coccyx / Tailbone Pain Treatment** | Assessment and treatment for tailbone pain, often related to pelvic floor dysfunction. | [ ] Verify | [ ] |
+| **Birth Preparation / Labor Prep** | Perineal stretching, positioning, breathing techniques, and physical readiness for delivery. | [ ] Verify | [ ] |
+| **Pre/Post-Surgical Rehabilitation** | General orthopedic rehab before and after surgery. | [ ] Verify | [ ] |
 
 ### Session Types
 
