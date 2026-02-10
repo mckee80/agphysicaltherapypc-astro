@@ -235,7 +235,7 @@ export const siteConfig = {
     {
       question: 'Do I need a doctor\'s referral?',
       answer:
-        'You do not need a referral from a doctor. However, in the state of California we are able to treat you for 12 sessions. If you wish to be treated beyond this timeline, then a written referral from your MD is required.',
+        'No, you do not need a referral from a doctor. In California, you can see a physical therapist without a physician referral.',
     },
     {
       question: 'How long is an initial evaluation?',

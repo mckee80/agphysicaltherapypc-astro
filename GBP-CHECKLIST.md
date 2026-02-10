@@ -153,7 +153,7 @@ Should include:
 Seed with FAQs from website:
 
 **Q: Do I need a referral?**
-> No, you do not need a referral from a doctor. In California, I can treat for 12 sessions or 45 days without a physician referral.
+> No, you do not need a referral from a doctor. In California, you can see a physical therapist without a physician referral.
 
 **Q: Do you offer virtual appointments?**
 > Yes! I offer video examinations for clients who are not local.
