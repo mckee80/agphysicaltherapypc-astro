@@ -61,6 +61,7 @@ If set up as hybrid business, add these service areas:
 - [ ] Encinitas
 - [ ] Escondido
 - [ ] Rancho Bernardo
+- [ ] Rancho Santa Fe
 - [ ] North County San Diego
 
 ---

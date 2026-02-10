@@ -195,6 +195,7 @@ export const siteConfig = {
     'Encinitas',
     'Escondido',
     'Rancho Bernardo',
+    'Rancho Santa Fe',
     'North County San Diego',
   ],
 

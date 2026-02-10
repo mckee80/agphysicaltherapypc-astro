@@ -118,6 +118,7 @@ Which areas do you serve for concierge home visits? Check all that apply:
 - [ ] Encinitas
 - [ ] Escondido
 - [ ] Rancho Bernardo
+- [ ] Rancho Santa Fe
 - [ ] North County San Diego (general)
 
 ### Any areas to add or remove?
