@@ -62,6 +62,9 @@ If set up as hybrid business, add these service areas:
 - [ ] Escondido
 - [ ] Rancho Bernardo
 - [ ] Rancho Santa Fe
+- [ ] Fallbrook
+- [ ] Solana Beach
+- [ ] Bonsall
 - [ ] North County San Diego
 
 ---

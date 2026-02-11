@@ -119,6 +119,9 @@ Which areas do you serve for concierge home visits? Check all that apply:
 - [ ] Escondido
 - [ ] Rancho Bernardo
 - [ ] Rancho Santa Fe
+- [ ] Fallbrook
+- [ ] Solana Beach
+- [ ] Bonsall
 - [ ] North County San Diego (general)
 
 ### Any areas to add or remove?

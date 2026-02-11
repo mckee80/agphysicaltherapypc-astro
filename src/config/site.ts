@@ -198,6 +198,9 @@ export const siteConfig = {
     'Escondido',
     'Rancho Bernardo',
     'Rancho Santa Fe',
+    'Fallbrook',
+    'Solana Beach',
+    'Bonsall',
     'North County San Diego',
   ],
 
