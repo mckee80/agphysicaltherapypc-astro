@@ -109,6 +109,7 @@ export const siteConfig = {
       { name: 'Services', href: '/agphysicaltherapypc-astro/#services' },
       { name: 'Areas Served', href: '/agphysicaltherapypc-astro/areas-served/' },
       { name: 'Blog', href: '/agphysicaltherapypc-astro/blog/' },
+      { name: 'Resources', href: '/agphysicaltherapypc-astro/resources/' },
     ],
     footer: {
       quickLinks: [
@@ -116,6 +117,7 @@ export const siteConfig = {
         { name: 'Services', href: '/agphysicaltherapypc-astro/#services' },
         { name: 'Areas Served', href: '/agphysicaltherapypc-astro/areas-served/' },
         { name: 'Blog', href: '/agphysicaltherapypc-astro/blog/' },
+        { name: 'Resources', href: '/agphysicaltherapypc-astro/resources/' },
         { name: 'Book Online', href: 'https://agphysicaltherapypc.janeapp.com/' },
       ],
     },
