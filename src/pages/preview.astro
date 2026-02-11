@@ -142,72 +142,56 @@ import { siteConfig } from '@/config/site';
       </div>
 
       <!-- Service Cards Grid -->
-      <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-
-        <!-- Postpartum PT -->
-        <div class="bg-white rounded-2xl p-8 shadow-sm border border-brand-sage/20">
-          <div class="w-12 h-12 bg-brand-sage/10 rounded-xl flex items-center justify-center mb-4">
-            <svg class="w-6 h-6 text-brand-sage" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
-            </svg>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {siteConfig.services.map((service) => (
+          <div class="service-card">
+            <div class="service-icon">
+              {service.icon === 'pelvic' && (
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <circle cx="12" cy="12" r="10"/>
+                  <path d="M12 6v6l4 2"/>
+                </svg>
+              )}
+              {service.icon === 'heart' && (
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                </svg>
+              )}
+              {service.icon === 'women' && (
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                  <circle cx="9" cy="7" r="4"/>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                </svg>
+              )}
+              {service.icon === 'orthopedic' && (
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M18 8h1a4 4 0 0 1 0 8h-1"/>
+                  <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/>
+                  <line x1="6" y1="1" x2="6" y2="4"/>
+                  <line x1="10" y1="1" x2="10" y2="4"/>
+                  <line x1="14" y1="1" x2="14" y2="4"/>
+                </svg>
+              )}
+              {service.icon === 'virtual' && (
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                  <line x1="8" y1="21" x2="16" y2="21"/>
+                  <line x1="12" y1="17" x2="12" y2="21"/>
+                </svg>
+              )}
+              {service.icon === 'home' && (
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                  <polyline points="9 22 9 12 15 12 15 22"/>
+                </svg>
+              )}
+            </div>
+            <h3>{service.name}</h3>
+            <p>{service.description}</p>
           </div>
-          <h2 class="text-xl font-heading font-semibold text-brand-navy mb-3">Postpartum Physical Therapy</h2>
-          <p class="text-brand-navy-light mb-4">
-            Your body just did something amazing. But "bouncing back" isn't as simple as social media makes it look. After giving birth, so many women in San Diego struggle with getting back to normal activities — picking up their baby, going for a walk, returning to the gym.
-          </p>
-          <p class="text-brand-navy-light">
-            As a Postpartum Corrective Exercise Specialist, I help new moms heal safely. We work on your core, your pelvic floor, C-section scar recovery, and getting you back to the activities you love. I also come to your home — because getting out the door with a newborn is hard enough.
-          </p>
-        </div>
-
-        <!-- Urinary Incontinence -->
-        <div class="bg-white rounded-2xl p-8 shadow-sm border border-brand-sage/20">
-          <div class="w-12 h-12 bg-brand-sage/10 rounded-xl flex items-center justify-center mb-4">
-            <svg class="w-6 h-6 text-brand-sage" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-            </svg>
-          </div>
-          <h2 class="text-xl font-heading font-semibold text-brand-navy mb-3">Urinary Incontinence Treatment</h2>
-          <p class="text-brand-navy-light mb-4">
-            Leaking when you cough, sneeze, laugh, or run is common — but it's not something you should just live with. This was my own experience after having kids. I couldn't even chase my toddler down the street without leaking.
-          </p>
-          <p class="text-brand-navy-light">
-            Urinary incontinence treatment through pelvic floor therapy works. We figure out why you're leaking — weak muscles, tight muscles, coordination issues, or all of the above — and fix it. Most women see real changes within a few weeks.
-          </p>
-        </div>
-
-        <!-- Diastasis Recti -->
-        <div class="bg-white rounded-2xl p-8 shadow-sm border border-brand-sage/20">
-          <div class="w-12 h-12 bg-brand-sage/10 rounded-xl flex items-center justify-center mb-4">
-            <svg class="w-6 h-6 text-brand-sage" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <circle cx="12" cy="12" r="10"/>
-              <path d="M12 6v6l4 2"/>
-            </svg>
-          </div>
-          <h2 class="text-xl font-heading font-semibold text-brand-navy mb-3">Diastasis Recti Rehabilitation</h2>
-          <p class="text-brand-navy-light mb-4">
-            That gap down the middle of your belly after pregnancy? That's diastasis recti. It's the separation of your ab muscles, and it affects how your whole core works — your back, your pelvic floor, everything.
-          </p>
-          <p class="text-brand-navy-light">
-            Diastasis recti rehabilitation is about more than closing the gap. It's about getting your core to function again as a team. I give you a personalized exercise program that works with your body, not against it. No crunches. No generic PDFs. A real plan built for you.
-          </p>
-        </div>
-
-        <!-- Pelvic Pain -->
-        <div class="bg-white rounded-2xl p-8 shadow-sm border border-brand-sage/20">
-          <div class="w-12 h-12 bg-brand-sage/10 rounded-xl flex items-center justify-center mb-4">
-            <svg class="w-6 h-6 text-brand-sage" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
-            </svg>
-          </div>
-          <h2 class="text-xl font-heading font-semibold text-brand-navy mb-3">Pelvic Pain Treatment</h2>
-          <p class="text-brand-navy-light mb-4">
-            Pelvic pain can show up in a lot of ways — pain during sex, tailbone pain, hip pain that won't go away, pain near a C-section scar months or years later. A lot of women go from doctor to doctor without getting answers.
-          </p>
-          <p class="text-brand-navy-light">
-            Pelvic pain treatment starts with actually listening to your story and doing a thorough exam. I look at your pelvic floor muscles, your hips, your core, your posture — the whole picture. One of my patients came to me a year after her C-section with unexplained pain near her scar. Her doctors couldn't figure it out. We did, and she got better.
-          </p>
-        </div>
+        ))}
       </div>
     </div>
   </section>
