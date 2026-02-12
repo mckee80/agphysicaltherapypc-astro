@@ -3,14 +3,17 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
 import { siteConfig } from '@/config/site';
 ---
 
-<BaseLayout>
+<BaseLayout
+  title="Pelvic Floor Therapy San Diego | Dr. Ashlee Gendron, DPT"
+  description="Pelvic floor therapy in San Diego from Dr. Ashlee Gendron, DPT. Specializing in postpartum physical therapy, diastasis recti, urinary incontinence, and pelvic pain. In-home visits throughout North County."
+>
   <!-- Hero Section -->
   <section class="relative min-h-[75vh] flex items-center pt-36 pb-20 overflow-hidden" id="hero">
     <div class="absolute inset-0 hero-gradient opacity-50 -z-10"></div>
     <div class="absolute inset-0 -z-10">
       <img
         src="/agphysicaltherapypc-astro/images/hero-pg.jpg"
-        alt="Pelvic floor physical therapy session"
+        alt="Pelvic floor physical therapy session in San Diego"
         class="w-full h-full object-cover opacity-15"
         width="1920"
         height="1080"
@@ -19,20 +22,21 @@ import { siteConfig } from '@/config/site';
     </div>
     <div class="container-max">
       <p class="text-sm uppercase tracking-widest text-brand-sage font-semibold mb-4">
-        Vista & North County San Diego
+        Vista, Carlsbad, Rancho Bernardo & North County
       </p>
       <h1 class="text-4xl md:text-5xl lg:text-6xl leading-tight mb-6">
-        Pelvic Floor Physical Therapy
+        Postpartum and Pelvic Floor Therapy<br />
+        <span class="text-brand-sage">Care That's Built Around You</span>
       </h1>
       <p class="text-lg md:text-xl text-brand-navy-light mb-8 max-w-2xl">
-        Reclaim your passions without leakage or pain. Holistic pelvic wellness and orthopedic concierge service. I evaluate your body as a whole to help you reach your personalized goals.
+        If you're leaking when you sneeze, struggling to get back to running after baby, or dealing with pain you've been told is just normal — you're in the right place. I'm Dr. Ashlee Gendron, and I help women in San Diego get their bodies back.
       </p>
       <div class="flex flex-wrap gap-4">
         <a href={siteConfig.bookingUrl} target="_blank" rel="noopener" class="btn btn-primary btn-lg">
-          Book Online
+          Book a Free 15-Min Consult
         </a>
-        <a href="#about" class="btn btn-outline btn-lg">
-          Learn More
+        <a href={`tel:${siteConfig.contact.phone.primary}`} class="btn btn-outline btn-lg">
+          Call {siteConfig.contact.phone.formatted}
         </a>
       </div>
     </div>
@@ -48,28 +52,28 @@ import { siteConfig } from '@/config/site';
         </div>
         <div class="trust-item">
           <span class="trust-icon">&#10003;</span>
-          <span>Free 15-Min Phone Consult</span>
+          <span>Home Visits Throughout North County</span>
         </div>
         <div class="trust-item">
           <span class="trust-icon">&#10003;</span>
-          <span>In-Clinic, Home & Virtual Visits</span>
+          <span>90-Minute Initial Sessions</span>
         </div>
         <div class="trust-item">
-          <span class="trust-icon">&#10003;</span>
-          <span>90-Minute Initial Evaluation</span>
+          <span class="text-yellow-400 text-sm tracking-wide">★★★★★</span>
+          <span>{siteConfig.googleReviews.rating} on Google ({siteConfig.googleReviews.reviewCount} reviews)</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- About Section -->
+  <!-- Intro / Local Story -->
   <section class="section-padding" id="about">
     <div class="container-max">
       <div class="about-grid">
         <div>
           <img
             src="/agphysicaltherapypc-astro/images/ashlee-gendron.jpg"
-            alt="Dr. Ashlee Gendron, PT, DPT, PCES - Pelvic Floor Physical Therapist in Vista CA"
+            alt="Dr. Ashlee Gendron, pelvic floor physical therapist in San Diego"
             class="w-full rounded-2xl shadow-xl"
             width="256"
             height="320"
@@ -77,21 +81,20 @@ import { siteConfig } from '@/config/site';
           />
         </div>
         <div>
-          <span class="section-label">My Practice</span>
-          <h2 class="section-title">Dr. Ashlee Gendron, PT, DPT, PCES</h2>
-          <p class="text-lg text-brand-sage-dark font-medium mb-6">
-            Doctor of Physical Therapy with a focus on Pelvic Health and Orthopedics
-          </p>
-          <p class="mb-4">
-            <strong>My mission is to help women reclaim their passions without leakage or pain, empowering them to feel strong in the process.</strong>
+          <span class="section-label">Meet Your Therapist</span>
+          <h2 class="section-title">Why I Started Doing Pelvic Floor Therapy in San Diego</h2>
+          <p class="text-brand-navy-light mb-6">
+            After my first baby was born in 2015, I couldn't run, jump, or even sneeze without leaking. My OB told me to "just do kegels." That advice didn't work. I'm a Doctor of Physical Therapy, and even I had trouble finding someone locally who could actually help me.
           </p>
           <p class="text-brand-navy-light mb-6">
-            Ashlee Gendron Physical Therapy is a holistic pelvic wellness and orthopedic concierge service. I evaluate the body as a whole to help you reach your personalized goals. Each session and plan of care is tailored to each individual, and I advocate for a multidisciplinary approach with a large radius of resources to meet each client's needs.
+            That experience changed everything for me. I saw how many women in San Diego — in Vista, Carlsbad, Oceanside, Rancho Bernardo — were going through the same thing and being told it was just "normal after kids." It's common, but it's not something you have to live with.
+          </p>
+          <p class="text-brand-navy-light mb-6">
+            Now I bring pelvic floor therapy directly to women across North County San Diego. I come to your home, I see you at my clinic in Rancho Bernardo, or we meet over video. Every session is one-on-one, 60 to 90 minutes, just you and me. No rushing, no rotating between patients.
           </p>
           <div class="philosophy-box">
-            <h3>My Philosophy</h3>
-            <p>Every person has their own story and one size program does not fit all. I focus on the body as a whole and develop a unique program to fit each individual and their needs.</p>
-            <p><strong>Strengthening the pelvic floor is not "just do kegels."</strong></p>
+            <h3>My Approach</h3>
+            <p>I look at your whole body, not just your pelvic floor. Strengthening the pelvic floor is <strong>not "just do kegels."</strong> Everything needs to work together — your core, your hips, your breathing, your pelvic floor. That's how real healing happens.</p>
           </div>
           <a
             href="/agphysicaltherapypc-astro/about/"
@@ -111,37 +114,34 @@ import { siteConfig } from '@/config/site';
               <strong>PCES</strong>
               <span>Postpartum Corrective Exercise Specialist</span>
             </div>
+            <div class="credential">
+              <strong>14+ Years</strong>
+              <span>Clinical Experience</span>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Specializations Section -->
-  <section class="py-16 bg-gradient-to-br from-brand-sage to-brand-sage-dark">
-    <div class="container-max">
-      <div class="text-center mb-12">
-        <span class="section-label text-white/80">Areas of Expertise</span>
-        <h2 class="section-title text-white">I Specialize In</h2>
-      </div>
-      <div class="flex flex-wrap justify-center gap-4">
-        {siteConfig.specializations.map((spec) => (
-          <div class="spec-item">{spec}</div>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <!-- Services Section -->
+  <!-- Pelvic Floor Physical Therapy -->
   <section class="section-padding bg-surface-alt" id="services">
     <div class="container-max">
-      <div class="text-center mb-12 max-w-2xl mx-auto">
-        <span class="section-label">What I Offer</span>
-        <h2 class="section-title">Services</h2>
-        <p class="section-description">
-          I combine Women's Health and Orthopedics, looking at the body as a whole
+      <div class="max-w-3xl mx-auto mb-16">
+        <span class="section-label">What I Treat</span>
+        <h2 class="section-title">Pelvic Floor Physical Therapy</h2>
+        <p class="text-brand-navy-light mb-4">
+          A lot of women in San Diego don't even know pelvic floor physical therapy exists. They think leaking, pain, or pressure down there is just something they have to accept. It's not.
+        </p>
+        <p class="text-brand-navy-light mb-4">
+          Pelvic floor therapy works on the muscles that support your bladder, uterus, and bowel. Sometimes those muscles are too weak. Sometimes they're too tight. Sometimes it's both. I do a full assessment — internal and external — to figure out exactly what's going on with you. Then we build a plan around your body and your goals.
+        </p>
+        <p class="text-brand-navy-light">
+          Whether you're dealing with leaking, pelvic pressure, pain during sex, or you just feel like something isn't right — pelvic floor therapy can help. I treat patients from Vista, Carlsbad, Encinitas, Oceanside, Escondido, San Marcos, and throughout the Rancho Bernardo area.
         </p>
       </div>
+
+      <!-- Service Cards Grid -->
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {siteConfig.services.map((service) => (
           <div class="service-card">
@@ -196,46 +196,55 @@ import { siteConfig } from '@/config/site';
     </div>
   </section>
 
-  <!-- Patient Resources Section -->
-  <section class="section-padding" id="patient-resources">
+  <!-- Why Choose Us / Differentiators -->
+  <section class="section-padding">
     <div class="container-max">
       <div class="text-center mb-12 max-w-2xl mx-auto">
-        <span class="section-label">Patient Resources</span>
-        <h2 class="section-title">What to Expect</h2>
+        <span class="section-label">Why Patients Choose Me</span>
+        <h2 class="section-title">What Makes This Practice Different</h2>
       </div>
-      <div class="grid md:grid-cols-3 gap-8">
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
         <div class="resource-card">
-          <div class="resource-number">1</div>
-          <h3 class="mt-2 mb-2 text-lg">Free 15-Minute Phone Consult</h3>
+          <div class="resource-number">90</div>
+          <h3 class="mt-2 mb-2 text-lg">Minute Initial Sessions</h3>
           <p class="text-brand-navy-light text-base">
-            Start with a complimentary phone consultation so you can determine if my services are right for you. No commitment required.
+            Your first visit is 90 minutes. That's enough time to actually understand what's going on — not rush through a checklist. Most clinics give you 30 to 45.
           </p>
         </div>
         <div class="resource-card">
-          <div class="resource-number">2</div>
-          <h3 class="mt-2 mb-2 text-lg">Initial Evaluation (90 Minutes)</h3>
+          <div class="resource-number">1:1</div>
+          <h3 class="mt-2 mb-2 text-lg">One-on-One, Every Time</h3>
           <p class="text-brand-navy-light text-base">
-            Examinations available by video (if not local), in clinic, or at home. Your initial session includes a plan of care, home exercise program, and comprehensive assessment.
+            Every session is just you and me. I don't rotate between three patients at once. You get my full attention for the full hour.
           </p>
         </div>
         <div class="resource-card">
-          <div class="resource-number">3</div>
-          <h3 class="mt-2 mb-2 text-lg">Follow-Up Sessions (60 Minutes)</h3>
+          <div class="resource-number">
+            <svg class="w-8 h-8 text-brand-sage mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+            </svg>
+          </div>
+          <h3 class="mt-2 mb-2 text-lg">I Come to You</h3>
           <p class="text-brand-navy-light text-base">
-            Each follow-up treatment session is 60 minutes in length. Treatment is based on a plan of care we develop together, tailored to your individual needs and goals.
+            Home visits throughout Vista, Carlsbad, Oceanside, San Marcos, Encinitas, Escondido, and Rancho Bernardo. No loading up the car with the baby.
+          </p>
+        </div>
+        <div class="resource-card highlight">
+          <h3 class="mb-2 text-lg">Whole-Body Approach</h3>
+          <p class="text-base">
+            I combine pelvic floor therapy with orthopedic physical therapy. Your pelvic floor doesn't work in isolation — your hips, core, and back all play a role. I treat the whole picture.
           </p>
         </div>
       </div>
-
     </div>
   </section>
 
-  <!-- Testimonials Section -->
+  <!-- Testimonials -->
   <section class="py-16 md:py-20 bg-gradient-to-br from-brand-sage to-brand-sage-dark">
     <div class="container-max">
       <div class="text-center mb-12">
-        <span class="section-label text-white/80">Patient Stories</span>
-        <h2 class="section-title text-white">What Patients Say</h2>
+        <span class="section-label text-white/80">Real Patients, Real Results</span>
+        <h2 class="section-title text-white">What Women in San Diego Are Saying</h2>
       </div>
       <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
         {siteConfig.testimonials.map((testimonial) => (
@@ -248,7 +257,6 @@ import { siteConfig } from '@/config/site';
         ))}
       </div>
 
-      <!-- Google Rating -->
       <div class="mt-12 text-center">
         <a
           href={siteConfig.googleReviews.url}
@@ -265,72 +273,41 @@ import { siteConfig } from '@/config/site';
     </div>
   </section>
 
-  <!-- Locations / Contact Section -->
-  <section class="section-padding bg-surface-alt" id="locations">
+  <!-- Service Areas -->
+  <section class="section-padding bg-surface-alt">
     <div class="container-max">
       <div class="text-center mb-12 max-w-2xl mx-auto">
-        <span class="section-label">Contact</span>
-        <h2 class="section-title">Locations & Hours</h2>
+        <span class="section-label">Where I Work</span>
+        <h2 class="section-title">Pelvic Floor Therapy Across North County San Diego</h2>
+        <p class="text-brand-navy-light">
+          I see patients at my clinic in Rancho Bernardo on Wednesdays and Fridays. The rest of the week, I bring pelvic floor therapy to your home anywhere in North County San Diego.
+        </p>
       </div>
-      <div class="grid md:grid-cols-3 gap-8 mb-12">
-        <div class="location-card primary">
-          <h3>San Diego County Midwives HQ</h3>
-          <p class="location-subtitle">Wednesdays & Fridays</p>
-          <address>
-            16885 Via Del Campo Ct<br />
-            Suite 110<br />
-            San Diego, CA 92127
-          </address>
-          <a
-            href="https://maps.google.com/?q=16885+Via+Del+Campo+Ct+Suite+110+San+Diego+CA+92127"
-            target="_blank"
-            rel="noopener"
-            class="location-link"
-          >
-            Get Directions
-          </a>
-        </div>
-        <div class="location-card">
-          <h3>Mobile / Concierge Services</h3>
-          <p class="location-subtitle">San Diego & North County</p>
-          <p class="text-brand-navy-light">
-            In-home physical therapy services throughout San Diego and North County. Receive personalized care in the comfort of your own home.
-          </p>
-        </div>
-        <div class="location-card">
-          <h3>Virtual Visits</h3>
-          <p class="location-subtitle">Video Examinations</p>
-          <p class="text-brand-navy-light">
-            For clients who are not local, video examinations are available. Get expert guidance from anywhere.
-          </p>
-        </div>
+      <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-3xl mx-auto mb-12">
+        {siteConfig.serviceAreas.map((area) => (
+          <div class="bg-white rounded-lg px-4 py-3 text-center shadow-sm">
+            <span class="text-brand-navy font-medium">{area}</span>
+          </div>
+        ))}
       </div>
-      <div class="contact-info-section grid lg:grid-cols-2 gap-12 items-center">
-        <div class="space-y-6">
-          <div>
-            <strong class="block text-xs uppercase tracking-wider text-brand-navy-light mb-1">Email</strong>
-            <a href={`mailto:${siteConfig.contact.email}`} class="text-brand-navy hover:text-brand-sage transition-colors">
-              {siteConfig.contact.email}
-            </a>
-          </div>
-          <div>
-            <strong class="block text-xs uppercase tracking-wider text-brand-navy-light mb-1">Hours</strong>
-            <span class="block">Clinic: {siteConfig.contact.hours.clinic.days}, {siteConfig.contact.hours.clinic.time}</span>
-            <span class="block text-sm text-brand-navy-light">Home visits: {siteConfig.contact.hours.homeVisits.days} (flexible)</span>
-          </div>
-          <div>
-            <strong class="block text-xs uppercase tracking-wider text-brand-navy-light mb-1">Book Online</strong>
-            <a href={siteConfig.bookingUrl} target="_blank" rel="noopener" class="text-brand-sage hover:text-brand-sage-dark transition-colors font-medium">
-              Schedule via Jane App
-            </a>
-          </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-brand-sage/20 text-center">
+          <h3 class="font-heading font-semibold text-brand-navy mb-2">In-Clinic</h3>
+          <p class="text-brand-sage-dark font-medium text-sm mb-2">San Diego County Midwives HQ</p>
+          <p class="text-brand-navy-light text-sm">Wed & Fri, 9am - 1pm</p>
+          <p class="text-brand-navy-light text-sm">Rancho Bernardo</p>
         </div>
-        <div class="cta-section">
-          <h3>Ready to Get Started?</h3>
-          <p>Schedule a free 15-minute phone consultation to see if my services are right for you.</p>
-          <a href={siteConfig.bookingUrl} target="_blank" rel="noopener" class="btn btn-primary btn-lg">
-            Book Online
-          </a>
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-brand-sage/20 text-center">
+          <h3 class="font-heading font-semibold text-brand-navy mb-2">Home Visits</h3>
+          <p class="text-brand-sage-dark font-medium text-sm mb-2">I Come to You</p>
+          <p class="text-brand-navy-light text-sm">Tue - Fri, flexible</p>
+          <p class="text-brand-navy-light text-sm">All of North County</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-brand-sage/20 text-center">
+          <h3 class="font-heading font-semibold text-brand-navy mb-2">Virtual</h3>
+          <p class="text-brand-sage-dark font-medium text-sm mb-2">Video Consultations</p>
+          <p class="text-brand-navy-light text-sm">Tue - Fri, flexible</p>
+          <p class="text-brand-navy-light text-sm">Anywhere</p>
         </div>
       </div>
     </div>
@@ -340,23 +317,60 @@ import { siteConfig } from '@/config/site';
   <section class="section-padding" id="faq">
     <div class="container-max">
       <div class="text-center mb-12 max-w-2xl mx-auto">
-        <span class="section-label">FAQ</span>
-        <h2 class="section-title">Frequently Asked Questions</h2>
+        <span class="section-label">Common Questions</span>
+        <h2 class="section-title">Questions People Ask About Pelvic Floor Therapy</h2>
       </div>
       <div class="max-w-3xl mx-auto">
-        {siteConfig.faq.map((item) => (
+        <details class="faq-item">
+          <summary>Do I need a referral for pelvic floor therapy in San Diego?</summary>
+          <p>No. In California, you don't need a doctor's referral for physical therapy. If your insurance requires a referral, check with your provider first.</p>
+        </details>
+        <details class="faq-item">
+          <summary>What happens at the first pelvic floor therapy appointment?</summary>
+          <p>Your first visit is 90 minutes. We talk about your history, your symptoms, and your goals. Then I do a full assessment — which can include an internal and external exam of your pelvic floor muscles, but only with your consent and at your comfort level. You leave with a personalized exercise plan and a clear picture of what's going on.</p>
+        </details>
+        <details class="faq-item">
+          <summary>How soon will I see results from pelvic floor therapy?</summary>
+          <p>Most women start noticing changes within a few weeks. Some feel better after the first session. It depends on what we're treating, but I'll give you honest expectations from the start.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Do you take insurance?</summary>
+          <p>I'm an out-of-network provider. That means insurance doesn't dictate your care. You get longer sessions, one-on-one attention, and a treatment plan built around you — not around billing codes. I can provide superbills for you to submit to your insurance for potential reimbursement.</p>
+        </details>
+        <details class="faq-item">
+          <summary>When should I start postpartum physical therapy?</summary>
+          <p>You can start as early as 6 weeks postpartum, or later — there's no expiration date. I see women who are 3 months, 1 year, or 10 years postpartum. If something doesn't feel right, it's worth getting checked out.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Can you help with pain during sex?</summary>
+          <p>Yes. Pain during sex is one of the most common reasons women seek pelvic floor therapy. It's often caused by tight pelvic floor muscles, scar tissue, or hormonal changes. It's treatable, and you don't have to just live with it.</p>
+        </details>
+        {siteConfig.faq.filter(item => item.question === 'Where are you located?').map((item) => (
           <details class="faq-item">
             <summary>{item.question}</summary>
             <p>{item.answer}</p>
-            {item.link && (
-              <p class="mt-2">
-                <a href={item.link.url} target="_blank" rel="noopener" class="btn btn-primary btn-sm">
-                  {item.link.text}
-                </a>
-              </p>
-            )}
           </details>
         ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 bg-gradient-to-br from-brand-sage to-brand-sage-dark">
+    <div class="container-max">
+      <div class="max-w-2xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl text-white mb-4">Ready to Feel Like Yourself Again?</h2>
+        <p class="text-white/85 text-lg mb-8">
+          Start with a free 15-minute phone call. Tell me what's going on, and I'll tell you if I can help. No pressure, no commitment.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href={siteConfig.bookingUrl} target="_blank" rel="noopener" class="btn btn-primary bg-white text-brand-sage hover:bg-gray-100 border-white btn-lg">
+            Book Free Consultation
+          </a>
+          <a href={`tel:${siteConfig.contact.phone.primary}`} class="btn btn-outline border-white text-white hover:bg-white/10 btn-lg">
+            Call {siteConfig.contact.phone.formatted}
+          </a>
+        </div>
       </div>
     </div>
   </section>
