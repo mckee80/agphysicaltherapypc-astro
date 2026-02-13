@@ -60,5 +60,42 @@ const fullTitle =
       <slot />
     </main>
     <Footer />
+
+    <!-- Sticky Mobile CTA -->
+    <div
+      id="mobile-cta"
+      class="fixed bottom-0 left-0 right-0 z-40 lg:hidden translate-y-full transition-transform duration-300"
+    >
+      <div class="bg-brand-sage/95 backdrop-blur-sm px-4 py-3 shadow-[0_-2px_10px_rgba(0,0,0,0.1)]">
+        <a
+          href={siteConfig.bookingUrl}
+          target="_blank"
+          rel="noopener"
+          class="block w-full text-center text-white font-semibold text-base py-2.5 bg-brand-sage-dark rounded-lg hover:bg-brand-navy transition-colors"
+        >
+          Book Online
+        </a>
+      </div>
+    </div>
+
+    <script>
+      const mobileCta = document.getElementById('mobile-cta');
+      let lastScrollY = 0;
+
+      function updateMobileCta() {
+        const scrollY = window.scrollY;
+        // Show after scrolling past 300px (past the hero area)
+        if (scrollY > 300) {
+          mobileCta?.classList.remove('translate-y-full');
+          mobileCta?.classList.add('translate-y-0');
+        } else {
+          mobileCta?.classList.add('translate-y-full');
+          mobileCta?.classList.remove('translate-y-0');
+        }
+        lastScrollY = scrollY;
+      }
+
+      window.addEventListener('scroll', updateMobileCta, { passive: true });
+    </script>
   </body>
 </html>

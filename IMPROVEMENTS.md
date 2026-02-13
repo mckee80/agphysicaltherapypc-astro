@@ -10,8 +10,10 @@ Create 2-3 dedicated service pages for main specialties:
 
 Each page should include: what to expect, who it's for, Dr. Gendron's approach, link to book.
 
-### 2. Add Sticky Mobile CTA
-Add a floating "Book Now" button on mobile for better conversion when users scroll past the header.
+### ~~2. Add Sticky Mobile CTA~~ DONE
+- [x] Fixed "Book Online" button at bottom of screen on mobile (lg:hidden)
+- [x] Slides in after scrolling past 300px, hidden at top of page
+- [x] Links to Jane App booking URL
 
 ### 3. Vista-Specific Content
 Create blog posts or content targeting local keywords:
@@ -22,7 +24,7 @@ Create blog posts or content targeting local keywords:
 - [x] Facebook added to site config and schema
 - [x] Instagram in site config and schema
 - [x] Yelp in site config and schema
-- [ ] Display social links in footer/header UI (configured in config + schema but not visible on site)
+- [x] Social icons displayed in footer (Facebook, Instagram, Yelp)
 
 ---
 
@@ -35,8 +37,8 @@ Create blog posts or content targeting local keywords:
 ### 6. Add BreadcrumbList Schema
 Add breadcrumb structured data for improved navigation signals in search results.
 
-### 7. Add aggregateRating to LocalBusiness Schema
-Google Reviews data exists in site.ts (5.0 stars, 14 reviews) but is not wired into schema markup. Add aggregateRating to LocalBusiness structured data.
+### ~~7. Add aggregateRating to LocalBusiness Schema~~ DONE
+- [x] aggregateRating added to LocalBusiness schema (5.0 stars, 14 reviews from Google)
 
 ---
 
@@ -77,22 +79,22 @@ Document partnership with San Diego County Midwives, local events, etc.
 
 ---
 
-## Next Up
+## ~~Next Up~~ Recently Completed
 
-### 15. Add Resources Section
-Add a resources section to the site (e.g., helpful links, recommended reading, patient education materials).
+### ~~15. Add Resources Section~~ DONE
+Resources page live with community provider referrals across 10 categories.
 
 ### 16. Add Pictures
-Incorporate professional photos throughout the site (hero, about, services, etc.). Pending client photo assets.
+Incorporate professional photos throughout the site (hero, about, services, etc.). Pending client photo assets. Birth prep blog post has 9 image placeholders ready.
 
-### 17. Add Pricing
-Display pricing information for sessions (initial evaluation, follow-ups, discovery call).
+### ~~17. Add Pricing~~ DONE
+Pricing added to site.ts config (home visit, clinic, discovery call, Reconnection Session). Displayed on services.
 
-### 18. Add Reconnection Session Info
-Add information about reconnection sessions as a service/offering on the site.
+### ~~18. Add Reconnection Session Info~~ DONE
+Reconnection Session added as 9th service card with pricing ($670 for 3 sessions). Collaborative acupuncture + pelvic floor therapy program with Nina Jung.
 
-### 19. Convert Community Resources PDF to Web Page
-Turn the community resources PDF into a dedicated page on the site for better SEO and user accessibility.
+### ~~19. Convert Community Resources PDF to Web Page~~ DONE
+Community resources converted to the Resources page (/resources/) with all provider referrals organized by category.
 
 ---
 
@@ -105,12 +107,22 @@ Turn the community resources PDF into a dedicated page on the site for better SE
 | About page | Done | Full story, credentials, ProfilePage schema |
 | Areas Served page | Done | GBP linking, service area coverage |
 | FAQ section with CTA links | Done | 10 FAQs, "Book a Discovery Call" button |
-| Client-confirmed service descriptions | Done | 8 services in site.ts |
+| Client-confirmed service descriptions | Done | 9 services in site.ts (added Reconnection Session) |
 | Preview page for SEO content | Done | /preview/ with alternative homepage copy |
 | Backlink opportunities research | Done | BACKLINK-OPPORTUNITIES.md |
 | Local marketing plan | Done | LOCAL-MARKETING.md |
 | GBP sync checklist | Done | GBP-CHECKLIST.md |
 | Client checklist | Done | CLIENT-CHECKLIST.md |
+| Resources page | Done | Community provider referrals, 10 categories |
+| Pricing in site config | Done | Home visit, clinic, discovery call, Reconnection Session |
+| Reconnection Session service card | Done | 3-session program ($670) with Nina Jung |
+| Community resources PDF to web | Done | /resources/ page |
+| Birth prep blog post | Done | 9 exercises from PDF, image placeholders ready |
+| Blog author credentials | Done | All posts show "Dr. Ashlee Gendron, PT, DPT, PCES" |
+| Referral FAQ update | Done | "No immediate referral" wording in config + homepage |
+| aggregateRating in schema | Done | 5.0 stars, 14 reviews wired into LocalBusiness structured data |
+| Social icons in footer | Done | Facebook, Instagram, Yelp icons with links |
+| Sticky mobile CTA | Done | Fixed "Book Online" button on mobile, appears after scrolling |
 
 ---
 

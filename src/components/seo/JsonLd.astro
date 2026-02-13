@@ -76,6 +76,13 @@ const defaultSchema = {
           },
         }),
       })),
+      aggregateRating: {
+        '@type': 'AggregateRating',
+        ratingValue: siteConfig.googleReviews.rating,
+        reviewCount: siteConfig.googleReviews.reviewCount,
+        bestRating: 5,
+        worstRating: 1,
+      },
       sameAs: Object.values(siteConfig.social),
       hasOfferCatalog: {
         '@type': 'OfferCatalog',
