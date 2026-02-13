@@ -26,7 +26,17 @@ const defaultSchema = {
       telephone: `+1-${siteConfig.contact.phone.primary}`,
       email: siteConfig.contact.email,
       priceRange: '$$',
-      medicalSpecialty: 'Physical Therapy',
+      medicalSpecialty: ['Physical Therapy', 'Womens Health'],
+      knowsAbout: [
+        'Pelvic Floor Physical Therapy',
+        'Women\'s Health Physical Therapy',
+        'Postpartum Recovery',
+        'Concierge Home Visit Physical Therapy',
+        'Orthopedic Physical Therapy',
+        'Pelvic Pain Treatment',
+        'Diastasis Recti Rehabilitation',
+        'Pregnancy Physical Therapy',
+      ],
       address: {
         '@type': 'PostalAddress',
         streetAddress: siteConfig.contact.address.street,
@@ -53,7 +63,7 @@ const defaultSchema = {
         '@type': 'Person',
         name: siteConfig.provider.name,
         jobTitle: siteConfig.provider.title,
-        description: `${siteConfig.provider.credentials} - ${siteConfig.provider.title} specializing in Pelvic Health and Orthopedics`,
+        description: `${siteConfig.provider.credentials} - ${siteConfig.provider.title} specializing in pelvic health and orthopedics. Boutique concierge practice offering one-on-one care with home visits throughout North County San Diego.`,
       },
       // Area served
       areaServed: siteConfig.serviceAreas.map((city) => ({

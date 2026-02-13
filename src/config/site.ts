@@ -78,15 +78,21 @@ export const siteConfig = {
   seo: {
     titleTemplate: '%s | AG Physical Therapy Vista CA',
     defaultTitle:
-      'Pelvic Floor Physical Therapy Vista CA | Dr. Ashlee Gendron PT',
+      'Pelvic Floor Physical Therapy Vista CA | Boutique Concierge PT',
     defaultDescription:
-      'Expert pelvic floor physical therapy in Vista & North County San Diego. Dr. Ashlee Gendron specializes in postpartum rehab, incontinence, diastasis recti & pelvic pain. Book your free consultation today.',
+      'Boutique concierge pelvic floor physical therapy in Vista & North County San Diego. Dr. Ashlee Gendron offers one-on-one home visits, in-clinic sessions & virtual care. Specializing in postpartum rehab, incontinence, diastasis recti & pelvic pain.',
     defaultImage: '/images/ashlee-gendron.jpg',
     keywords: [
       'pelvic floor physical therapy',
       'women\'s health physical therapy',
       'postpartum physical therapy',
       'orthopedic physical therapy',
+      'boutique physical therapy',
+      'concierge physical therapy',
+      'concierge home visit PT San Diego',
+      'one-on-one physical therapy',
+      'in-home pelvic floor therapy',
+      'women\'s health PT San Diego',
       'Vista CA',
       'San Diego',
       'pelvic pain',
