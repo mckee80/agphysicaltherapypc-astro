@@ -260,7 +260,7 @@ export const siteConfig = {
     {
       question: 'Do I need a doctor\'s referral?',
       answer:
-        'No, you do not need a referral from a doctor. In California, you can see a physical therapist without a physician referral.',
+        'No, you do not need an immediate referral in the state of California.',
     },
     {
       question: 'How long is an initial evaluation?',
