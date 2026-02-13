@@ -13,7 +13,13 @@
       "WebFetch(domain:mckee80.github.io)",
       "Bash(git commit -m \"$\\(cat <<''EOF''\nSEO improvements: title, phone, schema, images\n\n- Optimize title tag \\(55 chars\\) with location keywords\n- Add meta description with call-to-action\n- Add phone number \\(760-874-3309\\) to header top bar and footer\n- Improve H1 with \"Pelvic Floor Physical Therapy in Vista\"\n- Fix hero image path and add descriptive alt text\n- Add width/height attributes and lazy loading to images\n- Enhance schema with MedicalBusiness type and phone\n- Add Review schema for testimonials\n- Fix image paths for GitHub Pages base URL\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
       "Bash(git commit:*)",
-      "WebFetch(domain:www.agphysicaltherapypc.com)"
+      "WebFetch(domain:www.agphysicaltherapypc.com)",
+      "WebFetch(domain:www.google.com)",
+      "WebFetch(domain:agphysicaltherapypc.janeapp.com)",
+      "Bash(cd:*)",
+      "Bash(powershell -Command:*)",
+      "Bash(nslookup:*)",
+      "Bash(npm ls:*)"
     ]
   }
 }
