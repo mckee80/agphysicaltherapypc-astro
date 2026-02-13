@@ -64,7 +64,8 @@ const fullTitle =
     <!-- Sticky Mobile CTA -->
     <div
       id="mobile-cta"
-      class="fixed bottom-0 left-0 right-0 z-40 lg:hidden translate-y-full transition-transform duration-300"
+      class="fixed bottom-0 left-0 right-0 z-40 lg:hidden transition-transform duration-300"
+      style="transform: translateY(100%);"
     >
       <div class="bg-brand-sage/95 backdrop-blur-sm px-4 py-3 shadow-[0_-2px_10px_rgba(0,0,0,0.1)]">
         <a
@@ -80,19 +81,15 @@ const fullTitle =
 
     <script>
       const mobileCta = document.getElementById('mobile-cta');
-      let lastScrollY = 0;
 
       function updateMobileCta() {
-        const scrollY = window.scrollY;
+        if (!mobileCta) return;
         // Show after scrolling past 300px (past the hero area)
-        if (scrollY > 300) {
-          mobileCta?.classList.remove('translate-y-full');
-          mobileCta?.classList.add('translate-y-0');
+        if (window.scrollY > 300) {
+          mobileCta.style.transform = 'translateY(0)';
         } else {
-          mobileCta?.classList.add('translate-y-full');
-          mobileCta?.classList.remove('translate-y-0');
+          mobileCta.style.transform = 'translateY(100%)';
         }
-        lastScrollY = scrollY;
       }
 
       window.addEventListener('scroll', updateMobileCta, { passive: true });
