@@ -239,6 +239,91 @@ import { siteConfig } from '@/config/site';
     </div>
   </section>
 
+  <!-- Pricing -->
+  <section class="section-padding bg-surface-alt" id="pricing">
+    <div class="container-max">
+      <div class="text-center mb-12 max-w-2xl mx-auto">
+        <span class="section-label">Investment</span>
+        <h2 class="section-title">Transparent Pricing</h2>
+        <p class="text-brand-navy-light">
+          No surprise bills. No insurance runaround. Just straightforward pricing for dedicated, one-on-one care.
+        </p>
+      </div>
+      <div class="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+        <!-- Home Visit Pricing -->
+        <div class="bg-white rounded-2xl p-8 shadow-sm border border-brand-sage/20 relative overflow-hidden">
+          <div class="absolute top-4 right-4 bg-brand-sage text-white text-xs font-medium px-3 py-1 rounded-full">
+            Most Popular
+          </div>
+          <div class="w-12 h-12 bg-brand-sage/10 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-brand-sage" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-heading font-semibold text-brand-navy mb-4">Concierge Home Visits</h3>
+          <div class="space-y-4 mb-6">
+            <div class="flex justify-between items-baseline border-b border-gray-100 pb-3">
+              <div>
+                <p class="font-medium text-brand-navy">Initial Evaluation</p>
+                <p class="text-sm text-brand-navy-light">90 minutes</p>
+              </div>
+              <p class="text-2xl font-heading font-semibold text-brand-sage">${siteConfig.pricing.homeVisit.initialEval}</p>
+            </div>
+            <div class="flex justify-between items-baseline">
+              <div>
+                <p class="font-medium text-brand-navy">Follow-Up Session</p>
+                <p class="text-sm text-brand-navy-light">60 minutes</p>
+              </div>
+              <p class="text-2xl font-heading font-semibold text-brand-sage">${siteConfig.pricing.homeVisit.followUp}</p>
+            </div>
+          </div>
+          <p class="text-sm text-brand-navy-light">
+            I come to you anywhere in North County San Diego. No commute, no waiting room.
+          </p>
+        </div>
+        <!-- In-Clinic Pricing -->
+        <div class="bg-white rounded-2xl p-8 shadow-sm border border-brand-sage/20">
+          <div class="w-12 h-12 bg-brand-sage/10 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-brand-sage" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-heading font-semibold text-brand-navy mb-4">In-Clinic</h3>
+          <div class="space-y-4 mb-6">
+            <div class="flex justify-between items-baseline border-b border-gray-100 pb-3">
+              <div>
+                <p class="font-medium text-brand-navy">Initial Evaluation</p>
+                <p class="text-sm text-brand-navy-light">90 minutes</p>
+              </div>
+              <p class="text-2xl font-heading font-semibold text-brand-sage">${siteConfig.pricing.clinic.initialEval}</p>
+            </div>
+            <div class="flex justify-between items-baseline">
+              <div>
+                <p class="font-medium text-brand-navy">Follow-Up Session</p>
+                <p class="text-sm text-brand-navy-light">60 minutes</p>
+              </div>
+              <p class="text-2xl font-heading font-semibold text-brand-sage">${siteConfig.pricing.clinic.followUp}</p>
+            </div>
+          </div>
+          <p class="text-sm text-brand-navy-light">
+            San Diego County Midwives HQ in Rancho Bernardo. Wed & Fri, 9am–1pm.
+          </p>
+        </div>
+      </div>
+      <!-- Pricing Notes -->
+      <div class="max-w-3xl mx-auto mt-8 text-center">
+        <div class="bg-white rounded-xl p-6 shadow-sm border border-brand-sage/10">
+          <p class="text-brand-navy-light text-sm mb-2">
+            <strong class="text-brand-navy">Free 15-minute discovery call</strong> — Let's talk about your goals before you commit to anything.
+          </p>
+          <p class="text-brand-navy-light text-sm">
+            I provide superbills for PPO insurance carriers so you can submit for potential reimbursement.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Testimonials -->
   <section class="py-16 md:py-20 bg-gradient-to-br from-brand-sage to-brand-sage-dark">
     <div class="container-max">

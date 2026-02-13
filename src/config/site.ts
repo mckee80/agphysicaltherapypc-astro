@@ -56,6 +56,19 @@ export const siteConfig = {
     specialization: 'Postpartum Corrective Exercise Specialist',
   },
 
+  // Pricing
+  pricing: {
+    homeVisit: {
+      initialEval: 200,
+      followUp: 185,
+    },
+    clinic: {
+      initialEval: 150,
+      followUp: 125,
+    },
+    discoveryCall: 0, // Free
+  },
+
   // Branding
   brand: {
     colors: {
