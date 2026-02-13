@@ -67,6 +67,12 @@ export const siteConfig = {
       followUp: 125,
     },
     discoveryCall: 0, // Free
+    reconnectionSession: {
+      session1: 250,
+      session2: 210,
+      session3: 210,
+      total: 670,
+    },
   },
 
   // Branding
@@ -203,6 +209,12 @@ export const siteConfig = {
       description:
         'San Diego and North County concierge services. Receive personalized care in the comfort and privacy of your own home.',
       icon: 'home',
+    },
+    {
+      name: 'Reconnection Session: Acupuncture + Pelvic Floor Therapy',
+      description:
+        'A 3-session collaborative program ($670) with acupuncturist Nina Jung exploring the jaw-pelvic floor connection. Includes nervous system grounding, fascia and breath mapping, at-home tools like gua sha and ear seeds, and a personalized home exercise program.',
+      icon: 'heart',
     },
   ],
 
