@@ -54,6 +54,10 @@ const articleSchema = {
   type="article"
   publishedTime={frontmatter.pubDate}
   jsonLd={articleSchema}
+  breadcrumbs={[
+    { name: 'Blog', url: '/blog/' },
+    { name: frontmatter.title, url: Astro.url.pathname.replace(/^\/agphysicaltherapypc-astro/, '') },
+  ]}
 >
   <article class="section-padding pt-36">
     <div class="container-max">

@@ -34,8 +34,10 @@ Create blog posts or content targeting local keywords:
 - [x] Person schema in JsonLd.astro (name, jobTitle, description, credentials)
 - [x] Full ProfilePage + Person schema on About page (credentials, alumni, knowsAbout)
 
-### 6. Add BreadcrumbList Schema
-Add breadcrumb structured data for improved navigation signals in search results.
+### ~~6. Add BreadcrumbList Schema~~ DONE
+- [x] BreadcrumbList JSON-LD on all pages (except homepage and 404)
+- [x] Single-level: About, Areas Served, Blog, Resources
+- [x] Two-level for blog posts: Home > Blog > Post Title
 
 ### ~~7. Add aggregateRating to LocalBusiness Schema~~ DONE
 - [x] aggregateRating added to LocalBusiness schema (5.0 stars, 14 reviews from Google)
@@ -123,6 +125,7 @@ Community resources converted to the Resources page (/resources/) with all provi
 | aggregateRating in schema | Done | 5.0 stars, 14 reviews wired into LocalBusiness structured data |
 | Social icons in footer | Done | Facebook, Instagram, Yelp icons with links |
 | Sticky mobile CTA | Done | Fixed "Book Online" button on mobile, appears after scrolling |
+| BreadcrumbList schema | Done | JSON-LD on all pages, 2-level for blog posts |
 
 ---
 
