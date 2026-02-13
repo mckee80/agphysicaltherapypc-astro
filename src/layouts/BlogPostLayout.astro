@@ -21,7 +21,8 @@ const formattedDate = new Date(frontmatter.pubDate).toLocaleDateString('en-US', 
 });
 
 const defaultAuthorDisplay = `Dr. ${siteConfig.provider.name}, ${siteConfig.provider.credentials}`;
-const authorDisplay = frontmatter.author || defaultAuthorDisplay;
+const isDefaultAuthor = !frontmatter.author || frontmatter.author === siteConfig.provider.name;
+const authorDisplay = isDefaultAuthor ? defaultAuthorDisplay : frontmatter.author;
 
 const articleSchema = {
   '@context': 'https://schema.org',
