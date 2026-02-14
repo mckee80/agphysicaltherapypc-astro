@@ -58,6 +58,14 @@ const fullTitle =
 <!doctype html>
 <html lang="en">
   <head>
+    <!-- Google Analytics (GA4) -->
+    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-EX6G073Z5H"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-EX6G073Z5H');
+    </script>
     <SEOHead
       title={fullTitle}
       description={description}
