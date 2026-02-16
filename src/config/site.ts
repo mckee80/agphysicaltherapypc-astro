@@ -27,19 +27,19 @@ export const siteConfig = {
     },
     hours: {
       // General availability
-      days: 'Tuesday - Friday',
+      days: 'Monday - Friday',
       time: 'By Appointment',
-      full: 'Tue-Fri by appointment',
+      full: 'Mon-Fri by appointment',
       // In-clinic specific
       clinic: {
         days: 'Wednesdays & Fridays',
-        time: '9:00 AM - 1:00 PM',
+        time: '8:00 AM - 1:00 PM',
         location: 'San Diego County Midwives HQ',
       },
       // Home visits
       homeVisits: {
-        days: 'Tuesday - Friday',
-        time: 'Flexible scheduling',
+        days: 'Monday - Friday',
+        time: '8:00 AM - 1:00 PM',
       },
     },
     geo: {
@@ -292,7 +292,7 @@ export const siteConfig = {
     {
       question: 'What are your hours?',
       answer:
-        'In-clinic appointments at San Diego County Midwives HQ are available Wednesdays and Fridays, 9am to 1pm. For concierge home visits and virtual consultations, I have flexible scheduling Tuesday through Friday. Please contact me to find a time that works best for you.',
+        'In-clinic appointments at San Diego County Midwives HQ are available Wednesdays and Fridays, 8am to 1pm. For concierge home visits and virtual consultations, I have flexible scheduling Monday through Friday, 8am to 1pm. Please contact me to find a time that works best for you.',
     },
     {
       question: 'What should I expect during pelvic floor therapy?',

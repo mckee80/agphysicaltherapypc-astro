@@ -44,16 +44,91 @@ Create blog posts or content targeting local keywords:
 
 ---
 
-## When Moving to Custom Domain
+## When Moving to Custom Domain (Netlify)
 
-### 8. Update Base Path
-- Remove `/agphysicaltherapypc-astro/` prefix from all navigation links in site.ts
-- Update `astro.config.mjs` to remove base path
-- Verify sitemap generates with correct domain
+### 8. Set Up Netlify Deployment
+
+#### Step 1: Create Netlify Site
+1. Create a free account at [netlify.com](https://www.netlify.com)
+2. Click **Add new site** > **Import an existing project** > **GitHub**
+3. Authorize Netlify and select the `mckee80/agphysicaltherapypc-astro` repo
+4. Configure build settings:
+   - **Build command:** `npm run build`
+   - **Publish directory:** `dist`
+5. Under **Environment variables**, add: `NODE_VERSION` = `20`
+6. Click **Deploy site** — Netlify will build and deploy to a random URL like `random-name.netlify.app`
+7. Verify the site works at that URL before proceeding
+
+#### Step 2: Add Custom Domain in Netlify
+1. Go to **Site configuration** > **Domain management** > **Add a domain**
+2. Enter `agphysicaltherapypc.com`
+3. Netlify will also auto-add `www.agphysicaltherapypc.com`
+4. Note your Netlify site name (e.g., `random-name.netlify.app`) — you'll need it for DNS
+
+#### Step 3: Configure DNS in Squarespace Domains
+> **Note:** Google Domains was migrated to Squarespace Domains (completed July 2024).
+> Manage your domain at [domains.squarespace.com](https://domains.squarespace.com).
+
+1. Log in to **Squarespace Domains** (use your Google account if that's how you registered)
+2. Select `agphysicaltherapypc.com` > **DNS** > **DNS Settings**
+3. **Delete** any existing default records (A records, CNAME for www, etc.) that point to Squarespace or Google — use the trash/delete icon on each
+4. **Add these records:**
+
+| Type | Host | Value | TTL |
+|------|------|-------|-----|
+| A | @ | `75.2.60.5` | 3600 |
+| CNAME | www | `your-site-name.netlify.app` | 3600 |
+
+> Replace `your-site-name.netlify.app` with your actual Netlify subdomain from Step 2.
+
+5. Save changes
+6. **Wait for DNS propagation** — can take 15 minutes to 48 hours (usually under 1 hour)
+
+#### Step 4: Enable HTTPS
+1. Back in Netlify: **Site configuration** > **Domain management** > **HTTPS**
+2. Click **Verify DNS configuration** — if DNS has propagated, it will show green
+3. Click **Provision certificate** — Netlify auto-provisions a free Let's Encrypt SSL cert
+4. Enable **Force HTTPS** to redirect all HTTP traffic to HTTPS
+
+#### Step 5: Verify Everything Works
+- [ ] `https://agphysicaltherapypc.com` loads the site
+- [ ] `https://www.agphysicaltherapypc.com` loads the site (redirects to apex or vice versa)
+- [ ] HTTPS padlock shows in browser
+- [ ] All pages and images load correctly
+- [ ] Pushing to `master` triggers automatic Netlify deploy
+
+### 8b. Update Base Path (do this AFTER Netlify is connected)
+Remove `/agphysicaltherapypc-astro/` from all references — **25 occurrences across 10 files**:
+
+- `astro.config.mjs` — change `site` to `https://www.agphysicaltherapypc.com`, remove `base` line
+- `src/config/site.ts` — 10 occurrences (nav links, image paths, URL)
+- `src/pages/index.astro` — 3 occurrences (image paths, nav links)
+- `src/components/seo/SEOHead.astro` — 2 occurrences
+- `src/components/layout/Header.astro` — 2 occurrences
+- `src/pages/about.astro` — 2 occurrences
+- `src/layouts/BlogPostLayout.astro` — 2 occurrences (back link, breadcrumb regex)
+- `src/components/layout/Footer.astro` — 1 occurrence
+- `src/pages/areas-served.astro` — 1 occurrence
+- `src/pages/blog/index.astro` — 1 occurrence
+- `src/pages/404.astro` — 1 occurrence
+
+After removing, run `npm run build` and verify all links/images work locally.
+
+### 8c. Optional: Remove GitHub Pages Deploy
+- Delete `.github/workflows/deploy.yml` (or keep it as a backup deploy target)
+- In GitHub repo Settings > Pages, disable GitHub Pages
 
 ### 9. Submit to Google Search Console
-- Submit new sitemap
-- Request indexing of key pages
+- Verify domain ownership in Search Console (Netlify DNS or HTML file method)
+- Submit new sitemap (`https://www.agphysicaltherapypc.com/sitemap-index.xml`)
+- Request indexing of key pages (homepage, about, areas-served, blog)
+
+### 9b. Update Google Business Profile
+- Update website URL to `https://www.agphysicaltherapypc.com`
+- **Update booking link** to point to Jane App (`https://agphysicaltherapy.janeapp.com/`) — currently points to the old site's "Book Online" page
+- Verify all GBP data matches website exactly (address, hours, phone, services)
+- See `GBP-CHECKLIST.md` for full sync checklist
+- **Important**: GBP-to-website data mismatches can cause profile suspension (2026 policy)
 
 ---
 

@@ -40,9 +40,16 @@ const pageSchema = {
     {
       '@type': 'OpeningHoursSpecification',
       dayOfWeek: ['Wednesday', 'Friday'],
-      opens: '09:00',
+      opens: '08:00',
       closes: '13:00',
       description: 'In-clinic appointments at San Diego County Midwives HQ',
+    },
+    {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Monday', 'Tuesday', 'Thursday'],
+      opens: '08:00',
+      closes: '13:00',
+      description: 'Concierge home visits throughout North County San Diego',
     },
   ],
   hasOfferCatalog: {
@@ -132,7 +139,7 @@ const pageSchema = {
           <div class="border-t border-gray-100 pt-4 mt-4">
             <p class="text-sm font-medium text-brand-navy mb-1">Clinic Hours</p>
             <p class="text-brand-navy-light">Wednesdays & Fridays</p>
-            <p class="text-brand-navy-light">9:00 AM - 1:00 PM</p>
+            <p class="text-brand-navy-light">8:00 AM - 1:00 PM</p>
           </div>
           <a
             href="https://maps.google.com/?q=16885+Via+Del+Campo+Ct+Suite+110+San+Diego+CA+92127"
@@ -171,8 +178,8 @@ const pageSchema = {
           </p>
           <div class="border-t border-gray-100 pt-4 mt-4">
             <p class="text-sm font-medium text-brand-navy mb-1">Home Visit Hours</p>
-            <p class="text-brand-navy-light">Tuesday - Friday</p>
-            <p class="text-brand-navy-light">Flexible scheduling available</p>
+            <p class="text-brand-navy-light">Monday - Friday</p>
+            <p class="text-brand-navy-light">8:00 AM - 1:00 PM</p>
           </div>
         </div>
 
@@ -190,8 +197,8 @@ const pageSchema = {
           </p>
           <div class="border-t border-gray-100 pt-4 mt-4">
             <p class="text-sm font-medium text-brand-navy mb-1">Virtual Hours</p>
-            <p class="text-brand-navy-light">Tuesday - Friday</p>
-            <p class="text-brand-navy-light">Flexible scheduling available</p>
+            <p class="text-brand-navy-light">Monday - Friday</p>
+            <p class="text-brand-navy-light">8:00 AM - 1:00 PM</p>
           </div>
         </div>
       </div>
