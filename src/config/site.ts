@@ -166,7 +166,7 @@ export const siteConfig = {
       name: 'Urinary Incontinence & Pelvic Organ Prolapse',
       description:
         'Leaking urine when exercising, coughing, or sneezing. Increased urinary or fecal urgency, frequency, and pelvic pressure. We treat the root cause, not just the symptoms.',
-      icon: 'pelvic',
+      icon: 'droplet',
     },
     {
       name: 'Pelvic Pain',
@@ -178,25 +178,25 @@ export const siteConfig = {
       name: 'Diastasis Recti & Postpartum Recovery',
       description:
         'Diastasis recti (abdominal separation) and postpartum rehab: progressive core, back, and hip strengthening, C-section scar mobilization, and return to running program.',
-      icon: 'women',
+      icon: 'baby',
     },
     {
       name: 'Pregnancy & Birth Preparation',
       description:
         'Exercises for optimal birth, breathing and pushing strategies, birthing positions, pelvic and back pain relief, pubic symphysis and round ligament pain, and pelvic floor assessment.',
-      icon: 'orthopedic',
+      icon: 'pregnant',
     },
     {
       name: 'Orthopedic Physical Therapy',
       description:
         'Holistic orthopedic assessment and treatment that evaluates your body as a whole, addressing musculoskeletal issues with an understanding of their connection to pelvic health.',
-      icon: 'orthopedic',
+      icon: 'dumbbell',
     },
     {
       name: "Women's Health",
       description:
         "Comprehensive women's health physical therapy addressing unique needs throughout all stages of life, from pregnancy preparation to menopause and beyond.",
-      icon: 'women',
+      icon: 'flower',
     },
     {
       name: 'Virtual Consultations',
@@ -214,7 +214,7 @@ export const siteConfig = {
       name: 'Reconnection Session: Acupuncture + Pelvic Floor Therapy',
       description:
         'A 3-session collaborative program ($670) with acupuncturist Nina Jung exploring the jaw-pelvic floor connection. Includes nervous system grounding, fascia and breath mapping, at-home tools like gua sha and ear seeds, and a personalized home exercise program.',
-      icon: 'heart',
+      icon: 'sparkle',
     },
   ],
 
