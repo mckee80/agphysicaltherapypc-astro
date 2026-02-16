@@ -239,7 +239,7 @@ export const siteConfig = {
   googleReviews: {
     rating: 5.0,
     reviewCount: 14,
-    url: 'https://g.page/r/CQdHP0IP2synEBM/review',
+    url: 'https://g.page/r/CQdHP0IP2synEBM',
   },
 
   // Testimonials
