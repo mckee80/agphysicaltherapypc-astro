@@ -3,6 +3,7 @@ title: "9 Birth Prep Exercises to Get Your Pelvic Floor Ready for Labor"
 description: "A pelvic floor physical therapist's guide to preparing your body for childbirth. These 9 exercises focus on pelvic mobility, breathing, and pelvic floor lengthening to help you have a more comfortable birth."
 pubDate: 2025-02-08
 author: "Ashlee Gendron"
+image: "/agphysicaltherapypc-astro/images/birth-prep/freestocks-ux53SGpRAHU-unsplash.jpg"
 tags: ["birth preparation", "pregnancy", "pelvic floor", "exercises"]
 ---
 
