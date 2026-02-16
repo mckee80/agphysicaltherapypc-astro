@@ -239,7 +239,7 @@ export const siteConfig = {
   googleReviews: {
     rating: 5.0,
     reviewCount: 14,
-    url: 'https://www.google.com/search?q=Ashlee+Gendron+Physical+Therapy+Vista+CA+reviews',
+    url: 'https://g.page/r/CQdHP0IP2synEBM/review',
   },
 
   // Testimonials
