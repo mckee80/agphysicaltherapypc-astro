@@ -3,7 +3,7 @@ title: "9 Birth Prep Exercises to Get Your Pelvic Floor Ready for Labor"
 description: "A pelvic floor physical therapist's guide to preparing your body for childbirth. These 9 exercises focus on pelvic mobility, breathing, and pelvic floor lengthening to help you have a more comfortable birth."
 pubDate: 2025-02-08
 author: "Ashlee Gendron"
-image: "/agphysicaltherapypc-astro/images/birth-prep/freestocks-ux53SGpRAHU-unsplash.jpg"
+image: "/images/birth-prep/freestocks-ux53SGpRAHU-unsplash.jpg"
 tags: ["birth preparation", "pregnancy", "pelvic floor", "exercises"]
 ---
 
@@ -15,7 +15,7 @@ You don't need any special equipment — just a yoga block, a foam roller, and a
 
 ## 1. Anterior Pelvic Tilt
 
-![Anterior pelvic tilt exercise demonstration](/agphysicaltherapypc-astro/images/birth-prep/anterior-pelvic-tilt.jpg)
+![Anterior pelvic tilt exercise demonstration](/images/birth-prep/anterior-pelvic-tilt.jpg)
 
 Rest on a pillow or foam roller with your forearms down to isolate your pelvis. Keep your back still and in a neutral position — the only thing moving is your pelvis. Push your glutes into the air to tilt your pelvis forward.
 
@@ -25,7 +25,7 @@ Combine this with the posterior pelvic tilt below for a smooth rocking motion.
 
 ## 2. Posterior Pelvic Tilt
 
-![Posterior pelvic tilt exercise demonstration](/agphysicaltherapypc-astro/images/birth-prep/posterior-pelvic-tilt.jpg)
+![Posterior pelvic tilt exercise demonstration](/images/birth-prep/posterior-pelvic-tilt.jpg)
 
 From the same position, keep your back neutral and still, and tuck your tailbone under. As you do this, zip up your core from the front of the pelvic floor to the belly button. This prevents doming of the abdomen and teaches your core and pelvic floor to work together.
 
@@ -33,7 +33,7 @@ From the same position, keep your back neutral and still, and tuck your tailbone
 
 ## 3. Back Breathing with Yoga Block
 
-![Back breathing with yoga block exercise demonstration](/agphysicaltherapypc-astro/images/birth-prep/back-breathing-with-yoga-block.jpg)
+![Back breathing with yoga block exercise demonstration](/images/birth-prep/back-breathing-with-yoga-block.jpg)
 
 Place one leg on a yoga block. Make sure your hips are over your knees and shift about 80% of your weight onto the leg on the block. Then shift your weight back into your glute — you should feel a small stretch.
 
@@ -43,7 +43,7 @@ Now take 6 deep breaths into your back, focusing on feeling the pelvic floor exp
 
 ## 4. Adductor Stretch
 
-![Adductor stretch exercise demonstration](/agphysicaltherapypc-astro/images/birth-prep/adductor-stretch.jpg)
+![Adductor stretch exercise demonstration](/images/birth-prep/adductor-stretch.jpg)
 
 Kneel on one knee with your foot flexed, and have the other leg straight out to your side with toes pointed forward. Rock forward and back, feeling a stretch into your inner thigh. Your adductors connect to your pelvic floor, so keeping them mobile helps the pelvic floor move more freely during delivery.
 
@@ -51,7 +51,7 @@ Kneel on one knee with your foot flexed, and have the other leg straight out to 
 
 ## 5. Foam Roller Internal Rotation
 
-![Foam roller internal rotation exercise demonstration](/agphysicaltherapypc-astro/images/birth-prep/foam-roll-internal-rotation.jpg)
+![Foam roller internal rotation exercise demonstration](/images/birth-prep/foam-roll-internal-rotation.jpg)
 
 Lie on one side with a foam roller under your top leg at a 90-degree hip and knee position. Keeping your knee on the foam roller, just lift the bottom half of your leg and foot to internally rotate the hip. You can add a resistance band around the ankle for more challenge.
 
@@ -61,9 +61,9 @@ Internal rotation of the hip opens up the pelvic outlet — the space your baby 
 
 ## 6. Rotation with Foam Roller
 
-![Thoracic rotation with foam roller — starting position](/agphysicaltherapypc-astro/images/birth-prep/sideline-rotations-start.jpg)
+![Thoracic rotation with foam roller — starting position](/images/birth-prep/sideline-rotations-start.jpg)
 
-![Thoracic rotation with foam roller — arms open](/agphysicaltherapypc-astro/images/birth-prep/sideline-rotations-open.jpg)
+![Thoracic rotation with foam roller — arms open](/images/birth-prep/sideline-rotations-open.jpg)
 
 Lie on your side with hips at 90 degrees and a foam roller between your legs. Start with your hands together in front of you. Take a deep breath in, filling air into the side ribs facing up. As you exhale, open your top arm and rotate your body toward the ceiling.
 
@@ -73,7 +73,7 @@ This mobilizes the thoracic spine and ribcage, which directly affects how your d
 
 ## 7. Deep Squat
 
-![Deep squat exercise demonstration](/agphysicaltherapypc-astro/images/birth-prep/deep-squat.jpg)
+![Deep squat exercise demonstration](/images/birth-prep/deep-squat.jpg)
 
 Hold onto a secure post or counter and sit back on your heels with your feet flat on the ground. Keep your shins relaxed — if they feel tight, move closer to whatever you're holding onto.
 
@@ -83,7 +83,7 @@ Take a deep breath into your lower back and into your pelvic floor. Feel the pel
 
 ## 8. Internal Rotation Rock Backs
 
-![Internal rotation rock backs on stool exercise demonstration](/agphysicaltherapypc-astro/images/birth-prep/internal-rotation-rock-backs.jpg)
+![Internal rotation rock backs on stool exercise demonstration](/images/birth-prep/internal-rotation-rock-backs.jpg)
 
 Rest your forearms on a stool or yoga ball. Have your knees together — this position opens the posterior pelvic floor. Rock back onto your legs, bending your knees with slow, controlled movements.
 
@@ -91,7 +91,7 @@ Rest your forearms on a stool or yoga ball. Have your knees together — this po
 
 ## 9. Child's Pose with Pillow
 
-![Child's pose with pillow exercise demonstration](/agphysicaltherapypc-astro/images/birth-prep/childs-pose-w-pillow.jpg)
+![Child's pose with pillow exercise demonstration](/images/birth-prep/childs-pose-w-pillow.jpg)
 
 Try to keep your knees somewhat close together. Put a pillow under your bottom and sit back on the pillow, extending your arms in front of you.
 

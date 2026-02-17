@@ -3,7 +3,7 @@ title: "Empowering Women Through Pelvic Health and Jaw Relief"
 description: "Understanding the connection between pelvic floor health and jaw tension, and how acupuncture and manual release techniques can help women find relief."
 pubDate: 2025-10-21
 author: "Ashlee Gendron"
-image: "/agphysicaltherapypc-astro/images/10-21-cover.jpg"
+image: "/images/10-21-cover.jpg"
 tags: ["pelvic floor", "jaw tension", "TMJ", "women's health"]
 ---
 
@@ -35,7 +35,7 @@ Similarly, needling techniques applied to the jaw can alleviate tightness and di
 
 When these two techniques work hand in hand, women may notice transformative benefits. For example, a survey of women who received combined therapies indicated that over 80% experienced significant improvements in pelvic pain and overall bladder control. Additionally, the calming effects positively influenced their emotional state.
 
-![Acupuncture needles for treatment](/agphysicaltherapypc-astro/images/10-21-c1.jpg)
+![Acupuncture needles for treatment](/images/10-21-c1.jpg)
 
 ## The Nervous System Connection
 
@@ -61,7 +61,7 @@ This intricate connection between pelvic floor health and jaw release serves as 
 
 As we deepen our understanding of our bodies' complexities, it's clear that adopting holistic approaches to health can yield rewarding results. If you're experiencing tension and discomfort in any of these areas, consider incorporating these techniques into your wellness routine. Your body will appreciate the care!
 
-![Serene treatment room for relaxation](/agphysicaltherapypc-astro/images/10-21-c2.jpg)
+![Serene treatment room for relaxation](/images/10-21-c2.jpg)
 
 ## Conclusion
 

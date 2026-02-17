@@ -56,14 +56,14 @@ const articleSchema = {
   jsonLd={articleSchema}
   breadcrumbs={[
     { name: 'Blog', url: '/blog/' },
-    { name: frontmatter.title, url: Astro.url.pathname.replace(/^\/agphysicaltherapypc-astro/, '') },
+    { name: frontmatter.title, url: Astro.url.pathname },
   ]}
 >
   <article class="section-padding pt-36">
     <div class="container-max">
       <div class="max-w-3xl mx-auto">
         <!-- Back to blog -->
-        <a href="/agphysicaltherapypc-astro/blog/" class="inline-flex items-center gap-2 text-brand-sage hover:text-brand-sage-dark transition-colors mb-8">
+        <a href="/blog/" class="inline-flex items-center gap-2 text-brand-sage hover:text-brand-sage-dark transition-colors mb-8">
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
           </svg>

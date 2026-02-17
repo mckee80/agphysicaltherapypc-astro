@@ -3,7 +3,7 @@ title: "Advantages of Comprehensive Orthopedic Therapy: Your Guide to Comprehens
 description: "Discover how comprehensive orthopedic therapy offers a full-circle approach to rehabilitation, addressing body mechanics, lifestyle, and goals for long-term health."
 pubDate: 2025-12-04
 author: "Ashlee Gendron"
-image: "/agphysicaltherapypc-astro/images/dec-4-cover.jpg"
+image: "/images/dec-4-cover.jpg"
 tags: ["orthopedic therapy", "rehabilitation", "physical therapy", "women's health"]
 ---
 
@@ -37,7 +37,7 @@ Here's what you can expect from a comprehensive orthopedic therapy experience:
 
 One of the best parts? You learn how to listen to your body and take control of your healing process. It's empowering to know you're actively working toward a stronger, healthier you.
 
-![Woman doing stretching exercises during orthopedic therapy](/agphysicaltherapypc-astro/images/dec-4-c1.jpg)
+![Woman doing stretching exercises during orthopedic therapy](/images/dec-4-c1.jpg)
 
 ## What to Expect from a Comprehensive Orthopedic Therapy Program
 
@@ -65,7 +65,7 @@ Whether you're recovering from surgery, managing chronic pain, or addressing pel
 
 I've seen firsthand how this approach changes lives. It's not just about healing an injury; it's about restoring your confidence and independence.
 
-![Orthopedic therapy tools and exercise bands used in rehabilitation](/agphysicaltherapypc-astro/images/dec-4-c2.jpg)
+![Orthopedic therapy tools and exercise bands used in rehabilitation](/images/dec-4-c2.jpg)
 
 ## Taking the First Step Toward a Stronger You
 

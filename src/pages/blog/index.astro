@@ -37,7 +37,7 @@ const formatDate = (date: Date) => {
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {posts.map((post) => (
             <article class="bg-white rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 overflow-hidden">
-              <a href={`/agphysicaltherapypc-astro/blog/${post.slug}/`} class="block">
+              <a href={`/blog/${post.slug}/`} class="block">
                 {post.data.image && (
                   <img
                     src={post.data.image}

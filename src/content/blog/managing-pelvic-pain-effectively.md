@@ -3,7 +3,7 @@ title: "Managing Pelvic Pain Effectively: Techniques That Really Work"
 description: "Practical techniques for managing pelvic pain including physical therapy, mindful movement, heat therapy, and lifestyle adjustments to help you take back control."
 pubDate: 2025-12-10
 author: "Ashlee Gendron"
-image: "/agphysicaltherapypc-astro/images/dec-10-cover.jpg"
+image: "/images/dec-10-cover.jpg"
 tags: ["pelvic pain", "pain management", "pelvic floor", "women's health"]
 ---
 
@@ -15,7 +15,7 @@ Before diving into solutions, it's important to understand what pelvic pain real
 
 Knowing what's behind your pain helps you choose the right approach. For example, if your pain is muscle-related, physical therapy might be your best friend. If it's nerve-related, other treatments might be needed. Don't hesitate to get a proper diagnosis - it's the first step to feeling better.
 
-![Pelvic anatomy model showing muscles and bones](/agphysicaltherapypc-astro/images/dec-10-c1.jpg)
+![Pelvic anatomy model showing muscles and bones](/images/dec-10-c1.jpg)
 
 ## Managing Pelvic Pain Effectively: Practical Techniques You Can Try
 
@@ -45,7 +45,7 @@ Heat is a simple, soothing way to reduce pelvic pain. A warm heating pad or hot 
 
 Just be sure not to use heat for too long at once - 15 to 20 minutes is usually enough. And if you have any swelling or infection, avoid heat and opt for cold packs instead.
 
-![Heating pad for pelvic pain relief](/agphysicaltherapypc-astro/images/dec-10-c2.jpg)
+![Heating pad for pelvic pain relief](/images/dec-10-c2.jpg)
 
 ### 4. Mind-Body Techniques
 

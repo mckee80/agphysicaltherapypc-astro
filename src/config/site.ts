@@ -130,19 +130,19 @@ export const siteConfig = {
   // Navigation structure
   navigation: {
     main: [
-      { name: 'About', href: '/agphysicaltherapypc-astro/about/' },
-      { name: 'Services', href: '/agphysicaltherapypc-astro/#services' },
-      { name: 'Areas Served', href: '/agphysicaltherapypc-astro/areas-served/' },
-      { name: 'Blog', href: '/agphysicaltherapypc-astro/blog/' },
-      { name: 'Resources', href: '/agphysicaltherapypc-astro/resources/' },
+      { name: 'About', href: '/about/' },
+      { name: 'Services', href: '/#services' },
+      { name: 'Areas Served', href: '/areas-served/' },
+      { name: 'Blog', href: '/blog/' },
+      { name: 'Resources', href: '/resources/' },
     ],
     footer: {
       quickLinks: [
-        { name: 'About', href: '/agphysicaltherapypc-astro/about/' },
-        { name: 'Services', href: '/agphysicaltherapypc-astro/#services' },
-        { name: 'Areas Served', href: '/agphysicaltherapypc-astro/areas-served/' },
-        { name: 'Blog', href: '/agphysicaltherapypc-astro/blog/' },
-        { name: 'Resources', href: '/agphysicaltherapypc-astro/resources/' },
+        { name: 'About', href: '/about/' },
+        { name: 'Services', href: '/#services' },
+        { name: 'Areas Served', href: '/areas-served/' },
+        { name: 'Blog', href: '/blog/' },
+        { name: 'Resources', href: '/resources/' },
         { name: 'Book Online', href: 'https://agphysicaltherapypc.janeapp.com/' },
       ],
     },

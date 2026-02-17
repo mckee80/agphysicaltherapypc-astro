@@ -3,7 +3,7 @@ title: "Effective Strategies for Pelvic Pain Management"
 description: "Practical strategies for managing pelvic pain including physical therapy, lifestyle changes, mind-body techniques, and emotional support to help you regain control."
 pubDate: 2025-11-03
 author: "Ashlee Gendron"
-image: "/agphysicaltherapypc-astro/images/11-3-cover.jpg"
+image: "/images/11-3-cover.jpg"
 tags: ["pelvic pain", "pain management", "pelvic floor", "women's health"]
 ---
 
@@ -23,7 +23,7 @@ Here are some practical strategies that can make a real difference:
 - **Lifestyle Adjustments:** Sometimes, small changes like adjusting your posture, avoiding certain activities, or improving your diet can help reduce symptoms.
 - **Support Networks:** Talking to others who understand what you're going through can be incredibly healing. Whether it's a support group or close friends, connection matters.
 
-![Cozy therapy room with treatment table](/agphysicaltherapypc-astro/images/11-3-c1.jpg)
+![Cozy therapy room with treatment table](/images/11-3-c1.jpg)
 
 ## How Long is Too Long for Pelvic Pain?
 
@@ -68,7 +68,7 @@ Here are some lifestyle tips that can support your healing journey:
 
 Remember, these changes don't have to happen all at once. Start small and build habits that feel sustainable for you.
 
-![Water bottle and fresh fruits for healthy hydration](/agphysicaltherapypc-astro/images/11-3-c2.jpg)
+![Water bottle and fresh fruits for healthy hydration](/images/11-3-c2.jpg)
 
 ## Embracing Emotional Well-being Alongside Physical Healing
 
