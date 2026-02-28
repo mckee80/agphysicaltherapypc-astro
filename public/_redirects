@@ -1,0 +1,2 @@
+# Redirect old GitHub Pages base path URLs to new paths
+/agphysicaltherapypc-astro/*  /:splat  301

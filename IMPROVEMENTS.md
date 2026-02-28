@@ -44,91 +44,33 @@ Create blog posts or content targeting local keywords:
 
 ---
 
-## When Moving to Custom Domain (Netlify)
+## ~~When Moving to Custom Domain (Netlify)~~ DONE
 
-### 8. Set Up Netlify Deployment
+### ~~8. Set Up Netlify Deployment~~ DONE
+- [x] Netlify site created: `singular-scone-c8074a.netlify.app`
+- [x] Custom domain `agphysicaltherapypc.com` added
+- [x] DNS configured in Squarespace Domains (A record + CNAME)
+- [x] HTTPS enabled with Let's Encrypt certificate
+- [x] Auto-deploy from master branch working
 
-#### Step 1: Create Netlify Site
-1. Create a free account at [netlify.com](https://www.netlify.com)
-2. Click **Add new site** > **Import an existing project** > **GitHub**
-3. Authorize Netlify and select the `mckee80/agphysicaltherapypc-astro` repo
-4. Configure build settings:
-   - **Build command:** `npm run build`
-   - **Publish directory:** `dist`
-5. Under **Environment variables**, add: `NODE_VERSION` = `20`
-6. Click **Deploy site** — Netlify will build and deploy to a random URL like `random-name.netlify.app`
-7. Verify the site works at that URL before proceeding
-
-#### Step 2: Add Custom Domain in Netlify
-1. Go to **Site configuration** > **Domain management** > **Add a domain**
-2. Enter `agphysicaltherapypc.com`
-3. Netlify will also auto-add `www.agphysicaltherapypc.com`
-4. Note your Netlify site name (e.g., `random-name.netlify.app`) — you'll need it for DNS
-
-#### Step 3: Configure DNS in Squarespace Domains
-> **Note:** Google Domains was migrated to Squarespace Domains (completed July 2024).
-> Manage your domain at [domains.squarespace.com](https://domains.squarespace.com).
-
-1. Log in to **Squarespace Domains** (use your Google account if that's how you registered)
-2. Select `agphysicaltherapypc.com` > **DNS** > **DNS Settings**
-3. **Delete** any existing default records (A records, CNAME for www, etc.) that point to Squarespace or Google — use the trash/delete icon on each
-4. **Add these records:**
-
-| Type | Host | Value | TTL |
-|------|------|-------|-----|
-| A | @ | `75.2.60.5` | 3600 |
-| CNAME | www | `your-site-name.netlify.app` | 3600 |
-
-> Replace `your-site-name.netlify.app` with your actual Netlify subdomain from Step 2.
-
-5. Save changes
-6. **Wait for DNS propagation** — can take 15 minutes to 48 hours (usually under 1 hour)
-
-#### Step 4: Enable HTTPS
-1. Back in Netlify: **Site configuration** > **Domain management** > **HTTPS**
-2. Click **Verify DNS configuration** — if DNS has propagated, it will show green
-3. Click **Provision certificate** — Netlify auto-provisions a free Let's Encrypt SSL cert
-4. Enable **Force HTTPS** to redirect all HTTP traffic to HTTPS
-
-#### Step 5: Verify Everything Works
-- [ ] `https://agphysicaltherapypc.com` loads the site
-- [ ] `https://www.agphysicaltherapypc.com` loads the site (redirects to apex or vice versa)
-- [ ] HTTPS padlock shows in browser
-- [ ] All pages and images load correctly
-- [ ] Pushing to `master` triggers automatic Netlify deploy
-
-### 8b. Update Base Path (do this AFTER Netlify is connected)
-Remove `/agphysicaltherapypc-astro/` from all references — **25 occurrences across 10 files**:
-
-- `astro.config.mjs` — change `site` to `https://www.agphysicaltherapypc.com`, remove `base` line
-- `src/config/site.ts` — 10 occurrences (nav links, image paths, URL)
-- `src/pages/index.astro` — 3 occurrences (image paths, nav links)
-- `src/components/seo/SEOHead.astro` — 2 occurrences
-- `src/components/layout/Header.astro` — 2 occurrences
-- `src/pages/about.astro` — 2 occurrences
-- `src/layouts/BlogPostLayout.astro` — 2 occurrences (back link, breadcrumb regex)
-- `src/components/layout/Footer.astro` — 1 occurrence
-- `src/pages/areas-served.astro` — 1 occurrence
-- `src/pages/blog/index.astro` — 1 occurrence
-- `src/pages/404.astro` — 1 occurrence
-
-After removing, run `npm run build` and verify all links/images work locally.
+### ~~8b. Update Base Path~~ DONE
+- [x] Removed `/agphysicaltherapypc-astro/` from all references across 21 files
+- [x] Site URL updated to `https://www.agphysicaltherapypc.com`
 
 ### 8c. Optional: Remove GitHub Pages Deploy
 - Delete `.github/workflows/deploy.yml` (or keep it as a backup deploy target)
 - In GitHub repo Settings > Pages, disable GitHub Pages
 
-### 9. Submit to Google Search Console
-- Verify domain ownership in Search Console (Netlify DNS or HTML file method)
-- Submit new sitemap (`https://www.agphysicaltherapypc.com/sitemap-index.xml`)
-- Request indexing of key pages (homepage, about, areas-served, blog)
+### ~~9. Submit to Google Search Console~~ DONE
+- [x] Domain verified via DNS TXT record
+- [x] Sitemap submitted (`sitemap-index.xml`)
+- [x] Key pages submitted for indexing
 
-### 9b. Update Google Business Profile
-- Update website URL to `https://www.agphysicaltherapypc.com`
-- **Update booking link** to point to Jane App (`https://agphysicaltherapy.janeapp.com/`) — currently points to the old site's "Book Online" page
-- Verify all GBP data matches website exactly (address, hours, phone, services)
+### ~~9b. Update Google Business Profile~~ N/A
+- GBP website URL unchanged (same domain)
+- Booking link already points to Jane App
+- Verify GBP data matches website (address, hours, phone, services)
 - See `GBP-CHECKLIST.md` for full sync checklist
-- **Important**: GBP-to-website data mismatches can cause profile suspension (2026 policy)
 
 ---
 
@@ -156,22 +98,26 @@ Document partnership with San Diego County Midwives, local events, etc.
 
 ---
 
-## ~~Next Up~~ Recently Completed
+## Remaining Tasks
 
-### ~~15. Add Resources Section~~ DONE
-Resources page live with community provider referrals across 10 categories.
+### 16. Blog Post Cover Images
+3 blog posts still need cover images:
+- `comprehensive-orthopedic-therapy-for-all-needs.md` — Orthopedic therapy
+- `leaking-urine-stress-incontinence.md` — Stress urinary incontinence
+- `imposter-syndrome.md` — Imposter syndrome / personal growth
 
-### 16. Add Pictures
-Incorporate professional photos throughout the site (hero, about, services, etc.). Pending client photo assets. Birth prep blog post has 9 image placeholders ready.
+### 17. Optimize Images for Mobile Performance
+Mobile PageSpeed performance score is 76 (Desktop is 97). Main opportunity:
+- Convert large JPGs (professional photos) to WebP format with Astro's `<Image>` component
+- Resize images to appropriate display dimensions (most are full-resolution originals)
+- Add explicit `width`/`height` attributes to prevent layout shift
+- Consider `astro:assets` or `@astrojs/image` for automatic optimization at build time
 
-### ~~17. Add Pricing~~ DONE
-Pricing added to site.ts config (home visit, clinic, discovery call, Reconnection Session). Displayed on services.
+### 20. Disable GitHub Pages
+Old deploy at `mckee80.github.io/agphysicaltherapypc-astro` is broken (base path removed). Disable in GitHub repo Settings > Pages.
 
-### ~~18. Add Reconnection Session Info~~ DONE
-Reconnection Session added as 9th service card with pricing ($670 for 3 sessions). Collaborative acupuncture + pelvic floor therapy program with Nina Jung.
-
-### ~~19. Convert Community Resources PDF to Web Page~~ DONE
-Community resources converted to the Resources page (/resources/) with all provider referrals organized by category.
+### 21. Delete Wix Site
+Cancel/delete the old Wix site once stable on Netlify (no rush).
 
 ---
 
@@ -194,13 +140,21 @@ Community resources converted to the Resources page (/resources/) with all provi
 | Pricing in site config | Done | Home visit, clinic, discovery call, Reconnection Session |
 | Reconnection Session service card | Done | 3-session program ($670) with Nina Jung |
 | Community resources PDF to web | Done | /resources/ page |
-| Birth prep blog post | Done | 9 exercises from PDF, image placeholders ready |
+| Birth prep blog post | Done | 9 exercises with images, cover image added |
 | Blog author credentials | Done | All posts show "Dr. Ashlee Gendron, PT, DPT, PCES" |
 | Referral FAQ update | Done | "No immediate referral" wording in config + homepage |
 | aggregateRating in schema | Done | 5.0 stars, 14 reviews wired into LocalBusiness structured data |
 | Social icons in footer | Done | Facebook, Instagram, Yelp icons with links |
 | Sticky mobile CTA | Done | Fixed "Book Online" button on mobile, appears after scrolling |
 | BreadcrumbList schema | Done | JSON-LD on all pages, 2-level for blog posts |
+| Service card icons | Done | Meaningful SVGs: droplet, baby, pregnant, dumbbell, flower, sparkle |
+| Professional photos | Done | Homepage, about page, areas served, homepage photo break |
+| Hours update | Done | Clinic 8am-1pm Wed/Fri, home visits Mon-Fri 8am-1pm |
+| Resources page updates | Done | Whole Women Nutrition, Annie Guevara, Heather LeMaster, Laci Mattson, Jackie Martinez |
+| GA4 tracking | Done | Measurement ID G-EX6G073Z5H installed in BaseLayout |
+| Netlify deployment | Done | Live at agphysicaltherapypc.com with HTTPS |
+| Base path removal | Done | Removed /agphysicaltherapypc-astro/ from 21 files |
+| Google Search Console | Done | Verified, sitemap submitted, key pages indexed |
 
 ---
 
