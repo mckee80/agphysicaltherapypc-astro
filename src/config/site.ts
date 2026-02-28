@@ -99,8 +99,8 @@ export const siteConfig = {
     defaultTitle:
       'Pelvic Floor Physical Therapy Vista CA | Boutique Concierge PT',
     defaultDescription:
-      'Boutique concierge pelvic floor physical therapy in Vista & North County San Diego. Dr. Ashlee Gendron offers one-on-one home visits, in-clinic sessions & virtual care. Specializing in postpartum rehab, incontinence, diastasis recti & pelvic pain.',
-    defaultImage: '/images/ashlee-gendron.jpg',
+      'Boutique pelvic floor & orthopedic PT in Vista & North County San Diego. Dr. Ashlee Gendron offers home visits, clinic sessions & virtual care.',
+    defaultImage: '/images/og-image.jpg',
     keywords: [
       'pelvic floor physical therapy',
       'women\'s health physical therapy',
