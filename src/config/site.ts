@@ -238,7 +238,7 @@ export const siteConfig = {
   // Google Reviews
   googleReviews: {
     rating: 5.0,
-    reviewCount: 14,
+    reviewCount: 15,
     url: 'https://g.page/r/CQdHP0IP2synEBM',
   },
 
