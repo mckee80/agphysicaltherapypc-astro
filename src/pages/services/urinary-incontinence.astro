@@ -1,0 +1,348 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { siteConfig } from '@/config/site';
+
+const pageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'MedicalWebPage',
+  name: 'Pelvic Floor Therapy for Urinary Incontinence San Diego',
+  description: 'Pelvic floor therapy for bladder leakage and urinary incontinence in North County San Diego. Dr. Ashlee Gendron offers one-on-one treatment for stress incontinence, urge incontinence, and bladder retraining.',
+  url: `${siteConfig.url}/services/urinary-incontinence/`,
+  mainEntity: {
+    '@type': 'MedicalCondition',
+    name: 'Urinary Incontinence',
+    associatedAnatomy: {
+      '@type': 'AnatomicalStructure',
+      name: 'Pelvic Floor',
+    },
+    possibleTreatment: {
+      '@type': 'PhysicalTherapy',
+      name: 'Pelvic Floor Physical Therapy for Incontinence',
+      provider: {
+        '@type': 'PhysicalTherapist',
+        name: siteConfig.provider.name,
+        url: siteConfig.url,
+      },
+    },
+  },
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Does pelvic floor therapy actually work for incontinence?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. Pelvic floor physical therapy is the first-line treatment for urinary incontinence, recommended by the American Urological Association and the American College of Obstetricians and Gynecologists. Most patients see significant improvement within 4-8 sessions.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'I have never had kids — can I still have incontinence?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Absolutely. Incontinence can happen at any age and regardless of whether you\'ve given birth. Hormonal changes, high-impact exercise, chronic constipation, surgery, and menopause can all contribute. Pelvic floor therapy helps regardless of the cause.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'I have been leaking for years — is it too late?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Not at all. I work with women who have been leaking for 5, 10, 20+ years. Your pelvic floor muscles can still be retrained. It\'s never too late to get help.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What if kegels have not worked for me?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'That\'s actually one of the most common things I hear. Kegels only help if the problem is pelvic floor weakness — and even then, most women don\'t do them correctly. If your pelvic floor is too tight, kegels can make things worse. I figure out what\'s really going on before prescribing any exercises.',
+      },
+    },
+  ],
+};
+---
+
+<BaseLayout
+  title="Pelvic Floor Therapy for Bladder Leakage San Diego | Incontinence Treatment"
+  description="Pelvic floor therapy for urinary incontinence in North County San Diego. Dr. Ashlee Gendron treats stress incontinence, urge incontinence, and bladder leakage with one-on-one home visits and clinic sessions."
+  jsonLd={pageSchema}
+  breadcrumbs={[
+    { name: 'Services', url: '/#services' },
+    { name: 'Urinary Incontinence', url: '/services/urinary-incontinence/' },
+  ]}
+>
+  <!-- FAQ Schema -->
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+  <!-- Hero -->
+  <section class="pt-36 pb-16 bg-gradient-to-br from-brand-sage/10 to-transparent">
+    <div class="container-max">
+      <div class="max-w-3xl">
+        <span class="section-label">Urinary Incontinence</span>
+        <h1 class="text-4xl md:text-5xl mb-6">Pelvic Floor Therapy for Urinary Incontinence in San Diego</h1>
+        <p class="text-lg text-brand-navy-light mb-8">
+          Leaking isn't just a "mom thing." It's treatable.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href={siteConfig.bookingUrl} target="_blank" rel="noopener" class="btn btn-primary btn-lg">
+            Book a Free 15-Min Consult
+          </a>
+          <a href={`tel:${siteConfig.contact.phone.primary}`} class="btn btn-outline btn-lg">
+            Call {siteConfig.contact.phone.formatted}
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Intro -->
+  <section class="section-padding">
+    <div class="container-max">
+      <div class="max-w-3xl">
+        <p class="text-brand-navy-light mb-6">
+          You cross your legs before you sneeze. You skip the trampoline with your kids. You wear a pad "just in case." You've been told it's normal — especially after having babies.
+        </p>
+        <p class="text-brand-navy-light mb-6">
+          It's common. But it's not something you have to live with.
+        </p>
+        <p class="text-brand-navy-light">
+          Urinary incontinence affects millions of women, and pelvic floor physical therapy is the first-line treatment recommended by doctors and urogynecologists. I'm Dr. Ashlee Gendron, and I help women across North County San Diego stop leaking and get back to living without worrying about their bladder.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Types of Incontinence -->
+  <section class="section-padding bg-surface-alt">
+    <div class="container-max">
+      <div class="max-w-3xl mx-auto">
+        <span class="section-label">What I Treat</span>
+        <h2 class="section-title">Types of Incontinence</h2>
+
+        <div class="space-y-6">
+          <div class="bg-white rounded-xl p-6 shadow-sm border border-brand-sage/10">
+            <h3 class="font-heading font-semibold text-brand-navy mb-2">Stress Incontinence</h3>
+            <p class="text-brand-navy-light">Leaking when you cough, sneeze, laugh, jump, run, or lift something heavy. This is the most common type I see, especially in postpartum women and active women.</p>
+          </div>
+          <div class="bg-white rounded-xl p-6 shadow-sm border border-brand-sage/10">
+            <h3 class="font-heading font-semibold text-brand-navy mb-2">Urge Incontinence</h3>
+            <p class="text-brand-navy-light">That sudden, overwhelming "I need to go NOW" feeling — sometimes you don't make it to the bathroom in time. This often comes with going to the bathroom way more than you should need to.</p>
+          </div>
+          <div class="bg-white rounded-xl p-6 shadow-sm border border-brand-sage/10">
+            <h3 class="font-heading font-semibold text-brand-navy mb-2">Mixed Incontinence</h3>
+            <p class="text-brand-navy-light">A combination of both stress and urge. Many women deal with both.</p>
+          </div>
+          <div class="bg-white rounded-xl p-6 shadow-sm border border-brand-sage/10">
+            <h3 class="font-heading font-semibold text-brand-navy mb-2">Frequency and Urgency</h3>
+            <p class="text-brand-navy-light">Feeling like you always need to pee, even when your bladder isn't full. Running to the bathroom 10+ times a day. Planning your errands around bathroom locations.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How I Help -->
+  <section class="section-padding">
+    <div class="container-max">
+      <div class="max-w-3xl mx-auto">
+        <span class="section-label">How I Help</span>
+        <h2 class="section-title">More Than "Just Do Kegels"</h2>
+        <p class="text-brand-navy-light mb-8">
+          Leaking isn't just about a "weak pelvic floor." Sometimes the muscles are weak. Sometimes they're too tight and can't contract properly. Sometimes it's a coordination issue — your pelvic floor isn't firing at the right time. Sometimes it's related to your core, your breathing, or your hips. That's why "just do kegels" doesn't work for most women.
+        </p>
+
+        <div class="space-y-6">
+          <div class="flex gap-4">
+            <div class="flex-shrink-0 w-10 h-10 bg-brand-sage/10 rounded-full flex items-center justify-center">
+              <span class="text-brand-sage font-semibold">1</span>
+            </div>
+            <div>
+              <h3 class="font-heading font-semibold text-brand-navy mb-1">Full Assessment</h3>
+              <p class="text-brand-navy-light">Internal and external evaluation of your pelvic floor, core, hips, and breathing patterns. I figure out what's actually causing the leaking — not just treat the symptom.</p>
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <div class="flex-shrink-0 w-10 h-10 bg-brand-sage/10 rounded-full flex items-center justify-center">
+              <span class="text-brand-sage font-semibold">2</span>
+            </div>
+            <div>
+              <h3 class="font-heading font-semibold text-brand-navy mb-1">Targeted Muscle Training</h3>
+              <p class="text-brand-navy-light">Strengthening what's weak, releasing what's tight, and retraining coordination so your pelvic floor responds when you need it to.</p>
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <div class="flex-shrink-0 w-10 h-10 bg-brand-sage/10 rounded-full flex items-center justify-center">
+              <span class="text-brand-sage font-semibold">3</span>
+            </div>
+            <div>
+              <h3 class="font-heading font-semibold text-brand-navy mb-1">Bladder Retraining</h3>
+              <p class="text-brand-navy-light">For urgency and frequency issues, I help you retrain your bladder's habits so you're not running to the bathroom every 30 minutes.</p>
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <div class="flex-shrink-0 w-10 h-10 bg-brand-sage/10 rounded-full flex items-center justify-center">
+              <span class="text-brand-sage font-semibold">4</span>
+            </div>
+            <div>
+              <h3 class="font-heading font-semibold text-brand-navy mb-1">Functional Training</h3>
+              <p class="text-brand-navy-light">We practice the things that cause you to leak — whether that's jumping, running, lifting your kids, or sneezing — so your body learns to manage pressure without losing control.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Results -->
+  <section class="section-padding bg-surface-alt">
+    <div class="container-max">
+      <div class="max-w-3xl mx-auto">
+        <div class="philosophy-box">
+          <h3>You Don't Have to Plan Your Life Around Your Bladder</h3>
+          <p>I see women who have been leaking for years — some since their first pregnancy, some since menopause, some who've never been pregnant at all. Almost all of them were told it was "just how it is."</p>
+          <p>It's not. Pelvic floor therapy works, and it works well. The research backs it up, and I see it every day in my practice. Most women start seeing improvement within 4-6 sessions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Locations -->
+  <section class="section-padding">
+    <div class="container-max">
+      <div class="text-center mb-12 max-w-2xl mx-auto">
+        <span class="section-label">Convenient Care</span>
+        <h2 class="section-title">Incontinence Treatment Across North County</h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8 max-w-3xl mx-auto">
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-brand-sage/20 text-center">
+          <h3 class="font-heading font-semibold text-brand-navy mb-2">Home Visits</h3>
+          <p class="text-brand-sage-dark font-medium text-sm mb-2">I Come to You</p>
+          <p class="text-brand-navy-light text-sm">Vista, Carlsbad, Oceanside, San Marcos, Encinitas, Escondido, Rancho Bernardo & more</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-brand-sage/20 text-center">
+          <h3 class="font-heading font-semibold text-brand-navy mb-2">In-Clinic</h3>
+          <p class="text-brand-sage-dark font-medium text-sm mb-2">San Diego County Midwives HQ</p>
+          <p class="text-brand-navy-light text-sm">Wed & Fri, 8am - 1pm<br/>Rancho Bernardo</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-brand-sage/20 text-center">
+          <h3 class="font-heading font-semibold text-brand-navy mb-2">Virtual</h3>
+          <p class="text-brand-sage-dark font-medium text-sm mb-2">Video Consultations</p>
+          <p class="text-brand-navy-light text-sm">Available if you're not local</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section class="section-padding bg-surface-alt">
+    <div class="container-max">
+      <div class="text-center mb-12 max-w-2xl mx-auto">
+        <span class="section-label">Investment</span>
+        <h2 class="section-title">Transparent Pricing</h2>
+      </div>
+      <div class="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+        <div class="bg-white rounded-2xl p-8 shadow-sm border border-brand-sage/20 relative overflow-hidden">
+          <div class="absolute top-4 right-4 bg-brand-sage text-white text-xs font-medium px-3 py-1 rounded-full">
+            Most Popular
+          </div>
+          <h3 class="text-xl font-heading font-semibold text-brand-navy mb-4">Concierge Home Visits</h3>
+          <div class="space-y-4 mb-6">
+            <div class="flex justify-between items-baseline border-b border-gray-100 pb-3">
+              <div>
+                <p class="font-medium text-brand-navy">Initial Evaluation</p>
+                <p class="text-sm text-brand-navy-light">90 minutes</p>
+              </div>
+              <p class="text-2xl font-heading font-semibold text-brand-sage">${siteConfig.pricing.homeVisit.initialEval}</p>
+            </div>
+            <div class="flex justify-between items-baseline">
+              <div>
+                <p class="font-medium text-brand-navy">Follow-Up Session</p>
+                <p class="text-sm text-brand-navy-light">60 minutes</p>
+              </div>
+              <p class="text-2xl font-heading font-semibold text-brand-sage">${siteConfig.pricing.homeVisit.followUp}</p>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl p-8 shadow-sm border border-brand-sage/20">
+          <h3 class="text-xl font-heading font-semibold text-brand-navy mb-4">In-Clinic</h3>
+          <div class="space-y-4 mb-6">
+            <div class="flex justify-between items-baseline border-b border-gray-100 pb-3">
+              <div>
+                <p class="font-medium text-brand-navy">Initial Evaluation</p>
+                <p class="text-sm text-brand-navy-light">90 minutes</p>
+              </div>
+              <p class="text-2xl font-heading font-semibold text-brand-sage">${siteConfig.pricing.clinic.initialEval}</p>
+            </div>
+            <div class="flex justify-between items-baseline">
+              <div>
+                <p class="font-medium text-brand-navy">Follow-Up Session</p>
+                <p class="text-sm text-brand-navy-light">60 minutes</p>
+              </div>
+              <p class="text-2xl font-heading font-semibold text-brand-sage">${siteConfig.pricing.clinic.followUp}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="max-w-3xl mx-auto mt-8 text-center">
+        <div class="bg-white rounded-xl p-6 shadow-sm border border-brand-sage/10">
+          <p class="text-brand-navy-light text-sm mb-2">
+            <strong class="text-brand-navy">No referral needed</strong> in California. I provide superbills for PPO insurance reimbursement.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section-padding">
+    <div class="container-max">
+      <div class="text-center mb-12 max-w-2xl mx-auto">
+        <span class="section-label">Common Questions</span>
+        <h2 class="section-title">Urinary Incontinence FAQ</h2>
+      </div>
+      <div class="max-w-3xl mx-auto">
+        <details class="faq-item">
+          <summary>Does pelvic floor therapy actually work for incontinence?</summary>
+          <p>Yes. Pelvic floor physical therapy is the first-line treatment for urinary incontinence, recommended by the American Urological Association and the American College of Obstetricians and Gynecologists. Most of my patients see significant improvement within 4-8 sessions.</p>
+        </details>
+        <details class="faq-item">
+          <summary>I've never had kids — can I still have incontinence?</summary>
+          <p>Absolutely. Incontinence can happen at any age and regardless of whether you've given birth. Hormonal changes, high-impact exercise, chronic constipation, surgery, and menopause can all contribute. Pelvic floor therapy helps regardless of the cause.</p>
+        </details>
+        <details class="faq-item">
+          <summary>I've been leaking for years — is it too late?</summary>
+          <p>Not at all. I work with women who have been leaking for 5, 10, 20+ years. Your pelvic floor muscles can still be retrained. It's never too late to get help.</p>
+        </details>
+        <details class="faq-item">
+          <summary>What if kegels haven't worked for me?</summary>
+          <p>That's actually one of the most common things I hear. Kegels only help if the problem is pelvic floor weakness — and even then, most women don't do them correctly. If your pelvic floor is too tight, kegels can make things worse. I figure out what's really going on before prescribing any exercises.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 bg-gradient-to-br from-brand-sage to-brand-sage-dark">
+    <div class="container-max">
+      <div class="max-w-2xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl text-white mb-4">Ready to Stop Planning Your Life Around Your Bladder?</h2>
+        <p class="text-white/85 text-lg mb-8">
+          Start with a free 15-minute phone call. No pressure, no commitment — just an honest conversation about whether pelvic floor therapy can help you.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href={siteConfig.bookingUrl} target="_blank" rel="noopener" class="btn btn-primary bg-white text-brand-sage hover:bg-gray-100 border-white btn-lg">
+            Book Free Consultation
+          </a>
+          <a href={`tel:${siteConfig.contact.phone.primary}`} class="btn btn-outline border-white text-white hover:bg-white/10 btn-lg">
+            Call {siteConfig.contact.phone.formatted}
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -167,18 +167,21 @@ export const siteConfig = {
       description:
         'Leaking urine when exercising, coughing, or sneezing. Increased urinary or fecal urgency, frequency, and pelvic pressure. We treat the root cause, not just the symptoms.',
       icon: 'droplet',
+      href: '/services/urinary-incontinence/',
     },
     {
       name: 'Pelvic Pain',
       description:
         'Treatment for PCOS, endometriosis, painful bladder syndrome (IC), painful intercourse, painful menstruation, lower back and hip pain, constipation, and post-surgical rehabilitation.',
       icon: 'heart',
+      href: '/services/pelvic-pain/',
     },
     {
       name: 'Diastasis Recti & Postpartum Recovery',
       description:
         'Diastasis recti (abdominal separation) and postpartum rehab: progressive core, back, and hip strengthening, C-section scar mobilization, and return to running program.',
       icon: 'baby',
+      href: '/services/postpartum-recovery/',
     },
     {
       name: 'Pregnancy & Birth Preparation',

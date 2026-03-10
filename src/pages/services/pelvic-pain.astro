@@ -1,0 +1,396 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { siteConfig } from '@/config/site';
+
+const pageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'MedicalWebPage',
+  name: 'Pelvic Pain Physical Therapy San Diego',
+  description: 'Pelvic pain physical therapy in North County San Diego. Dr. Ashlee Gendron treats pain during intercourse, endometriosis, IC, vulvodynia, and chronic pelvic pain with one-on-one home visits and clinic sessions.',
+  url: `${siteConfig.url}/services/pelvic-pain/`,
+  mainEntity: {
+    '@type': 'MedicalCondition',
+    name: 'Chronic Pelvic Pain',
+    associatedAnatomy: {
+      '@type': 'AnatomicalStructure',
+      name: 'Pelvic Floor',
+    },
+    possibleTreatment: {
+      '@type': 'PhysicalTherapy',
+      name: 'Pelvic Pain Physical Therapy',
+      provider: {
+        '@type': 'PhysicalTherapist',
+        name: siteConfig.provider.name,
+        url: siteConfig.url,
+      },
+    },
+  },
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Can pelvic floor therapy help with pain during sex?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. Pain during sex is one of the most common — and most treatable — reasons women come to see me. It\'s often caused by tight pelvic floor muscles, scar tissue, or a nervous system that\'s stuck in protection mode. Pelvic floor therapy addresses all of these.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'My doctor says everything looks normal, but I am still in pain. Can you help?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'This is something I hear all the time. Normal imaging and lab work don\'t rule out pelvic floor dysfunction. An internal and external pelvic floor assessment looks at muscle tension, trigger points, and coordination — things that standard medical tests don\'t evaluate.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do I need an internal exam for pelvic pain treatment?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'An internal exam gives me the most complete picture, but it\'s never required. If you\'re not comfortable or not ready, I can still evaluate and treat you effectively with external techniques. We go at your pace.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How many sessions will I need for pelvic pain?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'It depends on how long you\'ve had the pain and what\'s causing it. Some women see meaningful improvement in 4-6 sessions. Chronic pain that\'s been present for years may take longer. I\'ll give you honest expectations after your first visit.',
+      },
+    },
+  ],
+};
+---
+
+<BaseLayout
+  title="Pelvic Pain Physical Therapy San Diego | Treatment for Pelvic Pain"
+  description="Pelvic pain physical therapy in North County San Diego. Dr. Ashlee Gendron treats pain during sex, endometriosis, interstitial cystitis, vulvodynia, and chronic pelvic pain. One-on-one home visits and clinic sessions."
+  jsonLd={pageSchema}
+  breadcrumbs={[
+    { name: 'Services', url: '/#services' },
+    { name: 'Pelvic Pain', url: '/services/pelvic-pain/' },
+  ]}
+>
+  <!-- FAQ Schema -->
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+  <!-- Hero -->
+  <section class="pt-36 pb-16 bg-gradient-to-br from-brand-sage/10 to-transparent">
+    <div class="container-max">
+      <div class="max-w-3xl">
+        <span class="section-label">Pelvic Pain</span>
+        <h1 class="text-4xl md:text-5xl mb-6">Pelvic Pain Physical Therapy in San Diego</h1>
+        <p class="text-lg text-brand-navy-light mb-8">
+          Pain down there isn't something you should just push through.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href={siteConfig.bookingUrl} target="_blank" rel="noopener" class="btn btn-primary btn-lg">
+            Book a Free 15-Min Consult
+          </a>
+          <a href={`tel:${siteConfig.contact.phone.primary}`} class="btn btn-outline btn-lg">
+            Call {siteConfig.contact.phone.formatted}
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Intro -->
+  <section class="section-padding">
+    <div class="container-max">
+      <div class="max-w-3xl">
+        <p class="text-brand-navy-light mb-6">
+          Maybe it started after having a baby. Maybe it's been there as long as you can remember. Maybe it showed up out of nowhere and no one can tell you why.
+        </p>
+        <p class="text-brand-navy-light mb-6">
+          Pelvic pain is one of the most frustrating things to deal with — partly because it's invisible, partly because so many women are told "everything looks fine" when it clearly doesn't feel fine.
+        </p>
+        <p class="text-brand-navy-light">
+          If you're dealing with pain during sex, pain with sitting, pain with exercise, or a constant ache in your pelvis — pelvic floor physical therapy can help. I'm Dr. Ashlee Gendron, and I treat pelvic pain at its source, not just the symptoms.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Conditions -->
+  <section class="section-padding bg-surface-alt">
+    <div class="container-max">
+      <div class="max-w-3xl mx-auto">
+        <span class="section-label">What I Treat</span>
+        <h2 class="section-title">Pelvic Pain Conditions</h2>
+        <p class="text-brand-navy-light mb-8">
+          Pelvic pain has many possible causes, and often more than one thing is going on at the same time. Here's what I see regularly:
+        </p>
+
+        <div class="space-y-6">
+          <div class="bg-white rounded-xl p-6 shadow-sm border border-brand-sage/10">
+            <h3 class="font-heading font-semibold text-brand-navy mb-2">Pain During Intercourse (Dyspareunia)</h3>
+            <p class="text-brand-navy-light">Pain with penetration, deep pain during sex, or pain that lingers afterward. This is one of the most common reasons women come to see me — and one of the most treatable.</p>
+          </div>
+          <div class="bg-white rounded-xl p-6 shadow-sm border border-brand-sage/10">
+            <h3 class="font-heading font-semibold text-brand-navy mb-2">Endometriosis-Related Pain</h3>
+            <p class="text-brand-navy-light">Endo can cause chronic pelvic pain, painful periods, and pain with intercourse. Pelvic floor therapy doesn't treat endo itself, but it addresses the muscle tension, scar tissue, and pain patterns that develop because of it.</p>
+          </div>
+          <div class="bg-white rounded-xl p-6 shadow-sm border border-brand-sage/10">
+            <h3 class="font-heading font-semibold text-brand-navy mb-2">Painful Periods</h3>
+            <p class="text-brand-navy-light">Severe cramping that goes beyond normal period discomfort. When the pelvic floor muscles are chronically tight, they can amplify menstrual pain.</p>
+          </div>
+          <div class="bg-white rounded-xl p-6 shadow-sm border border-brand-sage/10">
+            <h3 class="font-heading font-semibold text-brand-navy mb-2">Painful Bladder Syndrome / Interstitial Cystitis (IC)</h3>
+            <p class="text-brand-navy-light">Bladder pressure, urgency, and pain that isn't caused by an infection. Pelvic floor therapy is a core part of IC management.</p>
+          </div>
+          <div class="bg-white rounded-xl p-6 shadow-sm border border-brand-sage/10">
+            <h3 class="font-heading font-semibold text-brand-navy mb-2">Vulvodynia and Vestibulodynia</h3>
+            <p class="text-brand-navy-light">Chronic burning, stinging, or irritation at the vaginal opening or vulva. Often the pelvic floor muscles are involved.</p>
+          </div>
+          <div class="bg-white rounded-xl p-6 shadow-sm border border-brand-sage/10">
+            <h3 class="font-heading font-semibold text-brand-navy mb-2">Constipation and Bowel Pain</h3>
+            <p class="text-brand-navy-light">Difficulty with bowel movements, straining, or pain with sitting. The pelvic floor controls the opening and closing of the bowel, and when those muscles aren't working right, it affects everything.</p>
+          </div>
+          <div class="bg-white rounded-xl p-6 shadow-sm border border-brand-sage/10">
+            <h3 class="font-heading font-semibold text-brand-navy mb-2">Post-Surgical Pelvic Pain</h3>
+            <p class="text-brand-navy-light">Pain after hysterectomy, C-section, endometriosis surgery, or other pelvic procedures. Scar tissue and muscle guarding can persist long after the incision heals.</p>
+          </div>
+          <div class="bg-white rounded-xl p-6 shadow-sm border border-brand-sage/10">
+            <h3 class="font-heading font-semibold text-brand-navy mb-2">Lower Back and Hip Pain</h3>
+            <p class="text-brand-navy-light">Sometimes "hip pain" or "back pain" is actually coming from the pelvic floor. I assess the connection between your pelvis, hips, and core to find the real source.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Treatment -->
+  <section class="section-padding">
+    <div class="container-max">
+      <div class="max-w-3xl mx-auto">
+        <span class="section-label">How I Treat Pelvic Pain</span>
+        <h2 class="section-title">The Whole Picture, Not Just the Symptom</h2>
+        <p class="text-brand-navy-light mb-8">
+          Pelvic pain is almost never just one thing. Your pelvic floor muscles, your nervous system, your hips, your core, your breathing — they all play a role. That's why I look at the whole picture, not just the area that hurts.
+        </p>
+
+        <div class="space-y-6">
+          <div class="flex gap-4">
+            <div class="flex-shrink-0 w-10 h-10 bg-brand-sage/10 rounded-full flex items-center justify-center">
+              <span class="text-brand-sage font-semibold">1</span>
+            </div>
+            <div>
+              <h3 class="font-heading font-semibold text-brand-navy mb-1">Comprehensive Assessment</h3>
+              <p class="text-brand-navy-light">90 minutes, one-on-one. I evaluate your pelvic floor (internal and external, with your consent), your posture, core, hips, and breathing. I listen to your full story — when the pain started, what makes it better or worse, what you've already tried.</p>
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <div class="flex-shrink-0 w-10 h-10 bg-brand-sage/10 rounded-full flex items-center justify-center">
+              <span class="text-brand-sage font-semibold">2</span>
+            </div>
+            <div>
+              <h3 class="font-heading font-semibold text-brand-navy mb-1">Manual Therapy</h3>
+              <p class="text-brand-navy-light">Hands-on techniques including myofascial release, trigger point release, scar mobilization, cupping, and joint mobilization. For many pelvic pain patients, the pelvic floor muscles are too tight — the goal is to release tension, not add more.</p>
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <div class="flex-shrink-0 w-10 h-10 bg-brand-sage/10 rounded-full flex items-center justify-center">
+              <span class="text-brand-sage font-semibold">3</span>
+            </div>
+            <div>
+              <h3 class="font-heading font-semibold text-brand-navy mb-1">Nervous System Calming</h3>
+              <p class="text-brand-navy-light">Chronic pain involves the nervous system. I incorporate strategies to help your body feel safe again — breathwork, grounding techniques, and gradual exposure to movements that feel threatening.</p>
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <div class="flex-shrink-0 w-10 h-10 bg-brand-sage/10 rounded-full flex items-center justify-center">
+              <span class="text-brand-sage font-semibold">4</span>
+            </div>
+            <div>
+              <h3 class="font-heading font-semibold text-brand-navy mb-1">Strengthening (When Appropriate)</h3>
+              <p class="text-brand-navy-light">Once the pain is under better control, we build strength and stability so the pain doesn't come back. This isn't about jumping into exercises on day one — it's about timing it right.</p>
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <div class="flex-shrink-0 w-10 h-10 bg-brand-sage/10 rounded-full flex items-center justify-center">
+              <span class="text-brand-sage font-semibold">5</span>
+            </div>
+            <div>
+              <h3 class="font-heading font-semibold text-brand-navy mb-1">Home Program</h3>
+              <p class="text-brand-navy-light">Every session, you leave with specific things to work on between visits. Stretches, breathing exercises, self-release techniques — things you can do at home that actually help.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What Makes Me Different -->
+  <section class="section-padding bg-surface-alt">
+    <div class="container-max">
+      <div class="text-center mb-12 max-w-2xl mx-auto">
+        <span class="section-label">My Approach</span>
+        <h2 class="section-title">What Makes My Approach Different</h2>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="resource-card">
+          <div class="resource-number">60-90</div>
+          <h3 class="mt-2 mb-2 text-lg">Minute Sessions</h3>
+          <p class="text-brand-navy-light text-base">
+            Pelvic pain takes time to unpack. Your sessions give you my full, undivided attention.
+          </p>
+        </div>
+        <div class="resource-card">
+          <div class="resource-number">
+            <svg class="w-8 h-8 text-brand-sage mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+            </svg>
+          </div>
+          <h3 class="mt-2 mb-2 text-lg">Whole-Body Treatment</h3>
+          <p class="text-brand-navy-light text-base">
+            Pelvic pain rarely exists in isolation. I look at how your core, hips, breathing, and nervous system are contributing.
+          </p>
+        </div>
+        <div class="resource-card">
+          <div class="resource-number">
+            <svg class="w-8 h-8 text-brand-sage mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+            </svg>
+          </div>
+          <h3 class="mt-2 mb-2 text-lg">At Your Pace</h3>
+          <p class="text-brand-navy-light text-base">
+            If you're not ready for an internal exam, we don't do one. If certain movements are painful, we modify. You're always in control.
+          </p>
+        </div>
+        <div class="resource-card highlight">
+          <h3 class="mb-2 text-lg">I Come to You</h3>
+          <p class="text-base">
+            For many pelvic pain patients, being in a comfortable environment makes a real difference. Home visits are available throughout North County.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- You Deserve Answers -->
+  <section class="section-padding">
+    <div class="container-max">
+      <div class="max-w-3xl mx-auto">
+        <div class="philosophy-box">
+          <h3>You Deserve Answers</h3>
+          <p>Pelvic pain can feel isolating. You might have seen multiple doctors, had normal test results, and still be in pain. That doesn't mean the pain isn't real — it means the right assessment hasn't been done yet.</p>
+          <p>Pelvic floor physical therapy looks at what imaging and blood work can't see: how your muscles are functioning, where the tension is, and what's driving the pain cycle. For many women, this is the missing piece.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section class="section-padding bg-surface-alt">
+    <div class="container-max">
+      <div class="text-center mb-12 max-w-2xl mx-auto">
+        <span class="section-label">Investment</span>
+        <h2 class="section-title">Transparent Pricing</h2>
+      </div>
+      <div class="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+        <div class="bg-white rounded-2xl p-8 shadow-sm border border-brand-sage/20 relative overflow-hidden">
+          <div class="absolute top-4 right-4 bg-brand-sage text-white text-xs font-medium px-3 py-1 rounded-full">
+            Most Popular
+          </div>
+          <h3 class="text-xl font-heading font-semibold text-brand-navy mb-4">Concierge Home Visits</h3>
+          <div class="space-y-4 mb-6">
+            <div class="flex justify-between items-baseline border-b border-gray-100 pb-3">
+              <div>
+                <p class="font-medium text-brand-navy">Initial Evaluation</p>
+                <p class="text-sm text-brand-navy-light">90 minutes</p>
+              </div>
+              <p class="text-2xl font-heading font-semibold text-brand-sage">${siteConfig.pricing.homeVisit.initialEval}</p>
+            </div>
+            <div class="flex justify-between items-baseline">
+              <div>
+                <p class="font-medium text-brand-navy">Follow-Up Session</p>
+                <p class="text-sm text-brand-navy-light">60 minutes</p>
+              </div>
+              <p class="text-2xl font-heading font-semibold text-brand-sage">${siteConfig.pricing.homeVisit.followUp}</p>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl p-8 shadow-sm border border-brand-sage/20">
+          <h3 class="text-xl font-heading font-semibold text-brand-navy mb-4">In-Clinic</h3>
+          <div class="space-y-4 mb-6">
+            <div class="flex justify-between items-baseline border-b border-gray-100 pb-3">
+              <div>
+                <p class="font-medium text-brand-navy">Initial Evaluation</p>
+                <p class="text-sm text-brand-navy-light">90 minutes</p>
+              </div>
+              <p class="text-2xl font-heading font-semibold text-brand-sage">${siteConfig.pricing.clinic.initialEval}</p>
+            </div>
+            <div class="flex justify-between items-baseline">
+              <div>
+                <p class="font-medium text-brand-navy">Follow-Up Session</p>
+                <p class="text-sm text-brand-navy-light">60 minutes</p>
+              </div>
+              <p class="text-2xl font-heading font-semibold text-brand-sage">${siteConfig.pricing.clinic.followUp}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="max-w-3xl mx-auto mt-8 text-center">
+        <div class="bg-white rounded-xl p-6 shadow-sm border border-brand-sage/10">
+          <p class="text-brand-navy-light text-sm">
+            <strong class="text-brand-navy">No referral needed</strong> in California. Superbills provided for PPO insurance reimbursement.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section-padding">
+    <div class="container-max">
+      <div class="text-center mb-12 max-w-2xl mx-auto">
+        <span class="section-label">Common Questions</span>
+        <h2 class="section-title">Pelvic Pain FAQ</h2>
+      </div>
+      <div class="max-w-3xl mx-auto">
+        <details class="faq-item">
+          <summary>Can pelvic floor therapy help with pain during sex?</summary>
+          <p>Yes. Pain during sex is one of the most common — and most treatable — reasons women come to see me. It's often caused by tight pelvic floor muscles, scar tissue, or a nervous system that's stuck in protection mode. Pelvic floor therapy addresses all of these.</p>
+        </details>
+        <details class="faq-item">
+          <summary>My doctor says everything looks normal, but I'm still in pain. Can you help?</summary>
+          <p>This is something I hear all the time. Normal imaging and lab work don't rule out pelvic floor dysfunction. An internal and external pelvic floor assessment looks at muscle tension, trigger points, and coordination — things that standard medical tests don't evaluate.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Do I need an internal exam for pelvic pain treatment?</summary>
+          <p>An internal exam gives me the most complete picture, but it's never required. If you're not comfortable or not ready, I can still evaluate and treat you effectively with external techniques. We go at your pace.</p>
+        </details>
+        <details class="faq-item">
+          <summary>How many sessions will I need?</summary>
+          <p>It depends on how long you've had the pain and what's causing it. Some women see meaningful improvement in 4-6 sessions. Chronic pain that's been present for years may take longer. I'll give you honest expectations after your first visit.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 bg-gradient-to-br from-brand-sage to-brand-sage-dark">
+    <div class="container-max">
+      <div class="max-w-2xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl text-white mb-4">Ready to Find Out What's Really Going On?</h2>
+        <p class="text-white/85 text-lg mb-8">
+          Living with pelvic pain is exhausting. Start with a free 15-minute phone call. Tell me what you're dealing with, and I'll tell you if I can help.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href={siteConfig.bookingUrl} target="_blank" rel="noopener" class="btn btn-primary bg-white text-brand-sage hover:bg-gray-100 border-white btn-lg">
+            Book Free Consultation
+          </a>
+          <a href={`tel:${siteConfig.contact.phone.primary}`} class="btn btn-outline border-white text-white hover:bg-white/10 btn-lg">
+            Call {siteConfig.contact.phone.formatted}
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

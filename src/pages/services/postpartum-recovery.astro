@@ -1,0 +1,366 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { siteConfig } from '@/config/site';
+
+const pageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'MedicalWebPage',
+  name: 'Postpartum Pelvic Floor Therapy San Diego',
+  description: 'Postpartum pelvic floor therapy and diastasis recti treatment in North County San Diego. Dr. Ashlee Gendron offers one-on-one home visits, clinic sessions, and virtual care for postpartum recovery.',
+  url: `${siteConfig.url}/services/postpartum-recovery/`,
+  mainEntity: {
+    '@type': 'MedicalCondition',
+    name: 'Postpartum Pelvic Floor Dysfunction',
+    associatedAnatomy: {
+      '@type': 'AnatomicalStructure',
+      name: 'Pelvic Floor',
+    },
+    possibleTreatment: {
+      '@type': 'PhysicalTherapy',
+      name: 'Postpartum Pelvic Floor Physical Therapy',
+      provider: {
+        '@type': 'PhysicalTherapist',
+        name: siteConfig.provider.name,
+        url: siteConfig.url,
+      },
+    },
+  },
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'How soon after birth can I start pelvic floor therapy?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'I typically see patients starting around 6 weeks postpartum, but every situation is different. If you had complications or a C-section, we\'ll work around your recovery timeline. And if you\'re months or years postpartum, it\'s never too late — your body can still respond to treatment.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Will I have to do an internal exam?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'An internal exam gives me the most complete picture of your pelvic floor, but it\'s always your choice. I\'ll explain what I\'m looking for and why, and we only proceed if you\'re comfortable. I can still help you without one.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'I had my baby years ago — can pelvic floor therapy still help?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Absolutely. I regularly work with women who are 5, 10, even 15 years postpartum. Pelvic floor muscles respond to targeted training at any stage. It\'s never too late.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What is the difference between pelvic floor therapy and just doing kegels?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Kegels are one small piece of the puzzle — and for some women, kegels actually make things worse (especially if your pelvic floor is already too tight). I assess your whole body — core, hips, breathing, pelvic floor — to figure out what you actually need. It\'s not just kegels.',
+      },
+    },
+  ],
+};
+---
+
+<BaseLayout
+  title="Postpartum Pelvic Floor Therapy San Diego | Diastasis Recti & C-Section Recovery"
+  description="Postpartum pelvic floor therapy in North County San Diego. Dr. Ashlee Gendron treats diastasis recti, C-section scar pain, leaking, prolapse, and return to exercise. One-on-one home visits and clinic sessions."
+  jsonLd={pageSchema}
+  breadcrumbs={[
+    { name: 'Services', url: '/#services' },
+    { name: 'Postpartum Recovery', url: '/services/postpartum-recovery/' },
+  ]}
+>
+  <!-- FAQ Schema -->
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+  <!-- Hero -->
+  <section class="pt-36 pb-16 bg-gradient-to-br from-brand-sage/10 to-transparent">
+    <div class="container-max">
+      <div class="max-w-3xl">
+        <span class="section-label">Postpartum Recovery</span>
+        <h1 class="text-4xl md:text-5xl mb-6">Postpartum Pelvic Floor Therapy in San Diego</h1>
+        <p class="text-lg text-brand-navy-light mb-8">
+          Your body did something incredible. Let's help it recover.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href={siteConfig.bookingUrl} target="_blank" rel="noopener" class="btn btn-primary btn-lg">
+            Book a Free 15-Min Consult
+          </a>
+          <a href={`tel:${siteConfig.contact.phone.primary}`} class="btn btn-outline btn-lg">
+            Call {siteConfig.contact.phone.formatted}
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Intro -->
+  <section class="section-padding">
+    <div class="container-max">
+      <div class="max-w-3xl">
+        <p class="text-brand-navy-light mb-6">
+          Having a baby changes your body — and not just in the ways people talk about. Leaking when you pick up your toddler. A core that doesn't feel like yours anymore. Pain around your C-section scar months after surgery. A feeling that something "isn't right" down there but nobody seems to take it seriously.
+        </p>
+        <p class="text-brand-navy-light mb-6">
+          If any of that sounds familiar, you're not alone. And it's treatable.
+        </p>
+        <p class="text-brand-navy-light">
+          I'm Dr. Ashlee Gendron, and I specialize in helping women recover after birth — whether you're 6 weeks postpartum or 6 years. There's no window that closes on getting help.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- What I Treat -->
+  <section class="section-padding bg-surface-alt">
+    <div class="container-max">
+      <div class="max-w-3xl mx-auto">
+        <span class="section-label">What I Treat</span>
+        <h2 class="section-title">Postpartum Conditions</h2>
+        <p class="text-brand-navy-light mb-8">
+          After pregnancy and birth, your body needs more than "just do kegels." Here's what I work with every day:
+        </p>
+
+        <div class="space-y-6">
+          <div class="bg-white rounded-xl p-6 shadow-sm border border-brand-sage/10">
+            <h3 class="font-heading font-semibold text-brand-navy mb-2">Diastasis Recti (Abdominal Separation)</h3>
+            <p class="text-brand-navy-light">That gap down the middle of your abs after pregnancy. I assess how wide and deep the separation is, then build a progressive core strengthening program to restore function — not just close the gap.</p>
+          </div>
+          <div class="bg-white rounded-xl p-6 shadow-sm border border-brand-sage/10">
+            <h3 class="font-heading font-semibold text-brand-navy mb-2">C-Section Scar Pain and Tightness</h3>
+            <p class="text-brand-navy-light">Scar tissue can pull, restrict, and cause pain months or even years after surgery. I use hands-on scar mobilization to help your tissue heal and move properly again.</p>
+          </div>
+          <div class="bg-white rounded-xl p-6 shadow-sm border border-brand-sage/10">
+            <h3 class="font-heading font-semibold text-brand-navy mb-2">Leaking (Stress Incontinence)</h3>
+            <p class="text-brand-navy-light">Peeing when you sneeze, cough, jump, or run. This is common after birth, but it's not something you have to accept as your new normal.</p>
+          </div>
+          <div class="bg-white rounded-xl p-6 shadow-sm border border-brand-sage/10">
+            <h3 class="font-heading font-semibold text-brand-navy mb-2">Pelvic Organ Prolapse</h3>
+            <p class="text-brand-navy-light">A feeling of heaviness, pressure, or like something is falling out. Prolapse is more common than most women realize, and pelvic floor therapy is the first-line treatment.</p>
+          </div>
+          <div class="bg-white rounded-xl p-6 shadow-sm border border-brand-sage/10">
+            <h3 class="font-heading font-semibold text-brand-navy mb-2">Return to Exercise</h3>
+            <p class="text-brand-navy-light">You want to get back to running, lifting, or CrossFit but your body doesn't feel ready. I help you bridge that gap safely so you can get back to what you love without setbacks.</p>
+          </div>
+          <div class="bg-white rounded-xl p-6 shadow-sm border border-brand-sage/10">
+            <h3 class="font-heading font-semibold text-brand-navy mb-2">Pain During Sex</h3>
+            <p class="text-brand-navy-light">Postpartum pain with intercourse is something a lot of women deal with silently. It doesn't have to be that way.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- First Visit -->
+  <section class="section-padding">
+    <div class="container-max">
+      <div class="max-w-3xl mx-auto">
+        <span class="section-label">Your First Visit</span>
+        <h2 class="section-title">What to Expect</h2>
+        <p class="text-brand-navy-light mb-8">
+          Your initial evaluation is 90 minutes — just you and me, one-on-one. No rushing, no rotating between patients.
+        </p>
+
+        <div class="space-y-6">
+          <div class="flex gap-4">
+            <div class="flex-shrink-0 w-10 h-10 bg-brand-sage/10 rounded-full flex items-center justify-center">
+              <span class="text-brand-sage font-semibold">1</span>
+            </div>
+            <div>
+              <h3 class="font-heading font-semibold text-brand-navy mb-1">Your Full Story</h3>
+              <p class="text-brand-navy-light">I want to know about your pregnancy, birth, recovery, what's bothering you, and what your goals are.</p>
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <div class="flex-shrink-0 w-10 h-10 bg-brand-sage/10 rounded-full flex items-center justify-center">
+              <span class="text-brand-sage font-semibold">2</span>
+            </div>
+            <div>
+              <h3 class="font-heading font-semibold text-brand-navy mb-1">Whole-Body Assessment</h3>
+              <p class="text-brand-navy-light">I look at your posture, core, hips, breathing patterns, and pelvic floor. Everything is connected.</p>
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <div class="flex-shrink-0 w-10 h-10 bg-brand-sage/10 rounded-full flex items-center justify-center">
+              <span class="text-brand-sage font-semibold">3</span>
+            </div>
+            <div>
+              <h3 class="font-heading font-semibold text-brand-navy mb-1">Internal Exam (With Your Consent)</h3>
+              <p class="text-brand-navy-light">This helps me understand exactly what's happening with your pelvic floor muscles — whether they're weak, tight, or both.</p>
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <div class="flex-shrink-0 w-10 h-10 bg-brand-sage/10 rounded-full flex items-center justify-center">
+              <span class="text-brand-sage font-semibold">4</span>
+            </div>
+            <div>
+              <h3 class="font-heading font-semibold text-brand-navy mb-1">Your Plan</h3>
+              <p class="text-brand-navy-light">You leave with a clear understanding of what's going on and a personalized home exercise program to start right away.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Moms Choose Me -->
+  <section class="section-padding bg-surface-alt">
+    <div class="container-max">
+      <div class="text-center mb-12 max-w-2xl mx-auto">
+        <span class="section-label">Why Moms Choose Me</span>
+        <h2 class="section-title">A Practice Built for Postpartum Women</h2>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="resource-card">
+          <div class="resource-number">
+            <svg class="w-8 h-8 text-brand-sage mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+            </svg>
+          </div>
+          <h3 class="mt-2 mb-2 text-lg">I Come to You</h3>
+          <p class="text-brand-navy-light text-base">
+            Concierge home visits throughout North County. No loading up the car with the baby. No driving across town.
+          </p>
+        </div>
+        <div class="resource-card">
+          <div class="resource-number">
+            <svg class="w-8 h-8 text-brand-sage mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+            </svg>
+          </div>
+          <h3 class="mt-2 mb-2 text-lg">I've Been Where You Are</h3>
+          <p class="text-brand-navy-light text-base">
+            After my first baby, I couldn't run, jump, or sneeze without leaking. My OB said "just do kegels." That didn't work. That's why I do this work.
+          </p>
+        </div>
+        <div class="resource-card">
+          <div class="resource-number">90</div>
+          <h3 class="mt-2 mb-2 text-lg">Minute Sessions</h3>
+          <p class="text-brand-navy-light text-base">
+            Most clinics give you 30 to 45 minutes. Every minute of your session is dedicated to you.
+          </p>
+        </div>
+        <div class="resource-card highlight">
+          <h3 class="mb-2 text-lg">It's Never Too Late</h3>
+          <p class="text-base">
+            I see women who are 3 months postpartum and women who are 10 years out. Your body can still heal.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section class="section-padding">
+    <div class="container-max">
+      <div class="text-center mb-12 max-w-2xl mx-auto">
+        <span class="section-label">Investment</span>
+        <h2 class="section-title">Transparent Pricing</h2>
+      </div>
+      <div class="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+        <div class="bg-white rounded-2xl p-8 shadow-sm border border-brand-sage/20 relative overflow-hidden">
+          <div class="absolute top-4 right-4 bg-brand-sage text-white text-xs font-medium px-3 py-1 rounded-full">
+            Most Popular
+          </div>
+          <h3 class="text-xl font-heading font-semibold text-brand-navy mb-4">Concierge Home Visits</h3>
+          <div class="space-y-4 mb-6">
+            <div class="flex justify-between items-baseline border-b border-gray-100 pb-3">
+              <div>
+                <p class="font-medium text-brand-navy">Initial Evaluation</p>
+                <p class="text-sm text-brand-navy-light">90 minutes</p>
+              </div>
+              <p class="text-2xl font-heading font-semibold text-brand-sage">${siteConfig.pricing.homeVisit.initialEval}</p>
+            </div>
+            <div class="flex justify-between items-baseline">
+              <div>
+                <p class="font-medium text-brand-navy">Follow-Up Session</p>
+                <p class="text-sm text-brand-navy-light">60 minutes</p>
+              </div>
+              <p class="text-2xl font-heading font-semibold text-brand-sage">${siteConfig.pricing.homeVisit.followUp}</p>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl p-8 shadow-sm border border-brand-sage/20">
+          <h3 class="text-xl font-heading font-semibold text-brand-navy mb-4">In-Clinic</h3>
+          <div class="space-y-4 mb-6">
+            <div class="flex justify-between items-baseline border-b border-gray-100 pb-3">
+              <div>
+                <p class="font-medium text-brand-navy">Initial Evaluation</p>
+                <p class="text-sm text-brand-navy-light">90 minutes</p>
+              </div>
+              <p class="text-2xl font-heading font-semibold text-brand-sage">${siteConfig.pricing.clinic.initialEval}</p>
+            </div>
+            <div class="flex justify-between items-baseline">
+              <div>
+                <p class="font-medium text-brand-navy">Follow-Up Session</p>
+                <p class="text-sm text-brand-navy-light">60 minutes</p>
+              </div>
+              <p class="text-2xl font-heading font-semibold text-brand-sage">${siteConfig.pricing.clinic.followUp}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="max-w-3xl mx-auto mt-8 text-center">
+        <div class="bg-white rounded-xl p-6 shadow-sm border border-brand-sage/10">
+          <p class="text-brand-navy-light text-sm mb-2">
+            <strong class="text-brand-navy">No referral needed</strong> in California. I provide superbills for PPO insurance reimbursement.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section-padding bg-surface-alt">
+    <div class="container-max">
+      <div class="text-center mb-12 max-w-2xl mx-auto">
+        <span class="section-label">Common Questions</span>
+        <h2 class="section-title">Postpartum Pelvic Floor Therapy FAQ</h2>
+      </div>
+      <div class="max-w-3xl mx-auto">
+        <details class="faq-item">
+          <summary>How soon after birth can I start pelvic floor therapy?</summary>
+          <p>I typically see patients starting around 6 weeks postpartum, but every situation is different. If you had complications or a C-section, we'll work around your recovery timeline. And if you're months or years postpartum, it's never too late — your body can still respond to treatment.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Will I have to do an internal exam?</summary>
+          <p>An internal exam gives me the most complete picture of your pelvic floor, but it's always your choice. I'll explain what I'm looking for and why, and we only proceed if you're comfortable. I can still help you without one.</p>
+        </details>
+        <details class="faq-item">
+          <summary>I had my baby years ago — can pelvic floor therapy still help?</summary>
+          <p>Absolutely. I regularly work with women who are 5, 10, even 15 years postpartum. Pelvic floor muscles respond to targeted training at any stage. It's never too late.</p>
+        </details>
+        <details class="faq-item">
+          <summary>What's the difference between pelvic floor therapy and just doing kegels?</summary>
+          <p>Kegels are one small piece of the puzzle — and for some women, kegels actually make things worse (especially if your pelvic floor is already too tight). I assess your whole body — core, hips, breathing, pelvic floor — to figure out what you actually need. It's not just kegels.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 bg-gradient-to-br from-brand-sage to-brand-sage-dark">
+    <div class="container-max">
+      <div class="max-w-2xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl text-white mb-4">Ready to Start Your Recovery?</h2>
+        <p class="text-white/85 text-lg mb-8">
+          Not sure if pelvic floor therapy is right for you? Start with a free 15-minute phone call. Tell me what's going on, and I'll tell you if I can help. No pressure, no commitment.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href={siteConfig.bookingUrl} target="_blank" rel="noopener" class="btn btn-primary bg-white text-brand-sage hover:bg-gray-100 border-white btn-lg">
+            Book Free Consultation
+          </a>
+          <a href={`tel:${siteConfig.contact.phone.primary}`} class="btn btn-outline border-white text-white hover:bg-white/10 btn-lg">
+            Call {siteConfig.contact.phone.formatted}
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
