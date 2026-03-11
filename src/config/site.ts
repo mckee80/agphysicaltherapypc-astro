@@ -188,6 +188,7 @@ export const siteConfig = {
       description:
         'Exercises for optimal birth, breathing and pushing strategies, birthing positions, pelvic and back pain relief, pubic symphysis and round ligament pain, and pelvic floor assessment.',
       icon: 'pregnant',
+      href: '/services/pregnancy-birth-prep/',
     },
     {
       name: 'Orthopedic Physical Therapy',

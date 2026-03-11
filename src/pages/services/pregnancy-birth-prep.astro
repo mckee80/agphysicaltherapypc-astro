@@ -1,0 +1,435 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { siteConfig } from '@/config/site';
+
+const pageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'MedicalWebPage',
+  name: 'Prenatal Pelvic Floor Therapy San Diego',
+  description: 'Prenatal pelvic floor therapy and birth preparation in North County San Diego. Dr. Ashlee Gendron offers one-on-one home visits, clinic sessions, and virtual care for pregnant women.',
+  url: `${siteConfig.url}/services/pregnancy-birth-prep/`,
+  mainEntity: {
+    '@type': 'MedicalCondition',
+    name: 'Pregnancy-Related Pelvic Floor Dysfunction',
+    associatedAnatomy: {
+      '@type': 'AnatomicalStructure',
+      name: 'Pelvic Floor',
+    },
+    possibleTreatment: {
+      '@type': 'PhysicalTherapy',
+      name: 'Prenatal Pelvic Floor Physical Therapy',
+      provider: {
+        '@type': 'PhysicalTherapist',
+        name: siteConfig.provider.name,
+        url: siteConfig.url,
+      },
+    },
+  },
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Is pelvic floor therapy safe during pregnancy?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Absolutely. Prenatal pelvic floor therapy is specifically designed for pregnant women. I modify everything for your stage of pregnancy and how you\'re feeling that day. We start in the second trimester and continue through the final weeks before delivery.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'I\'ve never had pelvic floor issues — should I still see a PT during pregnancy?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes, and this is actually the best time to start. Think of it like training for a marathon — you don\'t wait until race day to prepare. Even if everything feels fine now, getting your pelvic floor assessed and preparing it for birth can reduce your risk of tearing, incontinence, and pain postpartum.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What if I\'m planning a C-section?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Prenatal pelvic floor therapy is still valuable. Your pelvic floor supported a growing baby for 9 months regardless of delivery method. The breathing, core, and pelvic floor work we do benefits C-section recovery too — and helps you prepare for postpartum whether your birth goes as planned or not.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How many sessions do I need before birth?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'It depends on when you start and what you\'re working on. Some women come for 3-4 focused birth prep sessions in the third trimester. Others start earlier and come every 2-3 weeks throughout pregnancy. After your first visit, I\'ll recommend a plan based on your body and your goals.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'I\'m in my third trimester — is it too late to start?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Not at all. Even 2-3 sessions of focused birth prep — pelvic floor lengthening, breathing strategies, and pushing techniques — can make a real difference. It\'s never too late to prepare.',
+      },
+    },
+  ],
+};
+---
+
+<BaseLayout
+  title="Prenatal Pelvic Floor Therapy San Diego | Pregnancy & Birth Preparation PT"
+  description="Prenatal pelvic floor therapy in North County San Diego. Dr. Ashlee Gendron helps pregnant women prepare for birth with pelvic floor training, pain relief, and breathing strategies. Home visits and clinic sessions."
+  jsonLd={pageSchema}
+  breadcrumbs={[
+    { name: 'Services', url: '/#services' },
+    { name: 'Pregnancy & Birth Prep', url: '/services/pregnancy-birth-prep/' },
+  ]}
+>
+  <!-- FAQ Schema -->
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+  <!-- Hero -->
+  <section class="pt-36 pb-10 bg-gradient-to-br from-brand-sage/10 to-transparent">
+    <div class="container-max">
+      <div class="max-w-3xl">
+        <span class="section-label">Pregnancy & Birth Prep</span>
+        <h1 class="text-4xl md:text-5xl mb-6">Prenatal Pelvic Floor Therapy in San Diego</h1>
+        <p class="text-lg text-brand-navy-light mb-8">
+          Prepare your body for birth — and set yourself up for a stronger recovery.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href={siteConfig.bookingUrl} target="_blank" rel="noopener" class="btn btn-primary btn-lg">
+            Book a Free 15-Min Consult
+          </a>
+          <a href={`tel:${siteConfig.contact.phone.primary}`} class="btn btn-outline btn-lg">
+            Call {siteConfig.contact.phone.formatted}
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Intro -->
+  <section class="py-10 md:py-12 px-4 md:px-8">
+    <div class="container-max">
+      <div class="max-w-3xl">
+        <p class="text-brand-navy-light mb-6">
+          Pregnancy changes everything about how your body works. Your core, your pelvic floor, your hips, your breathing — they're all adapting to carry and eventually deliver your baby. That's a lot to ask of your body, and most women get zero guidance on how to prepare for it.
+        </p>
+        <p class="text-brand-navy-light mb-6">
+          Prenatal pelvic floor therapy isn't just about preventing problems after birth — though it absolutely does that. It's about giving your body the tools it needs to handle labor, delivery, and recovery with more confidence and less pain.
+        </p>
+        <p class="text-brand-navy-light">
+          I'm Dr. Ashlee Gendron, and I help pregnant women across North County San Diego prepare their bodies for birth. Whether you're in your second trimester and planning ahead or your third trimester and feeling the pressure — you're in the right place.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- What Prenatal PT Covers -->
+  <section class="section-padding bg-surface-alt">
+    <div class="container-max">
+      <div class="max-w-3xl mx-auto">
+        <span class="section-label">What I Cover</span>
+        <h2 class="section-title">Prenatal Pelvic Floor Therapy</h2>
+        <p class="text-brand-navy-light mb-8">
+          Birth preparation is about more than exercises — it's about understanding your body and giving it the best chance to do what it needs to do.
+        </p>
+
+        <div class="space-y-6">
+          <div class="bg-white rounded-xl p-6 shadow-sm border border-brand-sage/10">
+            <h3 class="font-heading font-semibold text-brand-navy mb-2">Pelvic Floor Assessment & Training</h3>
+            <p class="text-brand-navy-light">Most women have never had their pelvic floor evaluated — and pregnancy is the best time to start. I assess whether your pelvic floor muscles are strong enough, flexible enough, and coordinated enough for delivery. Then we train specifically for what birth requires: your pelvic floor needs to know how to relax and lengthen, not just squeeze. That's why "just do kegels" isn't good enough advice for pregnancy.</p>
+          </div>
+          <div class="bg-white rounded-xl p-6 shadow-sm border border-brand-sage/10">
+            <h3 class="font-heading font-semibold text-brand-navy mb-2">Birth Preparation Exercises</h3>
+            <p class="text-brand-navy-light">I give you specific exercises focused on pelvic mobility, diaphragmatic breathing, and pelvic floor lengthening — the three things that make the biggest difference during labor. These aren't generic pregnancy workouts. They target the exact movement patterns and muscles you'll use during delivery.</p>
+          </div>
+          <div class="bg-white rounded-xl p-6 shadow-sm border border-brand-sage/10">
+            <h3 class="font-heading font-semibold text-brand-navy mb-2">Breathing & Pushing Strategies</h3>
+            <p class="text-brand-navy-light">How you breathe during labor directly affects your pelvic floor. I teach you breathing techniques that help the pelvic floor open during pushing — and strategies for different birthing positions so you have options during delivery, not just one plan.</p>
+          </div>
+          <div class="bg-white rounded-xl p-6 shadow-sm border border-brand-sage/10">
+            <h3 class="font-heading font-semibold text-brand-navy mb-2">Pregnancy-Related Pain Relief</h3>
+            <p class="text-brand-navy-light mb-3">Growing a baby puts new demands on your body, and pain is a common side effect. I treat:</p>
+            <ul class="text-brand-navy-light space-y-2 ml-4">
+              <li><strong>Lower back pain</strong> — one of the most common pregnancy complaints, often caused by shifting posture and a weakening core</li>
+              <li><strong>Pelvic girdle pain / SPD</strong> — sharp pain at the front of your pelvis, especially when walking, rolling over in bed, or going up stairs</li>
+              <li><strong>Round ligament pain</strong> — sudden, sharp pulling in your lower belly or groin</li>
+              <li><strong>Hip pain</strong> — tightness and aching from the extra load your hips are carrying</li>
+              <li><strong>Rib and mid-back pain</strong> — as baby grows and your ribcage expands</li>
+            </ul>
+          </div>
+          <div class="bg-white rounded-xl p-6 shadow-sm border border-brand-sage/10">
+            <h3 class="font-heading font-semibold text-brand-navy mb-2">Postpartum Planning</h3>
+            <p class="text-brand-navy-light">We don't just focus on birth — we plan for what comes after. I help you understand what postpartum recovery looks like, what's normal and what isn't, and when to come back for a postpartum evaluation. Women who do prenatal pelvic floor therapy typically have smoother, faster recoveries.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- When to Start -->
+  <section class="section-padding">
+    <div class="container-max">
+      <div class="max-w-3xl mx-auto">
+        <span class="section-label">Timing</span>
+        <h2 class="section-title">When Should You Start?</h2>
+        <p class="text-brand-navy-light mb-8">
+          Pregnancy prep starts in the second trimester — not the first. Here's what each stage looks like:
+        </p>
+
+        <div class="space-y-6">
+          <div class="flex gap-4">
+            <div class="flex-shrink-0 w-10 h-10 bg-brand-sage/10 rounded-full flex items-center justify-center">
+              <span class="text-brand-sage font-semibold text-sm">2nd</span>
+            </div>
+            <div>
+              <h3 class="font-heading font-semibold text-brand-navy mb-1">Second Trimester — When We Start</h3>
+              <p class="text-brand-navy-light">You're past the first-trimester fatigue, and there's plenty of time to do a baseline pelvic floor assessment, build strength and mobility, and develop pelvic floor awareness before the third trimester. If you have a history of pelvic floor issues or had complications in a previous pregnancy, starting early in the second trimester is especially valuable.</p>
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <div class="flex-shrink-0 w-10 h-10 bg-brand-sage/10 rounded-full flex items-center justify-center">
+              <span class="text-brand-sage font-semibold text-sm">3rd</span>
+            </div>
+            <div>
+              <h3 class="font-heading font-semibold text-brand-navy mb-1">Third Trimester — Birth Prep Gets Specific</h3>
+              <p class="text-brand-navy-light">We focus on pelvic floor lengthening, pushing strategies, birthing positions, and getting your body ready for labor. Even if you're starting late, a few sessions can make a meaningful difference.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why It Matters -->
+  <section class="section-padding bg-surface-alt">
+    <div class="container-max">
+      <div class="max-w-3xl mx-auto">
+        <div class="philosophy-box">
+          <h3>Why It Matters</h3>
+          <p class="mb-4">Research consistently shows that women who work with a pelvic floor PT during pregnancy have:</p>
+          <ul class="space-y-2 ml-4">
+            <li>Lower rates of severe perineal tearing during vaginal delivery</li>
+            <li>Shorter pushing phases during labor</li>
+            <li>Better pelvic floor function postpartum</li>
+            <li>Faster recovery after birth</li>
+            <li>Lower rates of urinary incontinence after delivery</li>
+          </ul>
+          <p class="mt-4">This isn't about making birth "perfect" — birth is unpredictable. It's about giving your body the best preparation possible so you can adapt to whatever happens.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Pregnant Women Choose Me -->
+  <section class="section-padding">
+    <div class="container-max">
+      <div class="text-center mb-12 max-w-2xl mx-auto">
+        <span class="section-label">Why Choose Me</span>
+        <h2 class="section-title">A Practice Built for Pregnant Women</h2>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="resource-card">
+          <div class="resource-number">
+            <svg class="w-8 h-8 text-brand-sage mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+            </svg>
+          </div>
+          <h3 class="mt-2 mb-2 text-lg">I Come to You</h3>
+          <p class="text-brand-navy-light text-base">
+            When you're 35 weeks pregnant, the last thing you want to do is drive across town. I bring everything to your home throughout North County.
+          </p>
+        </div>
+        <div class="resource-card">
+          <div class="resource-number">
+            <svg class="w-8 h-8 text-brand-sage mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+            </svg>
+          </div>
+          <h3 class="mt-2 mb-2 text-lg">I've Been Through It</h3>
+          <p class="text-brand-navy-light text-base">
+            I've been pregnant, I've given birth, and I've had my own recovery. I know what this feels like from the inside, not just from a textbook.
+          </p>
+        </div>
+        <div class="resource-card">
+          <div class="resource-number">90</div>
+          <h3 class="mt-2 mb-2 text-lg">Minute Sessions</h3>
+          <p class="text-brand-navy-light text-base">
+            Enough time to actually assess everything, answer all your questions, and build a real plan. No rushing.
+          </p>
+        </div>
+        <div class="resource-card highlight">
+          <h3 class="mb-2 text-lg">Birth to Postpartum</h3>
+          <p class="text-base">
+            I see you through pregnancy and after delivery. Continuity of care means I already know your body and your history.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- First Visit -->
+  <section class="section-padding bg-surface-alt">
+    <div class="container-max">
+      <div class="max-w-3xl mx-auto">
+        <span class="section-label">Your First Visit</span>
+        <h2 class="section-title">What to Expect</h2>
+        <p class="text-brand-navy-light mb-8">
+          Your initial evaluation is 90 minutes — just you and me, one-on-one. No rushing, no rotating between patients.
+        </p>
+
+        <div class="space-y-6">
+          <div class="flex gap-4">
+            <div class="flex-shrink-0 w-10 h-10 bg-brand-sage/10 rounded-full flex items-center justify-center">
+              <span class="text-brand-sage font-semibold">1</span>
+            </div>
+            <div>
+              <h3 class="font-heading font-semibold text-brand-navy mb-1">Your Story</h3>
+              <p class="text-brand-navy-light">I want to know about your pregnancy so far, any symptoms or pain you're experiencing, your birth plan, and what your goals are.</p>
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <div class="flex-shrink-0 w-10 h-10 bg-brand-sage/10 rounded-full flex items-center justify-center">
+              <span class="text-brand-sage font-semibold">2</span>
+            </div>
+            <div>
+              <h3 class="font-heading font-semibold text-brand-navy mb-1">Full Assessment</h3>
+              <p class="text-brand-navy-light">I evaluate your pelvic floor (internal and external, with your consent), your core function, your hips, your posture, and your breathing patterns. Everything shifts during pregnancy, and I want to see exactly where you are.</p>
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <div class="flex-shrink-0 w-10 h-10 bg-brand-sage/10 rounded-full flex items-center justify-center">
+              <span class="text-brand-sage font-semibold">3</span>
+            </div>
+            <div>
+              <h3 class="font-heading font-semibold text-brand-navy mb-1">Education</h3>
+              <p class="text-brand-navy-light">I explain what's happening in your body and why. Understanding your pelvic floor and how it works during labor gives you real confidence going into delivery.</p>
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <div class="flex-shrink-0 w-10 h-10 bg-brand-sage/10 rounded-full flex items-center justify-center">
+              <span class="text-brand-sage font-semibold">4</span>
+            </div>
+            <div>
+              <h3 class="font-heading font-semibold text-brand-navy mb-1">Your Program</h3>
+              <p class="text-brand-navy-light">You leave with a personalized exercise program focused on birth preparation, plus strategies for managing any pain you're dealing with.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section class="section-padding">
+    <div class="container-max">
+      <div class="text-center mb-12 max-w-2xl mx-auto">
+        <span class="section-label">Investment</span>
+        <h2 class="section-title">Transparent Pricing</h2>
+      </div>
+      <div class="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+        <div class="bg-white rounded-2xl p-8 shadow-sm border border-brand-sage/20 relative overflow-hidden">
+          <div class="absolute top-4 right-4 bg-brand-sage text-white text-xs font-medium px-3 py-1 rounded-full">
+            Most Popular
+          </div>
+          <h3 class="text-xl font-heading font-semibold text-brand-navy mb-4">Concierge Home Visits</h3>
+          <div class="space-y-4 mb-6">
+            <div class="flex justify-between items-baseline border-b border-gray-100 pb-3">
+              <div>
+                <p class="font-medium text-brand-navy">Initial Evaluation</p>
+                <p class="text-sm text-brand-navy-light">90 minutes</p>
+              </div>
+              <p class="text-2xl font-heading font-semibold text-brand-sage">${siteConfig.pricing.homeVisit.initialEval}</p>
+            </div>
+            <div class="flex justify-between items-baseline">
+              <div>
+                <p class="font-medium text-brand-navy">Follow-Up Session</p>
+                <p class="text-sm text-brand-navy-light">60 minutes</p>
+              </div>
+              <p class="text-2xl font-heading font-semibold text-brand-sage">${siteConfig.pricing.homeVisit.followUp}</p>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl p-8 shadow-sm border border-brand-sage/20">
+          <h3 class="text-xl font-heading font-semibold text-brand-navy mb-4">In-Clinic</h3>
+          <div class="space-y-4 mb-6">
+            <div class="flex justify-between items-baseline border-b border-gray-100 pb-3">
+              <div>
+                <p class="font-medium text-brand-navy">Initial Evaluation</p>
+                <p class="text-sm text-brand-navy-light">90 minutes</p>
+              </div>
+              <p class="text-2xl font-heading font-semibold text-brand-sage">${siteConfig.pricing.clinic.initialEval}</p>
+            </div>
+            <div class="flex justify-between items-baseline">
+              <div>
+                <p class="font-medium text-brand-navy">Follow-Up Session</p>
+                <p class="text-sm text-brand-navy-light">60 minutes</p>
+              </div>
+              <p class="text-2xl font-heading font-semibold text-brand-sage">${siteConfig.pricing.clinic.followUp}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="max-w-3xl mx-auto mt-8 text-center">
+        <div class="bg-white rounded-xl p-6 shadow-sm border border-brand-sage/10">
+          <p class="text-brand-navy-light text-sm mb-2">
+            <strong class="text-brand-navy">No referral needed</strong> in California. I provide superbills for PPO insurance reimbursement.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section-padding bg-surface-alt">
+    <div class="container-max">
+      <div class="text-center mb-12 max-w-2xl mx-auto">
+        <span class="section-label">Common Questions</span>
+        <h2 class="section-title">Prenatal Pelvic Floor Therapy FAQ</h2>
+      </div>
+      <div class="max-w-3xl mx-auto">
+        <details class="faq-item">
+          <summary>Is pelvic floor therapy safe during pregnancy?</summary>
+          <p>Absolutely. Prenatal pelvic floor therapy is specifically designed for pregnant women. I modify everything for your stage of pregnancy and how you're feeling that day. We start in the second trimester and continue through the final weeks before delivery.</p>
+        </details>
+        <details class="faq-item">
+          <summary>I've never had pelvic floor issues — should I still see a PT during pregnancy?</summary>
+          <p>Yes, and this is actually the best time to start. Think of it like training for a marathon — you don't wait until race day to prepare. Even if everything feels fine now, getting your pelvic floor assessed and preparing it for birth can reduce your risk of tearing, incontinence, and pain postpartum.</p>
+        </details>
+        <details class="faq-item">
+          <summary>What if I'm planning a C-section?</summary>
+          <p>Prenatal pelvic floor therapy is still valuable. Your pelvic floor supported a growing baby for 9 months regardless of delivery method. The breathing, core, and pelvic floor work we do benefits C-section recovery too — and helps you prepare for postpartum whether your birth goes as planned or not.</p>
+        </details>
+        <details class="faq-item">
+          <summary>How many sessions do I need before birth?</summary>
+          <p>It depends on when you start and what you're working on. Some women come for 3-4 focused birth prep sessions in the third trimester. Others start earlier and come every 2-3 weeks throughout pregnancy. After your first visit, I'll recommend a plan based on your body and your goals.</p>
+        </details>
+        <details class="faq-item">
+          <summary>I'm in my third trimester — is it too late to start?</summary>
+          <p>Not at all. Even 2-3 sessions of focused birth prep — pelvic floor lengthening, breathing strategies, and pushing techniques — can make a real difference. It's never too late to prepare.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 bg-gradient-to-br from-brand-sage to-brand-sage-dark">
+    <div class="container-max">
+      <div class="max-w-2xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl text-white mb-4">Ready to Prepare for Birth?</h2>
+        <p class="text-white/85 text-lg mb-8">
+          Pregnant and want to feel prepared — not just for birth, but for recovery too? Start with a free 15-minute phone call. Tell me where you are in your pregnancy and what you're dealing with, and I'll tell you how I can help. No pressure, no commitment.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href={siteConfig.bookingUrl} target="_blank" rel="noopener" class="btn btn-primary bg-white text-brand-sage hover:bg-gray-100 border-white btn-lg">
+            Book Free Consultation
+          </a>
+          <a href={`tel:${siteConfig.contact.phone.primary}`} class="btn btn-outline border-white text-white hover:bg-white/10 btn-lg">
+            Call {siteConfig.contact.phone.formatted}
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

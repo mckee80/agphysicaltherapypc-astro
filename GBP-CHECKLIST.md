@@ -1,191 +1,108 @@
-# Google Business Profile Sync Checklist
+# Google Business Profile — Status & Remaining Tasks
 
-## 1. Basic Information (Verify These Match Website)
+## Important: Phased Approach
 
-| Field | Website Value | GBP Status |
-|-------|---------------|------------|
-| **Business Name** | Ashlee Gendron Physical Therapy PC | [ ] Verified |
-| **Primary Category** | Physical Therapist (highest search volume for your services) | [ ] Verified |
-| **Additional Categories** | See category recommendations below | [ ] Added |
-| **Phone** | (760) 874-3309 | [ ] Verified |
-| **Email** | ashlee@agphysicaltherapypc.com | [ ] Verified |
-| **Website** | Link to `/areas-served/` page (per 2025 GBP policy) | [ ] Updated |
-| **Address** | 16885 Via Del Campo Ct, Suite 110, San Diego, CA 92127 | [ ] Verified |
+Make GBP changes in small batches (2-3 changes at a time) with a few days between each batch. Rapid bulk changes can trigger a manual review or temporary suspension.
 
 ---
 
-## 1b. Category Recommendations
+## Phase 1: Name — COMPLETE
 
-**Primary Category (pick one — this drives the most visibility):**
-- **Physical Therapist** — best fit, highest search volume
-
-**Recommended Additional Categories (2-4 relevant ones perform better than stuffing):**
-- [ ] Physical Therapy Clinic
-- [ ] Pelvic Floor Therapist *(check availability — Google has been adding this)*
-- [ ] Women's Health Clinic
-- [ ] Health Consultant
-
-**Consider but verify availability:**
-- Orthopedic Clinic *(only if ortho is a significant part of the business)*
-- Rehabilitation Center *(broad, but can help with discovery)*
-
-**Avoid these categories:**
-- Massage Therapist — wrong signals, different clientele
-- Chiropractor, Acupuncturist — unrelated specialties
-- Hospital / Medical Center — too broad, wrong expectations
-
-> **Note:** The primary category drives the most visibility. Additional categories help but have diminishing returns. Reviews, photos, and keeping GBP services aligned with the website matter more than extra categories.
+- [x] Business name confirmed as **Ashlee Gendron Physical Therapy PC** (registered business name)
 
 ---
 
-## 2. Hours
+## Phase 2: Core Info — COMPLETE
 
-**Website hours:**
-- Clinic: Wednesday & Friday, 9:00 AM - 1:00 PM
-- Home visits: Tuesday - Friday (flexible)
-
-**GBP Options:**
-- [ ] Set Wed/Fri 9am-1pm as primary hours
-- [ ] Add note about home visit availability Tue-Fri
-- [ ] Or use "By appointment" for Tue/Thu
+- [x] Website link set to `https://www.agphysicaltherapypc.com/areas-served/`
+- [x] Hours: Mon-Fri 8:00 AM - 1:00 PM
+- [x] Business description updated with full service details
 
 ---
 
-## 3. Service Areas (For Home Visits)
+## Phase 3: Services & Areas — COMPLETE
 
-If set up as hybrid business, add these service areas:
-- [ ] Vista
-- [ ] Carlsbad
-- [ ] Oceanside
-- [ ] San Marcos
-- [ ] Encinitas
-- [ ] Escondido
-- [ ] Rancho Bernardo
-- [ ] Rancho Santa Fe
-- [ ] Fallbrook
-- [ ] Solana Beach
-- [ ] Bonsall
-- [ ] North County San Diego
+- [x] 14 services added (pelvic floor PT, orthopedic PT, virtual, concierge home visits, plus conditions)
+- [x] 12 service areas added (Vista, Carlsbad, Oceanside, San Marcos, Encinitas, Escondido, Rancho Bernardo, Rancho Santa Fe, Fallbrook, Solana Beach, Bonsall, North County San Diego)
 
 ---
 
-## 4. Services to Add
+## Phase 4: Photos, Posts, Attributes — IN PROGRESS
 
-### Primary Services (Core Offerings)
+### Photos
+- [x] Professional headshot of Dr. Gendron (already on GBP)
+- [x] Treatment session photos (already on GBP)
+- [x] Logo (already on GBP)
+- [ ] **Exterior of San Diego County Midwives HQ** — need from Ashlee
 
-| Service Name | Description | Added |
-|-------------|-------------|-------|
-| **Pelvic Floor Physical Therapy** | Internal and external pelvic floor assessment and treatment for incontinence, pelvic pain, prolapse, and dysfunction. | [ ] |
-| **Postpartum Physical Therapy** | Specialized recovery for new moms including diastasis recti healing, C-section scar work, and return to exercise programming. | [ ] |
-| **Orthopedic Physical Therapy** | Holistic assessment and treatment for musculoskeletal issues with an understanding of their connection to pelvic health. | [ ] |
+**Goal:** At least 5-10 photos (most already uploaded)
 
-### Delivery Methods (Differentiators)
+### Q&A — DISCONTINUED
+> Google retired the Q&A feature in Dec 2025. It's being replaced by "Ask Maps" (AI-generated answers powered by Gemini). The best way to influence those AI answers is to keep your GBP info, website content, and FAQ sections complete and accurate.
 
-| Service Name | Description | Added |
-|-------------|-------------|-------|
-| **Concierge Home Visits** | In-home physical therapy throughout San Diego and North County. Ideal for postpartum moms or those who prefer care at home. | [ ] |
-| **Virtual Physical Therapy Consultation** | Video examinations and personalized exercise programs for clients who are not local. | [ ] |
-| **In-Clinic Physical Therapy** | Traditional clinic appointments at San Diego County Midwives HQ in Rancho Bernardo. | [ ] |
+**Repurpose as GBP posts instead:**
+- [ ] "Did you know you don't need a referral for PT in California?"
+- [ ] "We offer virtual video consultations for clients who aren't local"
+- [x] "Your first visit is 90 minutes — here's what to expect" — posted March 2026
 
-### Condition-Specific Services (Searchable Terms)
+### Attributes
+- [x] Women-owned — enabled
+- N/A — LGBTQ+ friendly not available for this category
+- N/A — Appointment required / Telehealth not available as attributes for this category
 
-| Service Name | Description | Added |
-|-------------|-------------|-------|
-| **Urinary Incontinence Treatment** | Physical therapy for stress incontinence, urge incontinence, and bladder control issues. | [ ] |
-| **Diastasis Recti Rehabilitation** | Assessment and treatment for abdominal separation, common after pregnancy. | [ ] |
-| **Pelvic Pain Treatment** | Comprehensive evaluation and treatment for chronic pelvic pain conditions. | [ ] |
-| **Pelvic Organ Prolapse Therapy** | Non-surgical management and strengthening for pelvic organ prolapse. | [ ] |
-| **Return to Running Program** | Specialized program to safely return to running and high-impact exercise postpartum or after pelvic floor issues. | [ ] |
-
-### Verify With Client (Potential Additional Services)
-
-> These are commonly offered by pelvic floor/women's health PT practices. Confirm with client before adding to GBP or website.
-
-| Service Name | Description | Offered? | Added |
-|-------------|-------------|----------|-------|
-| **Prenatal Physical Therapy** | Physical therapy during pregnancy for pelvic pain, back pain, and birth preparation. | [ ] Verify | [ ] |
-| **C-Section Scar Mobilization** | Scar tissue massage and mobilization to reduce pain and adhesions after cesarean delivery. *(Already referenced in Emily's testimonial)* | [ ] Verify | [ ] |
-| **Painful Intercourse / Dyspareunia** | Pelvic floor therapy for pain during intercourse — a common reason patients seek pelvic PT. | [ ] Verify | [ ] |
-| **Fecal Incontinence Treatment** | Physical therapy for bowel leakage and control issues. | [ ] Verify | [ ] |
-| **Perimenopause / Menopause Management** | Pelvic health support for hormonal transitions. *(Blog post already exists on this topic)* | [ ] Verify | [ ] |
-| **TMJ / Jaw Pain Treatment** | Assessment and treatment for temporomandibular joint dysfunction. *(Blog post on jaw relief exists)* | [ ] Verify | [ ] |
-| **SI Joint Pain Treatment** | Sacroiliac joint pain — extremely common in postpartum patients. | [ ] Verify | [ ] |
-| **Coccyx / Tailbone Pain Treatment** | Assessment and treatment for tailbone pain, often related to pelvic floor dysfunction. | [ ] Verify | [ ] |
-| **Birth Preparation / Labor Prep** | Perineal stretching, positioning, breathing techniques, and physical readiness for delivery. | [ ] Verify | [ ] |
-| **Pre/Post-Surgical Rehabilitation** | General orthopedic rehab before and after surgery. | [ ] Verify | [ ] |
-
-### Session Types
-
-| Service Name | Price | Added |
-|-------------|-------|-------|
-| **Initial Evaluation (90 min)** | Contact for pricing | [ ] |
-| **Follow-Up Session (60 min)** | Contact for pricing | [ ] |
-| **Free 15-Minute Phone Consultation** | Free | [ ] |
-
-### What NOT to Add
-- Generic terms like "Physical Therapy" (too broad, won't differentiate)
-- Services not offered (massage therapy, dry needling - unless she does these)
-- Insurance-specific services (keep it patient-focused)
+### Category
+- [x] **Physical Therapist** — only category. No additional categories fit (checked March 2026 — nothing for pelvic floor, women's health, or PT clinic). The 14 services already added do the work of telling Google what kind of PT practice this is.
 
 ---
 
-## 5. Business Description
+## Phase 5: Verify With Ashlee (Additional GBP Services)
 
-**Suggested description (matches website tone):**
+These are commonly offered by pelvic floor PT practices. Confirm before adding:
 
-> Boutique pelvic floor and orthopedic physical therapy serving North County San Diego. Dr. Ashlee Gendron, PT, DPT, PCES specializes in postpartum recovery, urinary incontinence, diastasis recti, pelvic pain, and return to exercise. In-clinic appointments in Rancho Bernardo, concierge home visits throughout North County, and virtual consultations available.
-
-- [ ] Description updated
-
----
-
-## 6. Photos
-
-Should include:
-- [ ] Professional headshot of Dr. Gendron
-- [ ] Clinic treatment room
-- [ ] Logo
-- [ ] Action shots (if available)
-- [ ] Exterior of San Diego County Midwives HQ
-
-**Goal:** At least 5-10 photos
+| Service | Offered? | Added? |
+|---------|----------|--------|
+| Prenatal Physical Therapy | [ ] Verify | [ ] |
+| C-Section Scar Mobilization | [ ] Verify | [ ] |
+| Painful Intercourse / Dyspareunia | [ ] Verify | [ ] |
+| Fecal Incontinence Treatment | [ ] Verify | [ ] |
+| Perimenopause / Menopause Management | [ ] Verify | [ ] |
+| TMJ / Jaw Pain Treatment | [ ] Verify | [ ] |
+| SI Joint Pain Treatment | [ ] Verify | [ ] |
+| Coccyx / Tailbone Pain Treatment | [ ] Verify | [ ] |
+| Birth Preparation / Labor Prep | [ ] Verify | [ ] |
 
 ---
 
-## 7. Q&A Section
+## Ongoing: GBP Posts (Weekly)
 
-Seed with FAQs from website:
+Regular posting signals freshness to Google. Aim for 1 post per week.
 
-**Q: Do I need a referral?**
-> No, you do not need a referral from a doctor. In California, you can see a physical therapist without a physician referral.
-
-**Q: Do you offer virtual appointments?**
-> Yes! I offer video examinations for clients who are not local.
-
-**Q: What should I expect during pelvic floor therapy?**
-> During pelvic floor therapy, I may perform both internal and external assessments based on your needs and comfort level. Everything is done with your consent.
-
-- [ ] Q&A seeded
+**Post ideas:**
+- Repurposed Q&A content (see above)
+- Blog post summaries with link to website
+- Patient education tips
+- Seasonal content (New Year's resolutions, Mother's Day, back-to-school)
+- New service page announcements
 
 ---
 
-## 8. Attributes to Enable
+## Verify (Basic Info)
 
-- [ ] Women-owned
-- [ ] LGBTQ+ friendly (if applicable)
-- [ ] Appointment required
-- [ ] Telehealth available
-
----
-
-## Quick Wins Priority
-
-1. [ ] **Update website link** → Change to `agphysicaltherapypc.com/areas-served/` (once custom domain is live)
-2. [ ] **Add all 6 services** listed above
-3. [ ] **Add service areas** for home visits
-4. [ ] **Verify hours** match Wed/Fri 9am-1pm
-5. [ ] **Review photos** - upload at least 5-10
+| Field | Expected Value | Status |
+|-------|---------------|--------|
+| **Primary Category** | Physical Therapist | [x] Verified |
+| **Phone** | (760) 874-3309 | [x] Verified |
+| **Email** | ashlee@agphysicaltherapypc.com | [x] Verified |
+| **Address** | 16885 Via Del Campo Ct, Suite 110, San Diego, CA 92127 | [x] Verified |
+| **Booking link** | https://agphysicaltherapypc.janeapp.com/ | [x] Verified |
 
 ---
 
-*Last updated: February 2026*
+## What NOT to Change/Add
+- Don't add services not actually offered (massage, dry needling, chiropractic)
+- Don't stuff categories (3-4 additional is plenty)
+- Don't use generic terms like "Physical Therapy" as a service name
+
+---
+
+*Last updated: March 2026*
